@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<tooltips>
+
+	<!-- el valor para el atributo code es el nombre del campo dentro del
+		registro. El atributo text espera el caracter ; para identificar
+		el titulo del texto durante el formato (solo para los campos) -->
+	
+	<!-- el metodo que establece el tooltip para los componentes se encargara
+	de romper el texto en varias lineas-->
+	
+	<!-- el valor del atributo code es el nombre de la clase para las acciones -->	
+	
+	<!-- acciones -->
+	<item code="tt01" text="Acerca de la aplicación" />
+	<item code="tt02" text="Presione para presentar el editor de direcciones" />
+	<item code="tt03" text="Asignar una forma al contribuyente seleccionado" />
+	<item code="tt04" text="Asociar un contribuyente a esta forma" />
+	<item code="tt05" text="Elimina uno o mas registros seleccionados" />
+	<item code="tt06" text="Abre el editor de formas" />
+	<item code="tt07" text="Modificar valores para el registro seleccionado " />
+	<item code="tt09" text="Presenta la ventana de ayudas" />
+	<item code="tt10" text="Presenta asistente para importar cuentas" />
+	<item code="tt11" text="Presenta asistente para importar movimientos. Activo solo si se han importado cuentas contables desde otra aplicación." />
+	<item code="tt12" text="Cargar formas adquiridas desde el archivo" />
+	<item code="tt13" text="Crear o adicionar nuevos registros a la lista" />
+	<item code="tt14" text="Seleccionar archivo" />
+	<item code="tt15" text="Preferencias de la aplicación" />
+	<item code="tt16" text="Imprimir este lado de la forma" />
+	<item code="tt17" text="Guardar contenido" />
+	<item code="tt18" text="Asistente para enviar solicitud" />
+	<item code="tt19" text="Inventario / Ordenar" />
+	<item code="tt20" text="Tips y trucos de interés" />
+	<item code="tt21" text="Noticias y novedades desde www.clio-ve.com. Inactivo si no hay conexión." />
+	<item code="tt22" text="Da vuelta a la hoja" />
+	<item code="tt23" text="Bienvenidos" />
+	<item code="tt24" text="Cambiar impresora" />
+
+	
+	<!-- otros componentes (similares a acciones) -->
+	<item code="tpSelector" text="Seleccionar el tipo de persona que se presentara en la lista" />
+	<item code="taxPSelector" text="Selecciona el contribuyente con cuyos datos se desea trabajar" />
+	<item code="addrTicket" text="Dirección con formato retornada por el editor de direcciones" />
+	<item code="formSelector" text="Seleccione la forma cuyas secciones se presentaran en la lista" />
+	<item code="keepTo" text="Seleccione el tipo de persona origen de la retención" />
+	<item code="year" text="Año" />
+
+	<!-- Unidad tributaria -->
+	<item
+		code="tuFecha"
+		text="Fecha; Fecha a partir de la cual, entra en vigencia el nuevo valor para la unidad tributaria. " />
+	<item code="tuValor" text="Valor; Valor en Bs. de una unidad tributaria." />
+	<item code="tuGazeta" text="Descripción; Breve descripción o nota. " />
+
+	<!-- Contribuyente -->
+	<item
+		code="tpRif"
+		text="R.I.F.; Registro de información fiscal que identifica al contribuyente. Coloque este campo si espacios ni signos de puntuación. Si alguna forma requiere formato, La aplicación se encargara de ello. *" />
+	<item
+		code="tpNit"
+		text="N.I.T.; Número de identificación tributaria. Al igual que el Rif, coloque sin espacios ni signos. " />
+	<item
+		code="tpNombre"
+		text="Razón social / Apellido y nombre completo; Coloque el nombre o razón social de la compañía si el contribuyente es una persona jurídica o el apellido y nombre completo si es persona natural." />
+	<item code="tpDirecc" text="Dirección; Dirección del contribuyente." />
+	<item code="tpMesCie" text="Mes de cierre; Indica el momento cuando contablemente se cierra el ejercicio. Este valor es usado por las formas para inicializar la fecha de inicio y fin del perdió gravable." />
+	<item code="tpNacion" text="Nacionalidad; Seleccione entre las opciones la nacionalidad del contribuyente." />
+	<item
+		code="tpTipCon"
+		text="Contribuyente; Seleccione el tipo de contribuyente. Este puede ser formal (o también llamados especiales) u ordinarios, también llamado ocasional o eventual. " />
+	<item code="tpCedRep" text="Representante legal; Cedula de identidad. " />
+	<item code="tpNacRep" text="Representante legal; Nacionalidad. " />
+	<item code="tpRifRep" text="Representante legal; R.I.F. Coloque sin espacios ni signos de puntuación. " />
+	<item code="tpNitRep" text="Representante legal; N.I.T. Coloque sin espacios ni signos de puntuación. " />
+	<item code="tpNomRep" text="Representante legal; Nombre completo. " />
+	<item code="tpDirRep" text="Representante legal; Dirección. " />
+	<item code="tpSocied" text="Tipo de sociedad; Seleccione el tipo de sociedad que posee el contribuyente. " />
+	<item
+		code="tpActEco"
+		text="Actividad; seleccione el tipo de actividad que ejerce el contribuyente. Si el contribuyente es persona natural, se presenta una lista de ocupaciones. Seleccione la que mas se asemeje al cargo o ocupación de la persona natural." />
+	<item code="tpDomici" text="Domiciliado; Marque si el contribuyente esta domiciliado en el país o posee base fija o residencia permanente en Venezuela." />
+	<item code="tpMayori" text="Mayorista; Marque si el contribuyente es mayorista." />
+	<item code="tpImport" text="Importador; Marque si el contribuyente es importador." />
+	<item code="tpRetenc" text="Retención; Marque si el contribuyente actúa como agente de retención. Activando esta opción permitirá llenar la declaración de retenciones." />
+	<item code="tpRecept" text="Receptor; Marque si el contribuyente es un agente recetor * *** verificar ***" />
+	<item code="tpRenExe" text="Rentas; rentas exentas *** verificar ***" />
+	<item
+		code="tpLucro"
+		text="Lucro; Marque si el contribuyente distribuye ganancias o beneficios (con fines de lucro)." />
+	<item code="tpNomCon" text="Contador del contribuyente; Nombre completo." />
+	<item code="tpCedCon" text="Contador del contribuyente; Cedula." />
+	<item code="tpCpcCon" text="Contador del contribuyente; C.P.C." />
+	<item code="tpCedula" text="Cédula; número de cedula de identidad de la persona natural." />
+	<item code="tpFecNac" text="Fecha; de nacimiento de persona natural." />
+	<item code="tpReside" text="Residenciado; Marque si la persona natural esta residenciado en el país. Esta opción determina el tipo de declaración para personas naturales." />
+	<item code="tpECivil" text="Estado civil; persona natural." />
+	<item code="tpConyDA" text="Cónyuge; Marque si el cónyuge declara aparte. Si este percibe algún ingreso por sueldo o honorario profesional, es preferible que declara aparte para disminuir el impuesto familiar." />
+	<item code="tpSepBie" text="Separado; de bienes *** verificar ***" />
+	<item
+		code="tpActEcP"
+		text="Actividad económica principal; Lista de las principales actividades según el código del c.i.i.u." />
+	<item
+		code="tpActEcS"
+		text="Actividad económica secundaria; Lista de las principales actividades según el código del c.i.i.u." />
+
+	<!-- Entrada contable -->
+	<item
+		code="acCode"
+		text="Código; código o numero de entrada contable. Para las cuentas importadas desde aplicaciones contables, aquí se coloca el código de cuenta contables." />
+	<item
+		code="acText"
+		text="Texto; Descripción de la entrada contable. Si importo cuentas contables, aquí se coloca los nombres de las cuentas importadas." />
+	<item
+		code="acIApp"
+		text="Aplicación; Presenta la aplicación de donde se extrajo esta entrada contables. No puede modificarse este valor" />
+	<item
+		code="acIDir"
+		text="Directorio; Carpeta de donde se extrajo esta entrada contable. No puede modificarse este valor." />
+	<item
+		code="acPreC"
+		text="Precalculo; Función que será aplicada al monto de los movimientos. Esta operación será ejecutada por la forma cuando encuentre movimientos para esta cuenta." />
+
+	<!-- Transacciones -->
+	<item
+		code="avAccAC"
+		text="Entrada contable; Código de la entrada contable. Esta debe ser una entrada contable ya creada en Contabilidad/Clio. " />
+	<item
+		code="avFecha"
+		text="Fecha; A partir de la cual, esta transacción es elegible por la aplicación para ser tomada en cuenta durante los cálculos. Para que esto suceda, esta fecha debe estar entre las fechas de inicio y fin de periodo gravable durante la edición de la forma." />
+	<item code="avMonto" text="Monto; De la transacción." />
+	<item code="avTexto" text="Descripción; Texto descriptivo de la transacción." />
+	
+	<!-- editor de direcciones -->
+	<item code="adEstado" text="Estado;Estado" />
+	<item code="adCiudad" text="Ciudad;Ciudad" />
+	<item code="adMunici" text="Municipio;Municipio" />
+	<item code="adParroq" text="Parroquia;Parroquia" />
+	<item code="adUrbani" text="Urbanización;Urbanización" />
+	<item code="adCalle" text="Calle;Calle" />
+	<item code="adEdf" text="Edificio;Edificio" />
+	<item code="adCodGeo" text="Código geográfico;Código geográfico" />
+	<item code="adZonPos" text="Zona postal;Zona postal" />
+	<item code="adTlf1" text="Teléfono; Teléfono" />
+	<item code="adTlf2" text="Teléfono; Teléfono" />
+	<item code="adFax" text="Fax;Fax" />
+	<item code="adLocal" text="Local;Local" />
+
+</tooltips>

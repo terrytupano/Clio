@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<root>
+
+		<!-- 
+		code en formato Appcode (aaaammdd) 
+		text en formato gen; gre; red ;pas donde 
+			gen = aliguota general
+			gre = alicuota general + reducida
+			red = alicuota reducida
+			pas = pasajes aereos
+		el reste de los atributos son usados por sysvar
+		-->
+
+	<item
+		code="20030101"
+		text="16;26;8;50" />
+	<item
+		code="20020901"
+		text="16;16;16;50" />
+	<item
+		code="20000801"
+		text="14.5;14.5;14.5;25" />
+	<item
+		code="19980801"
+		text="10;30;20;25" />
+</root>

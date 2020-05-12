@@ -1,0 +1,1353 @@
+<?xml version="1.0"  encoding='ISO-8859-1'?>
+
+<form id="epn" cryptoId="i" name="Estimacion para personas naturales" infoDoc="epn" price="2670" declaration="isrl">
+	<overse.image name="epn1.ov" />
+	<overse.title fore="255;255;255" back="42;94;190" fontN="Arial" fontF="11" fontB="yes" />
+	<overse.panel fore="42;94;190" back="255;255;255" fontN="Arial" fontF="11" fontB="no" />
+	<overse.selected back="226;234;245" />
+	<overse.background name="epn1.l" xPos="143" yPos="744" />
+	<reverse.image name="epn1.rv" />
+	<reverse.title fore="255;255;255" back="184;182;169" fontN="Arial" fontF="11" fontB="yes" />
+	<reverse.panel fore="184;182;169" back="255;255;255" fontN="Arial" fontF="11" fontB="no" />
+	<reverse.selected back="228;225;221" />
+
+	<!-- valore globales -->
+	<gv.timeScope value="360" />
+	<gv.firstFace value="reverse" />
+	<gv.pre-dive value="bottom" />
+	<gv.taxPayerConditions value="('{tpTipPer}' == 'na')" />
+	<gv.declarationDateStart value="ejeGraDes" />
+	<gv.declarationDateEnd value="ejeGraHas" />
+	
+	<!-- escenarios -->
+	<stage face="overse" expression="({ejeGraDes} == 19691231) || ({ejeGraHas} == 19691231)" message="msg07" />
+	<stage face="overse" expression="{ejeGraDes} > {ejeGraHas}" message="msg08" />
+	<stage face="overse" expression="{pag90} != ({pagEfe} + {pagBon} + {pagCer}) &amp;&amp; ({pagEfe} + {pagBon} + {pagCer}) > 0" message="msg09" />
+	<stage face="reverse" expression="({d_T1} * 0.8 > {d_T1e}) || ({d_T3} * 0.8 > {d_T3e})" message="msg30" />
+	<stage face="reverse" expression="({g832} > {g831} * 0.8) || ({g843} > {g842} * 0.8)" message="msg32" />
+
+	<stage face="overse" expression="dateDistance({ejeGraDes}, {ejeGraHas}) &lt; 360" message="msg36" />
+	
+	<!-- A. datos del contribuyente 									-->
+	<!--*************************************************************** -->
+	
+	<!-- rif -->
+	<overse.section 
+		id="rif"
+		class="SpacedOutput"
+		variable="tpRif"
+		xPos="53"
+		yPos="144"
+		width="190"
+		height="27"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- nit -->
+	<overse.section
+		id="nit"
+		class="SpacedOutput"
+		variable="tpNit"
+		xPos="53"
+		yPos="208"
+		width="190"
+		height="26"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- Ejecicio gabables desde -->
+	<overse.section
+		id="ejeGraDes"
+		class="DateInput"
+		inputIf="1.0"
+		init="doubleDate(*year, 01, 0)"
+		title="Ejercicio gravable"
+		label="Desde"
+		union="560;225;640;225" />
+
+	<!-- Ejecicio gabables hasta -->
+	<overse.section
+		id="ejeGraHas"
+		class="DateInput"
+		title="Ejercicio gravable"
+		label="Hasta"
+		init="doubleDate(*year, 12, 1)"
+		inputIf="1.0"
+		union="685;225;770;225" />
+
+	<!-- nro declaracion anterior -->
+	<overse.section
+		id="nroDecAnt"
+		title="Nro de declaración anterior"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="580;265" />
+
+	<overse.section
+		id="fecDecAnt"
+		title="Fecha declaracion anterior"
+		class="DateInput"
+		inputIf="{nroDecAnt} > 0"
+		outputIf="{nroDecAnt} > 0"
+		point="730;260" 
+		eastGap="45" />
+
+	<!-- nombre -->
+	<overse.section
+		id="nombre"
+		class="SimpleOutput"
+		variable="tpNombre"
+		point="480;325"
+		westGap="20" />
+
+	<!-- cedula -->
+	<overse.section
+		id="ci"
+		class="IdentificationCard"
+		variable="tpCedula"
+		nationalityField="tpNacRep"
+		xPos="70"
+		yPos="338"
+		width="140"
+		height="33" />
+
+	<!-- casado -->
+	<overse.section
+		id="casadoTrue"
+		class="BooleanOutput"
+		outputIf="'{tpECivil}' == 's2'"
+		point="425;363"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="casadoFalse"
+		class="BooleanOutput"
+		outputIf="'{tpECivil}' == 's1'"
+		point="482;363"
+		westGap="0"
+		eastGap="0" />
+	
+	<!-- conyuge declara aparte -->
+	<overse.section
+		id="cAparteTrue"
+		class="BooleanOutput"
+		outputIf="'{tpConyDA}' == 'true'"
+		point="555;363"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="cAparteFalse"
+		class="BooleanOutput"
+		outputIf="'{tpConyDA}' == 'false'"
+		point="609;363"
+		westGap="0"
+		eastGap="0" />
+	
+	<!-- separado de bienes -->
+	<overse.section
+		id="separadoTrue"
+		class="BooleanOutput"
+		outputIf="'{tpSepBie}' == 'true'"
+		point="693;363"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="separadoFalse"
+		class="BooleanOutput"
+		outputIf="'{tpSepBie}' == 'false'"
+		point="748;363"
+		westGap="0"
+		eastGap="0" />
+	
+	<!-- direccion -->
+	<overse.section
+		id="direccion"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="*complete"
+		point="480;390"
+		westGap="20" />
+
+	<!-- ciudad -->
+	<overse.section
+		id="ciudad"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adCiudad"
+		point="110;425"
+		westGap="20" />
+
+	<!-- estado -->
+	<overse.section
+		id="estado"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adEstado"
+		point="270;425" />
+
+	<!-- telefonos -->
+	<overse.section
+		id="telefonos"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adTlf1"
+		point="700;425" />
+
+	<!-- actividad economica -->
+	<overse.section
+		id="descActEco"
+		class="ConstantOutput"
+		variable="tpActEco"
+		constantElement="*value"
+		point="175;460" 
+		westGap="20" />
+
+	<!-- prorroga -->
+	<overse.section
+		id="nroProrr"
+		title="Nro de resolucion"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="615;460" />
+
+	<overse.section
+		id="fecProrr"
+		title="Fecha de prorroga"
+		class="DateInput"
+		inputIf="{nroProrr} > 0"
+		outputIf="{nroProrr} > 0"
+		point="745;455" />
+
+	<!-- B. datos del apoderado o representante legal					-->
+	<!--*************************************************************** -->
+
+	<!-- nombre apoderado -->
+	<overse.section
+		id="repNom"
+		class="SimpleOutput"
+		variable="tpNomRep"
+		point="200;510"
+		westGap="20" />
+
+	<!-- rif apoderado -->
+	<overse.section
+		id="repRif"
+		class="SimpleOutput"
+		variable="tpRifRep"
+		point="530;510" />
+
+	<!-- nit apoderado -->
+	<overse.section
+		id="repNit"
+		class="SimpleOutput"
+		variable="tpNitRep"
+		point="720;510" />
+
+	<!-- cedula del apoderado -->
+	<overse.section
+		id="repCi"
+		class="IdentificationCard"
+		variable="tpCedRep"
+		nationalityField="tpNacRep"
+		xPos="68"
+		yPos="523"
+		width="120"
+		height="33" />
+
+	<!-- direccion del apoderado -->
+	<overse.section
+		id="repDireccion"
+		class="AddressOutput"
+		addrField="*complete"
+		variable="tpDirRep"
+		point="480;545" />
+
+	<!-- ciudad apoderado -->
+	<overse.section
+		id="repCda"
+		class="AddressOutput"
+		addrField="adCiudad"
+		variable="tpDirRep"
+		point="140;575" 
+		westGap="20" />
+		
+	<!-- estado apoderado -->
+	<overse.section
+		id="repEdo"
+		class="AddressOutput"
+		addrField="adEstado"
+		variable="tpDirRep"
+		point="385;575" />
+
+	<!-- telefono apoderado -->
+	<overse.section
+		id="repTlf"
+		class="AddressOutput"
+		addrField="adTlf1"
+		variable="tpDirRep"
+		point="670;575" />
+
+	<!-- C. autoliquidacion del impuesto								-->
+	<!--*************************************************************** -->
+
+	<overse.section
+		id="c181"
+		class="EvaluatedSection"
+		mouseEntered="msg11"
+		expression="{d_T1e}"
+		point="530;630" />
+
+	<overse.section
+		id="c182"
+		class="EvaluatedSection"
+		mouseEntered="msg11"
+		expression="{d_T3e}"
+		point="730;630" />
+
+	<overse.section
+		id="c163"
+		class="EvaluatedSection"
+		mouseEntered="msg12"
+		expression="max({e850}, {e851})"
+		point="530;655" />
+
+	<!-- falta -->
+	<overse.section
+		id="c164"
+		class="EvaluatedSection"
+		expression="0.0"
+		ifBlank="----- O -----" 
+		point="730;655" />
+
+	<!-- algunos campos verifican el valor de estos dos para  -->
+	<!-- determinar si se presentan o no  -->
+
+	<overse.section
+		id="c153"
+		class="EvaluatedSection"
+		expression="{c181} - {c163}"
+		point="530;670" />
+
+	<overse.section
+		id="c154"
+		class="EvaluatedSection"
+		expression="{c182} - {c164}"
+		point="730;670" />
+	<!-- -->
+
+	<overse.section
+		id="c173"
+		class="EvaluatedSection"
+		expression="{f193}"
+		mouseEntered="msg13"
+		point="530;690" />
+
+	<overse.section
+		id="c174"
+		class="EvaluatedSection"
+		expression="{f194}"
+		mouseEntered="msg13"
+		point="730;690" />
+
+	<overse.section
+		id="c196"
+		class="EvaluatedSection"
+		expression="{c153} - {c173}"
+		point="530;710" />
+
+	<overse.section
+		id="c197"
+		class="EvaluatedSection"
+		expression="{c154} - {c174}"
+		point="730;710" />
+
+	<overse.section
+		id="max196"
+		class="EvaluatedSection"
+		expression="max({c196}, 0)" />
+
+	<overse.section
+		id="max197"
+		class="EvaluatedSection"
+		expression="max({c197}, 0)" />
+
+	<overse.section
+		id="vc185"
+		class="EvaluatedSection"
+		expression="{max196} / {tributaryUnit}"	/>
+
+	<overse.section
+		id="c185"
+		ifBlank="----- O -----" 
+		class="EvaluatedSection"
+		expression="totalTax({vc185}, 1, 1) * {tributaryUnit}"
+		point="530;730" />
+
+	<overse.section
+		id="c186"
+		ifBlank=" " 
+		class="EvaluatedSection"
+		expression="totalTax3({max197}, {tpActEco})"
+		point="730;730" />
+
+	<!-- rebanas del impuesto autoliquidado -->
+
+	<overse.section
+		id="c202"
+		class="EvaluatedSection"
+		expression="{tributaryUnit} * 10"
+		outputIf="({c153} > 0) &amp;&amp; ('{tpReside}' == 'true')"
+		point="530;770" />
+
+	<overse.section
+		id="c203"
+		class="EvaluatedSection"
+		expression="{tributaryUnit} * 10"
+		outputIf="({c154} > 0) &amp;&amp; ('{tpReside}' == 'true')"
+		point="730;770" />
+
+	<overse.section
+		id="nroc201"
+		class="SimpleInput"
+		inputIf="'{tpReside}' == 'true'"
+		mouseEntered="'{tpReside}' == 'true' ; xx ; msg22"
+		query="*no"
+		sectionValue="Integer"
+		title="Cargas de familia"
+		label="Cantidad"
+		xPos="160"
+		yPos="778"
+		width="34"
+		height="21" />
+
+	<overse.section
+		id="c201"
+		class="EvaluatedSection"
+		mouseEntered="'{tpReside}' == 'true' ; msg05 ; msg22"
+		outputIf="({nroc201} > 0) &amp;&amp; ({c153} > 0)"
+		expression="{nroc201} * 10 * {tributaryUnit}" 
+		point="530;785" />
+
+	<overse.section
+		id="c204"
+		class="EvaluatedSection"
+		mouseEntered="msg05"
+		outputIf="{nroc201} > 0 &amp;&amp; ({c154} > 0)"
+		expression="{nroc201} * 10 * {tributaryUnit}" 
+		point="730;785" />
+
+	<overse.section
+		id="c863"
+		class="SimpleInput"
+		inputIf="1.0"
+		sectionValue="Double"
+		title="Autoliquidación del impuesto"
+		label="Exedentes por inversiones en años anteriores"
+		point="530;805" />
+
+	<overse.section
+		id="c861"
+		class="EvaluatedSection"
+		mouseEntered="msg14"
+		expression="{g845}" 
+		point="330;825" />
+	
+	<overse.section
+		id="c864"
+		class="EvaluatedSection"
+		expression="({c861} * 20) / 100" 
+		point="530;825" />
+	
+	<overse.section
+		id="c865"
+		class="EvaluatedSection"
+		mouseEntered="msg21"
+		outputIf="('{tpActEco}' =='an') &amp;&amp; ({c153} > 0)"
+		expression="{tributaryUnit} * 40"
+		point="530;850" />
+	
+	<overse.section
+		id="c876"
+		class="EvaluatedSection"
+		expression="{c202} + {c201} + {c863} + {c864} + {c865}" 
+		point="530;865" />
+	
+	<overse.section
+		id="c877"
+		class="EvaluatedSection"
+		expression="{c203} + {c204}" 
+		point="730;865" />
+	
+	<overse.section
+		id="c187"
+		class="EvaluatedSection"
+		expression="{c185} - {c876}" 
+		point="530;885" />
+	
+	<overse.section
+		id="c188"
+		class="EvaluatedSection"
+		expression="{c186} + {c877}" 
+		point="730;885" />
+
+	<!-- Inpuesto liquidable -->
+	
+	<overse.section
+		id="c183"
+		class="EvaluatedSection"
+		expression="{c187} * 0.75" 
+		point="530;925" />
+	
+	<overse.section
+		id="c184"
+		class="EvaluatedSection"
+		expression="{c188} * 0.96"
+		point="730;945" />
+	
+	<overse.section
+		id="c189"
+		class="EvaluatedSection"
+		expression="{c183} + {c184}"
+		point="730;965" />
+
+	<!-- rebajas al impuesto del ejercicio -->
+	
+	<overse.section
+		id="c231"
+		class="SimpleInput"
+		sectionValue="Double"
+		title="Rebajas al impuesto"
+		label="Inpuesto retenidos hasta el mes anterior al plazo para declarar"
+		inputIf="1.0"
+		mouseEntered="msg20"
+		point="530;1005" />
+
+	<overse.section
+		id="c230"
+		class="SimpleInput"
+		sectionValue="Double"
+		title="Rebajas al impuesto"
+		label="Anticipos por enajenación de inmuebles"
+		
+		inputIf="1.0"
+		point="530;1025" />
+
+	<overse.section
+		id="nroPla"
+		class="SimpleInput"
+		sectionValue="Integer"
+		query="*no"
+		title="Rebajas al impuesto"
+		label="Nro de planilla sustituida"
+		inputIf="1.0"
+		xPos="321"
+		yPos="1034"
+		width="105"
+		height="21" />
+
+	<overse.section
+		id="c233"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="*no"
+		title="Rebajas al impuesto"
+		label="Por inpuesto pagado en delaración sustituida"
+		mouseEntered="msg03"
+		inputIf="{nroPla} != 0"
+		point="530;1045" />
+
+	<overse.section
+		id="c241"
+		class="EvaluatedSection"
+		mouseEntered="msg15"
+		expression="{h247}"
+		point="530;1065" />
+
+	<overse.section
+		id="c242"
+		class="EvaluatedSection"
+		expression="{i215}"
+		mouseEntered="msg16"
+		point="530;1085" />
+
+	<overse.section
+		id="c291"
+		class="EvaluatedSection"
+		expression="{c231} + {c230} + {c233} + {c241} + {c242}"
+		point="730;1105" />
+
+	<overse.section
+		id="vc90"
+		class="EvaluatedSection"
+		expression="{c189} - {c291}" />
+
+	<overse.section
+		id="c90"
+		class="EvaluatedSection"
+		ifBlank="----- O -----" 
+		expression="max({vc90}, 0)"
+		point="730;1125" />
+
+	<overse.section
+		id="c87"
+		class="EvaluatedSection"
+		ifBlank="----- O -----" 
+		expression="min({vc90}, 0)"
+		point="730;1145" />
+
+	<!-- planilla de pago												-->
+	<!--*************************************************************** -->
+
+	<!-- rif -->
+	<overse.section
+		id="pagRif"
+		class="SpacedOutput"
+		variable="tpRif"
+		xPos="593"
+		yPos="1223"
+		width="200"
+		height="30"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- nit -->
+	<overse.section
+		id="pagNit"
+		class="SpacedOutput"
+		variable="tpNit"
+		xPos="593"
+		yPos="1273"
+		width="200"
+		height="30"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- nombre -->
+	<overse.section
+		id="pagNombre"
+		class="SimpleOutput"
+		variable="tpNombre"
+		point="260;1285" 
+		westGap="20" />
+	
+	<!-- serial -->
+	<!-- preimpreso 
+	<overse.section
+		id="serial"
+		class="SimpleOutput"
+		constant="97"
+		point="405;1340" />
+	-->
+
+	<overse.section
+		id="serial"
+		class="SimpleInput"
+		title="Declaración o liquidación"
+		query="*no"
+		label="Nro de serial o de liquidación"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="480;1340" />
+
+	<!-- porcion -->
+	<overse.section
+		id="p_desde"
+		class="SimpleOutput"
+		constant="1"
+		point="630;1340" 
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="p_hasta"
+		class="SimpleInput"
+		title="Porcion"
+		query="*no"
+		label="Hasta"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="665;1340"
+		westGap="0"
+		eastGap="0" />
+		
+	<!-- monto a pagar -->
+	<overse.section
+		id="pag90"
+		class="EvaluatedSection"
+		expression="{c90}"
+		point="660;1380" 
+		westGap="20" />
+
+	<!-- periodo de pago -->
+	<overse.section
+		id="pag15"
+		class="DateOutput"
+		variable="ejeGraDes"
+		point="65;1428"  />
+
+	<overse.section
+		id="pag16"
+		class="DateOutput"
+		variable="ejeGraHas"
+		point="135;1428"  />
+
+	<!-- pago en efectivo -->
+	<overse.section
+		id="pagEfe"
+		title="Forma de pago"
+		label="Efectivo"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inputIf="1.0"
+		ifBlank="----- O -----" 
+		point="250;1428" 
+		westGap="25" />
+
+	<!-- bonos -->
+	<overse.section
+		id="pagBon"
+		title="Forma de pago"
+		label="Bonos"
+		ifBlank="----- O -----" 
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inputIf="1.0"
+		point="500;1428" 
+		westGap="25" />
+
+	<!-- certificados -->
+	<overse.section
+		id="pagCer"
+		title="Forma de pago"
+		label="Certificados de reintegro tributario"
+		class="SimpleInput"
+		ifBlank="----- O -----" 
+		query="*no"
+		sectionValue="Double"
+		inputIf="1.0"
+		point="700;1428"
+		westGap="25" />
+
+	<!-- ciudad -->
+	<overse.section
+		id="pagCda"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adCiudad"
+		point="240;1455"  />
+
+	<!--*********************************************************** -->
+	<!-- REVERSO DE LA PLANILLA 									-->
+	<!--*********************************************************** -->
+
+	<reverse.section
+		id="tributaryUnit"
+		class="EvaluatedSection"
+		expression="lastTributaryUnit({ejeGraHas}, 1)" />
+
+	<!-- D. Datos de la declaracion definitiva del año anterior 	-->
+	<!--*********************************************************** -->
+	<reverse.section
+		id="dDesde"
+		class="DateInput"
+		title="Ejercicio gravable"
+		label="Desde"
+		inputIf="1.0"
+		union="35;150;70;150" />
+
+	<reverse.section
+		id="dHasta"
+		class="DateInput"
+		title="Ejercicio gravable"
+		label="Hasta"
+		inoutIf="{dDesde} > 19691231"
+		union="85;150;130;150" />
+
+	<reverse.section
+		id="dNroH"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inoutIf="{dHasta} > 19691231"
+		query="*no"
+		title="Nro H"
+		point="170;125" />
+
+	<reverse.section
+		id="dNroPla"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{dNroH} > 0"
+		title="Nro de declaracion"
+		point="320;125" />
+
+	<reverse.section
+		id="d_T1"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="*no"
+		inoutIf="{dNroPla} > 0"
+		title="Enriquecimiento global neto"
+		label="Tarifa 1"
+		point="560;125" />
+
+	<reverse.section
+		id="d_T1e"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{d_T1} > 0"
+		title="Enriquecimiento neto estimado"
+		label="Tarifa 1"
+		point="720;125" />
+
+	<reverse.section
+		id="d_T3"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="*no"
+		inputIf="{dNroPla} > 0"
+		title="Enriquecimiento global neto"
+		label="Tarifa 3"
+		point="560;155" />
+
+	<reverse.section
+		id="d_T3e"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{d_T3} > 0"
+		title="Enriquecimiento neto estimado"
+		label="Tarifa 3"
+		point="720;155" />
+
+	<!-- E. pagado por concepto de desgravamenes persona naturales 	-->
+	<!--*********************************************************** -->
+
+	<reverse.section
+		id="e810"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Amount"
+		inputIf="'{tpReside}' == 'true'"
+		title="Pagados por conceptos de desgrabamenes"
+		mouseEntered="'{tpReside}' == 'true' ; msg04 ; msg22"
+		label="Institutos docentes en el país"
+		point="730;205" />
+
+	<reverse.section
+		id="e813"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Amount"
+		inputIf="'{tpReside}' == 'true'"
+		title="Pagados por conceptos de desgrabamenes"
+		mouseEntered="'{tpReside}' == 'true' ; msg04 ; msg22"
+		label="Primas de seguros de vida, Hospt. y maternidad a empresas domiciliadas en el país"
+		point="730;215" />
+
+	<reverse.section
+		id="e808"
+		class="HomeRelatedDisencumbrance"
+		variable="tributaryUnit"
+		inputIf="'{tpReside}' == 'true'"
+		mouseEntered="'{tpReside}' == 'true' ; msg04 ; msg22"
+		title="intereses * adquisición o pago de alquiler"
+		point="730;235" />
+
+	<reverse.section
+		id="e814"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Amount"
+		inputIf="'{tpReside}' == 'true'"
+		title="Pagados por conceptos de desgrabamenes"
+		label="Gastos médicos odontologicos prestados en el país"
+		mouseEntered="'{tpReside}' == 'true' ; msg04 ; msg22"
+		point="730;250" />
+
+	<reverse.section
+		id="e850"
+		class="EvaluatedSection"
+		outputIf="'{tpReside}' == 'true'"
+		expression="{e810} + {e813} + {e808} + {e814}"
+		point="730;265" />
+
+	<reverse.section
+		id="e851"
+		class="EvaluatedSection"
+		expression="{tributaryUnit} * 774"
+		outputIf="({e850} == 0) &amp;&amp; ('{tpReside}' == 'true')"
+		point="730;280" />
+
+	<!-- F. perdidas de años anteriores pendientes de compenzacion 	-->
+	<!--*********************************************************** -->
+	
+	<reverse.section
+		id="f190Desde"
+		class="DateInput"
+		title="Ejercicio"
+		label="Desde"
+		inputIf="1.0"
+		union="95;355;145;355" />
+
+	<reverse.section
+		id="f190Hasta"
+		class="DateInput"
+		title="Ejercicio"
+		label="Hasta"
+		inoutIf="{f190Desde} > 19691231"
+		union="200;355;250;355" />
+
+	<reverse.section
+		id="f155"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{f190Hasta} > 19691231"
+		title="Perdidas años anteriores pendientes * compensación"
+		label="Tarifa 1"
+		point="560;355" />
+
+	<reverse.section
+		id="f156"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{f190Hasta} > 19691231"
+		title="Perdidas años anteriores pendientes * compensación"
+		label="Tarifa 3"
+		point="720;355" />
+	
+	<reverse.section
+		id="f196Desde"
+		class="DateInput"
+		title="Ejercicio"
+		label="Desde"
+		inoutIf="({f155} != 0) || ({f156} != 0)"
+		union="95;375;145;375" />
+
+	<reverse.section
+		id="f196Hasta"
+		class="DateInput"
+		title="Ejercicio"
+		label="Hasta"
+		inoutIf="{f196Desde} > 19691231"
+		union="200;375;250;375" />
+
+	<reverse.section
+		id="f157"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{f196Hasta} > 19691231"
+		title="Perdidas años anteriores pendientes * compensación"
+		label="Tarifa 2"
+		point="560;375" />
+
+	<reverse.section
+		id="f158"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{f196Hasta} > 19691231"
+		title="Perdidas años anteriores pendientes * compensación"
+		label="Tarifa 3"
+		point="720;375" />
+	
+	<reverse.section
+		id="f197Desde"
+		class="DateInput"
+		title="Ejercicio"
+		label="Desde"
+		inoutIf="({f157} != 0) || ({f158} != 0)"
+		union="95;390;145;390" />
+
+	<reverse.section
+		id="f197Hasta"
+		class="DateInput"
+		title="Ejercicio"
+		label="Hasta"
+		inoutIf="{f197Desde} > 19691231"
+		union="200;390;245;390" />
+
+	<reverse.section
+		id="f168"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{f197Hasta} > 19691231"
+		title="Perdidas años anteriores pendientes * compensación"
+		label="Tarifa 2"
+		point="560;390" />
+
+	<reverse.section
+		id="f169"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{f197Hasta} > 19691231"
+		title="Perdidas años anteriores pendientes * compensación"
+		label="Tarifa 3"
+		point="720;390" />
+	
+	<reverse.section
+		id="f193"
+		class="EvaluatedSection"
+		expression="{f155} + {f157} + {f168}"
+		point="560;405" />
+
+	<reverse.section
+		id="f194"
+		class="EvaluatedSection"
+		expression="{f156} + {f157} + {f169}"
+		point="720;405" />
+	
+	<!-- G. inversion estimada de actividades distitintas a 		-->
+	<!-- hidrocarburos 												-->
+	<!--*********************************************************** -->
+
+	<reverse.section
+		id="g831"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="'{tpActEco}' == 'ab' || '{tpActEco}' == 'ao' || '{tpActEco}' == 'aj'"
+		mouseEntered="'{tpActEco}' == 'ab' || '{tpActEco}' == 'ao' || '{tpActEco}' == 'aj' ; x ; msg31"
+		title="Inversión anterior"
+		label="Actividades industriales, agroindustriales y turísticas"
+		point="385;470" />
+
+	<reverse.section
+		id="g832"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="'{tpActEco}' == 'ab' || '{tpActEco}' == 'ao' || '{tpActEco}' == 'aj'"
+		mouseEntered="'{tpActEco}' == 'ab' || '{tpActEco}' == 'ao' || '{tpActEco}' == 'aj' ; x ; msg31"
+		title="Inversión estimada"
+		label="Actividades industriales, agroindustriales y turísticas"
+		point="550;470" />
+
+	<reverse.section
+		id="g833"
+		class="EvaluatedSection"
+		expression="{g832} * 0.75"
+		point="730;470" />
+	
+	<reverse.section
+		id="g842"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="'{tpActEco}' == 'an'"
+		mouseEntered="'{tpActEco}' == 'an' ; x ; msg31"
+		title="Inversión anterior"
+		label="Actividades agrícolas, pecuarias, pesqueras o pisícolas"
+		point="385;480" />
+
+	<reverse.section
+		id="g843"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="'{tpActEco}' == 'an'"
+		mouseEntered="'{tpActEco}' == 'an' ; x ; msg31"
+		title="Inversión estimada"
+		label="Actividades agrícolas, pecuarias, pesqueras o pisícolas"
+		point="550;480" />
+
+	<reverse.section
+		id="g844"
+		class="EvaluatedSection"
+		expression="{g843} * 0.80"
+		point="730;480" />
+	
+	<reverse.section
+		id="g845"
+		class="EvaluatedSection"
+		expression="{g833} + {g844}"
+		point="720;500" />
+
+	<!-- H. Impuestos pagados en exceso años anteriores no 			-->
+	<!-- compenzados ni reintegrados								-->
+	<!--*********************************************************** -->
+
+	<reverse.section
+		id="h245eje"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inputIf="1.0"
+		title="Impuestos pagados en exceso"
+		label="Ejercicio"
+		point="145;565" />
+
+	<reverse.section
+		id="h245H"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{h245eje} > 0"
+		title="Impuestos pagados en exceso"
+		label="H"
+		point="270;565" />
+
+	<reverse.section
+		id="h245dec"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{h245H} > 0"
+		title="Impuestos pagados en exceso"
+		label="Declaración"
+		point="390;565" />
+
+	<reverse.section
+		id="h243"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{h245dec} > 0"
+		title="Impuestos pagados en exceso"
+		label="Monto"
+		point="550;565" />
+	
+	<reverse.section
+		id="h246eje"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{h243} > 0"
+		title="Impuestos pagados en exceso"
+		label="Ejercicio"
+		point="145;580" />
+
+	<reverse.section
+		id="h246H"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{h246eje} > 0"
+		title="Impuestos pagados en exceso"
+		label="H"
+		point="275;580" />
+	
+	<reverse.section
+		id="h246dec"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{h246H} > 0"
+		title="Impuestos pagados en exceso"
+		label="Declaración"
+		point="390;580" />
+
+	<reverse.section
+		id="h244"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{h246dec} > 0"
+		title="Impuestos pagados en exceso"
+		label="Monto"
+		point="550;580" />
+
+	<reverse.section
+		id="h247"
+		class="EvaluatedSection"
+		expression="{h243} + {h244}"
+		point="720;595" />
+	
+	<!-- I. Exedente de impuestos de activos impresariales		 	-->
+	<!--*********************************************************** -->
+
+	<reverse.section
+		id="i164Desde"
+		class="DateInput"
+		title="Ejercicio"
+		label="Desde"
+		inputIf="1.0"
+		union="100;667;160;667" />
+
+	<reverse.section
+		id="i164Hasta"
+		class="DateInput"
+		title="Ejercicio"
+		label="Hasta"
+		inoutIf="{i164Desde} > 19691231"
+		union="230;667;285;667" />
+
+	<reverse.section
+		id="i164pn"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{i164Hasta} > 19691231"
+		title="Ejercicio"
+		label="Planilla Nro."
+		point="400;667" />
+
+	<reverse.section
+		id="i212"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{i164pn} > 0"
+		title="Exedente de impuestos"
+		label="Monto"
+		point="530;667" />
+	
+	<reverse.section
+		id="i165Desde"
+		class="DateInput"
+		title="Ejercicio"
+		label="Desde"
+		inoutIf="{i212} > 0"
+		union="100;684;160;684" />
+
+	<reverse.section
+		id="i165Hasta"
+		class="DateInput"
+		title="Ejercicio"
+		label="Hasta"
+		inoutIf="{i165Desde} > 19691231"
+		union="230;684;285;684" />
+
+	<reverse.section
+		id="i165pn"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{i165Hasta} > 19691231"
+		title="Ejercicio"
+		label="Planilla Nro."
+		point="430;684" />
+
+	<reverse.section
+		id="i213"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{i165pn} > 0"
+		title="Exedente de impuestos"
+		label="Monto"
+		point="530;684" />
+	
+	<reverse.section
+		id="i166Desde"
+		class="DateInput"
+		title="Ejercicio"
+		label="Desde"
+		inoutIf="{i213} > 0"
+		union="100;700;160;700" />
+
+	<reverse.section
+		id="i166Hasta"
+		class="DateInput"
+		title="Ejercicio"
+		label="Hasta"
+		inoutIf="{i166Desde} > 19691231"
+		union="230;700;285;700" />
+
+	<reverse.section
+		id="i166pn"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="{i166Hasta} > 19691231"
+		title="Ejercicio"
+		label="Planilla Nro."
+		point="430;700" />
+
+	<reverse.section
+		id="i214"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inoutIf="{i166pn} > 0"
+		title="Exedente de impuestos"
+		label="Monto"
+		point="530;700" />
+	
+	<reverse.section
+		id="i215"
+		class="EvaluatedSection"
+		expression="{i212} + {i213} + {i214}"
+		point="730;715" />
+	
+	
+	<!-- declaracion jurada 										-->
+	<!--*********************************************************** -->
+	
+	<reverse.section
+		id="jurada_lugar"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adCiudad"
+		point="120;810" />
+
+	<reverse.section
+		id="jurada_fecha"
+		class="DateOutput"
+		variable="*today"
+		union="225;810;265;810" 
+		westGap="0"
+		eastGap="0" />
+
+	<!-- declaracion del contador 									-->
+	<!--*********************************************************** -->
+	<reverse.section
+		id="contador_nombre"
+		class="SimpleOutput"
+		variable="tpNomCon"
+		point="600;780" />
+
+	<reverse.section
+		id="contador_ci"
+		class="SimpleOutput"
+		variable="tpCedCon"
+		point="575;790" />
+
+	<reverse.section
+		id="contador_lugar"
+		class="AddressOutput"
+		variable="tpDirecc"
+		outputIf="'{contador_nombre}' != ''"
+		addrField="adCiudad"
+		point="470;830" />
+
+	<reverse.section
+		id="contador_fecha"
+		class="SimpleOutput"
+		outputIf="'{contador_nombre}' != ''"
+		variable="*date"
+		point="575;830" />
+
+	<reverse.section
+		id="contador_mes"
+		class="SimpleOutput"
+		variable="*month"
+		outputIf="'{contador_nombre}' != ''"
+		point="680;830" />
+
+	<reverse.section
+		id="contador_ano"
+		class="SimpleOutput"
+		variable="*year"
+		outputIf="'{contador_nombre}' != ''"
+		point="775;830" />
+
+	<reverse.section
+		id="contador_cpc"
+		class="SimpleOutput"
+		variable="tpCpcCon"
+		outputIf="'{contador_nombre}' != ''"
+		point="485;875" />
+
+</form>

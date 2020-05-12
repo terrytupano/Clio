@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<root>
+
+	<!-- mensajes interaccion forma/usuario (1, 50) -->
+	<message msgId="msg01" msgType="w" msgText="Si coloca algun valor aquí, no puede optar por el desgrabamen único." />
+	<message
+		msgId="msg02"
+		msgType="i"
+		msgText="Marque si esta declaracion es una variación. Marque nuevamente para limpiar." />
+	<message
+		msgId="msg03"
+		msgType="a"
+		msgText="Hacia su izquierda se encuentra el espacio para colocar el Nro. de planilla." />
+	<message msgId="msg04" msgType="w" msgText="No coloque ningun valor aqui si desea optar por el desgrabamen único." />
+	<message
+		msgId="msg05"
+		msgType="i"
+		msgText="Hacia su izquierda se encuentra el espacio para colocar las cargas familiares." />
+	<message
+		msgId="msg06"
+		msgType="i"
+		msgText="Recuerde colocar el año grabable para obtener la unidad tributaria correcta." />
+	<message msgId="msg07" msgType="i" msgText="Recuerde colocar la fecha del ejercicio grabable." />
+	<message msgId="msg08" msgType="a" msgText="Fecha desde debe ser mayor a Fecha hasta." />
+	<message
+		msgId="msg09"
+		msgType="a"
+		msgText="Efectivo + Bonos + Certificados de reintegro no coincide con el monto a cancelar." />
+	<message msgId="msg10" msgType="a" msgText="Efectivo + Bonos no coincide con el monto a cancelar." />
+	<message msgId="msg11" msgType="i" msgText="Viene del parrafo D en el reverso de la planilla." />
+	<message msgId="msg12" msgType="i" msgText="Viene del parrafo E en el reverso de la planilla." />
+	<message msgId="msg13" msgType="i" msgText="Viene del parrafo F en el reverso de la planilla." />
+	<message msgId="msg14" msgType="i" msgText="Viene del parrafo G en el reverso de la planilla." />
+	<message msgId="msg15" msgType="i" msgText="Viene del parrafo H en el reverso de la planilla." />
+	<message msgId="msg16" msgType="i" msgText="Viene del parrafo I en el reverso de la planilla." />
+	<message msgId="msg17" msgType="a" msgText="La suma de las formas de pago no coincide con el monto a cancelar." />
+	<message
+		msgId="msg18"
+		msgType="w"
+		msgText="La declaración sustitutiva no es procendente. Debera hacer los cambios en peridos futuros." />
+	<message msgId="msg19" msgType="i" msgText="Recuerde colocar el periodo de imposición." />
+	<message
+		msgId="msg20"
+		msgType="i"
+		msgText="Recuerde anexar los comprobantes correspondientes al momento de presentar su declaración." />
+	<message msgId="msg21" msgType="i" msgText="Solo para actividades agrícolas." />
+	<message msgId="msg22" msgType="i" msgText="Solo para personas naturales residentes." />
+	<message
+		msgId="msg23"
+		msgType="a"
+		msgText="Crédito a activos empresariales en el ejercicio debe se menor o igual al total impuesto. (243) &lt;= (290)" />
+	<message
+		msgId="msg24"
+		msgType="a"
+		msgText="Impuestos pagados en exceso debe ser menor o igual al total de impuestos después de aplicar créditos de activos empresariales (249) &lt;= (244)" />
+	<message msgId="msg25" msgType="a" msgText="Viene de línea 3, sección 170" />
+	<message msgId="msg26" msgType="a" msgText="Viene de línea 4, sección 406" />
+	<message msgId="msg27" msgType="i" msgText="Viene del parrafo J en el reverso de la planilla." />
+	<message msgId="msg28" msgType="i" msgText="Solo cuando esta declaración es una variación de los datos." />
+	<message
+		msgId="msg29"
+		msgType="a"
+		msgText="A su izquierda, se encuentra el espacio para colocar el día y mes de la fecha de pago." />
+	<message
+		msgId="msg30"
+		msgType="a"
+		msgText="El monto del enriquecimiento neto estimado no puede ser &lt; al 80% del enriquecimiento global neto del ejercicio anterior. Si lo es. Recuerde anexar justificación." />
+	<message
+		msgId="msg31"
+		msgType="i"
+		msgText="Solo para las actividades especificadas." />
+	<message
+		msgId="msg32"
+		msgType="a"
+		msgText="La inversión estimada no puede ser &gt; al 80% de la inversión declarada para igual propósito en años anteriores. Si lo es, recuerde anexar justificación." />
+	<message
+		msgId="msg33"
+		msgType="a"
+		msgText="Total débito fiscal no puede ser &lt; 0. Registre solo un ajuste con la cantidad negativa de la sección 47 y la diferencia ajústela en periodos futuros." />
+	<message
+		msgId="msg34"
+		msgType="a"
+		msgText="Total créditos fiscales no puede ser &lt; 0. Registre solo un ajuste tal que sección 39 &gt;= 0 y la diferencia ajústela en periodos futuros." />
+	<message
+		msgId="msg35"
+		msgType="i"
+		msgText="Solo si esta es una declaración sustitutiva." />
+	<message
+		msgId="msg36"
+		msgType="w"
+		msgText="El perdió durante el cual se computan los ingresos es normalmente 1 año." />
+	
+	
+		<!-- mensajes para dutyCalendar (51, 70)-->
+
+	<message
+		msgId="msg51"
+		msgType="i"
+		msgText="Faltan {0, number, integer} dia(s) para la fecha tope de entrega de {1}" />
+
+	<message msgId="msg52" msgType="w" msgText="Solo quedan {0, number, integer} formas {1} en el inventario." />
+
+	<message
+		msgId="msg53"
+		msgType="a"
+		msgText="Faltan {0, number, integer} día(s) para la fecha de vencimiento del inventario de formas." />
+	<message
+		msgId="msg54"
+		msgType="i"
+		msgText="La declaración {0} de {1} asignada el {2, date, short} ha pasado a estado inactivo." />
+
+	<!-- mensajes para interaccion gui/usuarior (81, 150)-->
+	
+	<message
+		msgId="msg81"
+		msgType="c"
+		msgText="No se ha encontrado ningún contribuyente." />
+	<message
+		msgId="msg82"
+		msgType="i"
+		msgText="Auto guardado efectuado." />
+	<message
+		msgId="msg83"
+		msgType="a"
+		msgText="El nombre de directorio no es valido." />
+	<message
+		msgId="msg84"
+		msgType="a"
+		msgText="El archivo seleccionado no es valido." />
+	<message
+		msgId="msg85"
+		msgType="c"
+		msgText="Las formas contenidas en este paquete no fueron emitidas para esta aplicación." />
+	<message
+		msgId="msg86"
+		msgType="c"
+		msgText="Error encontrado en formato interno." />
+	<message
+		msgId="msg87"
+		msgType="c"
+		msgText="Las formas contenidas en este paquete ya fueron cargadas o están vencidas." />	
+	<message
+		msgId="msg88"
+		msgType="a"
+		msgText="El registro que intenta adicionar ya se encuentra en el archivo." />			
+	<message
+		msgId="msg89"
+		msgType="a"
+		msgText="Se requiere un valor para este campo." />			
+	<message
+		msgId="msg90"
+		msgType="a"
+		msgText="El valor actual no es valido para este campo." />			
+	<message
+		msgId="msg91"
+		msgType="a"
+		msgText="No se pudo localizar el catalogo de cuentas de la aplicación contable." />			
+	<message
+		msgId="msg92"
+		msgType="a"
+		msgText="Se requiere que complete toda la información requerida." />			
+	<message
+		msgId="msg93"
+		msgType="a"
+		msgText="Debe colocar el nombre que desea dar a los archivo para la solicitud de renovación." />			
+	<message
+		msgId="msg94"
+		msgType="a"
+		msgText="La entrada contables no existe dentro del catalogo de cuentas." />			
+	<message
+		msgId="msg95"
+		msgType="w"
+		msgText="Para las persona naturales, es necesario coloque el Nro. de cédula." />			
+	<message
+		msgId="msg96"
+		msgType="w"
+		msgText="Los datos del contador deben estar completos o todos en blanco." />			
+	<message
+		msgId="msg97"
+		msgType="w"
+		msgText="Los datos del representante legal deben estar todos en blanco o todos (- N.I.T.) llenos." />			
+	<!-- solo para log -->
+	<message
+		msgId="msg98"
+		msgType="w"
+		msgText="Key date > today." />			
+	<message
+		msgId="msg99"
+		msgType="a"
+		msgText="Debe seleccionar al menos un aplicación origen de datos." />			
+	<message
+		msgId="msg100"
+		msgType="c"
+		msgText="No se ha encontrado datos de importación en las cuentas contables para este contribuyente." />
+
+	<!-- critico para sustituir el ; por el texto de execiones -->
+	<message
+		msgId="msg101"
+		msgType="c"
+		msgText=";" />			
+	
+</root>

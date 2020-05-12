@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK rel="stylesheet" href="../ClioHelp.css" type="text/css"></head></head>
+<body>
+<h4>Asignar forma/contribuyente</h4>
+En esta aplicación, llamamos asignar forma a la acción de asociar una forma fiscal a un contribuyente. Esta asociación inicia el editor de formas virtuales; el cual le permite completar los datos dentro de una imagen digital de la forma deseada. 
+
+Esta asociación entre el contribuyente y su forma puede establecerse desde dos sitios distintos:
+
+<ul>
+  <li><b>Desde lista de contribuyentes</b>: Presionando el botón <b>Asignar forma</b>, despliega una lista de las formas que pueden ser asignadas al contribuyente previamente seleccionado. La aplicación revisa las formas disponibles dentro del sistema seleccionando aquellas que cumplan con los parámetros del contribuyente. Por Ej.: Si el contribuyente es una persona jurídica, no se mostrara la forma declaración para personas naturales dentro de la lista. </li>
+  <li><b>Desde lista de formas</b>: Seleccionando cualquiera de las formas disponibles en la barra de acceso rápido, presentara una lista de los contribuyentes a los cuales se les ha asignado dicha forma. Presionando <b>Asignar contribuyente</b> se presenta una lista con los contribuyentes que por sus características, se les puede asignar esta forma. Por Ej.: si se esta en la lista de la forma declaración persona jurídica residenciada, en la lista no aparecerán los contribuyentes naturales y no residenciados.</li>
+</ul>
+
+Ambas acciones, Asignar forma y Asignar contribuyente Verifican que exista disponibilidad de formas en el inventario si existe, se presenta el siguiente mensaje 
+<p>
+<div align="center"><img src="ConfirmAllocateForm.gif" border="0" width="448" height="150" alt=""></div>
+</p>
+Aquí se resume la operación que esta por suceder. Si el usuario acepta, se descuenta una forma del inventario y se presenta el editor de formas para comenzar a calcular los valores de esta declaración para el contribuyente. Si no existe disponibilidad, se presenta un mensaje indicando que no se puede completar la operación. 
+
+<blockquote><hr size="1" noshade> 
+<b>Nota:</b>
+<br>No se pueden asignar mas de una forma a un contribuyente en el mismo día. Esto evita que accidentalmente se asigne mas de una forma a un contribuyente. Si desea asignar la misma forma al mismo contribuyente, deberá esperar al día siguiente.
+<hr size="1" noshade> </blockquote>
+
+</body>
+</html>

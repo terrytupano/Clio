@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK rel="stylesheet" href="../ClioHelp.css" type="text/css"></head></head>
+<body>
+<h4>Contabilidad/Clio</h4>
+Esta opción permite configurar la parte encargada de correlacionar las cuentas o entradas contables con las distintas secciones dentro de las formas fiscales. Aquí, dentro del ámbito de la aplicación, llamaremos <i><b>cuenta</b></i> o <i><b>entrada contable</b></i> a la información almacenada dentro de la aplicación cuyo código debe ser igual a una cuenta contable parametrizada dentro del catálogo de cuentas de la aplicación contable del contribuyente. Esto permite cargar transacciones en Clio de la misma forma que se cargan dentro de un sistema contable. 
+
+<p>Debido que esta interfaz es un poco mas complicada, comenzaremos con una revisión de sus componentes.
+</p>
+<p><div align="center"><img src="Account_clio.gif" border="0" width="600" height="400" alt=""></div></p>
+
+<ol>
+  <li>Permite seleccionar el contribuyente al cual se le van a crear la asociación entre las cuentas contables y las secciones de las distintas formas. Para cada contribuyente, existe una lista de entradas contables. Pueden existir cuentas contables de igual código pero en contribuyentes distintos.</li>
+  <li>Barra de herramientas para crear y mantener la lista de cuentas contables. </li>
+  <li>Lista de cuentas contables creadas para el contribuyente seleccionado.</li>
+  <li>Barra de herramientas con un selector para seleccionar las formas disponibles para esta operación y una acción para eliminar las asociaciones entrada-contable / sección. Note que las secciones están identificadas con un bolita de color. La acción de suprimir no borra la sección en si ya que esta forma parte permanente de la forma, solo puede suprimir la asociación.</li>
+  <li>Lista de secciones a las cuales se puede asociar una cuenta contables </li>
+</ol>
+
+<p>Es de hacer notar que las secciones pueden interpretar esta asociación de 2 maneras distintas, según su característica. Estas se identifican por el color del icono que las acompañan 
+</p>
+
+<p><img src="../../icons/CountDot16.gif" border="0" width="16" height="16" alt=""><b>Cuenta</b>: Se cuentan el número de transacciones y se coloca ese resultado dentro de la sección asociada. 
+
+<br><img src="../../icons/TotalDot16.gif" border="0" width="16" height="16" alt=""><b>Total</b>: se sumarizan los montos de cada transacción y la suma total es colocada como valor dentro de la sección. 
+</p>
+
+<p><b>Ver</b>
+<br>Editor de formas
+<br>Transacciones
+<br>Asociación entrada contable > secciones
+</p>
+
+</body>
+</html>

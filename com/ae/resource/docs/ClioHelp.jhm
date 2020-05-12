@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+
+<map version="1.0">
+
+	<!-- iconos & home -->
+	<mapID target="openbook" url="openbook.gif" />
+	<mapID target="chapter" url="chapter.gif" />
+	<mapID target="topic" url="topic.gif" />
+	<mapID target="home" url="HomeClioHelp.htm" />
+	
+	<!-- faq -->
+	<mapID target="faq.wdsr" url="faq/way_declaration_start_reverse.html" />
+	<mapID target="faq.cpafap" url="faq/can_print_another_form_after_print.html" />
+	<mapID target="faq.wii" url="faq/what_is_inactive.html" />
+	<mapID target="faq.nafr" url="faq/no_another_form_request.html" />
+	<mapID target="faq.aop" url="faq/are_official_price.html" />
+	<mapID target="faq.crp" url="faq/close_relationship_provider.html" />
+	
+	<!-- task -->
+	<mapID target="task.ac" url="task/Account_clio.html" />
+	<mapID target="task.lf" url="task/LoadForms.html" />
+	<mapID target="task.ntp" url="task/NewTaxPayer.html" />
+	<mapID target="task.pf" url="task/PrintForm.html" />
+	<mapID target="task.flu" url="task/FormLineUp.html" />
+	<mapID target="task.rf" url="task/RequestForm.html" />
+	<mapID target="task.ima" url="task/ImportAccount.html" />
+	
+	<!-- topics -->
+	<mapID target="topics.fea" url="topics/Features.html" />
+	<mapID target="topics.start" url="topics/Start.html" />
+
+	<mapID target="topics.dc" url="topics/DutyCalendar.html" />
+	<mapID target="topics.pref" url="topics/Preference.html" />
+	<mapID target="topics.stock" url="topics/Stock.html" />
+	<mapID target="topics.taxp" url="topics/TaxPayer.html" />
+	<mapID target="topics.form" url="topics/Form.html" />
+	<mapID target="topics.af" url="topics/AllocateForm.html" />
+	<mapID target="topics.fedit" url="topics/FormEditor.html" />
+	<mapID target="topics.fdm" url="topics/FormDataManager.html" />
+	<mapID target="topics.dm" url="topics/Datamanager.html" />
+
+	<mapID target="topics.acc_c" url="topics/Account_clio.html" />
+	<mapID target="topics.vou" url="topics/Voucher.html" />
+	<mapID target="topics.imn" url="topics/import_new.html" />
+	<mapID target="topics.kim" url="topics/keepinmind.html" />
+
+</map>

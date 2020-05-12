@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<root>
+
+	<!-- el atributo code corresponde al id de seccion solicitado por 
+		
+		code="xxxxannl" donde 
+		xxx - es el id de forma  
+		a - articulo 
+		nn - numeral 
+		l - literal 
+		
+		text="b;% donde  
+		b base imponible
+		% es el porcentaje. puede tener la constante "T2". Esto indica a
+		la funcion que deba aplicar la tarifa 2. y a la lista que debe
+		sustituir la constante.
+		
+		**** ver funcion taxKeeping para mas info y para saber como se calcula el sustraendo y monto base*** 
+	-->
+
+	<!-- ************************************************************** -->
+	<!-- persona juridica domicilidada -->
+	<!-- ************************************************************** -->
+	<item
+		code="pj-d901b"
+		text="100;5"
+		label="Actividades profesionales no mercantiles. Honorarios profesionales" />
+	<item
+		code="pj-d902a"
+		text="100;5"
+		label="Comisiones mercantiles por la venta de bienes inmuebles" />
+	<item
+		code="pj-d902b"
+		text="100;5"
+		label="Otras distintas a remuneraciones accesorias a sueldos" />
+	<item
+		code="pj-d903c"
+		text="100;5"
+		label="Intereses de capitales tomados en prestamo (pagados * personas jurídicas a otra persona o comunidad" />
+	<item
+		code="pj-d9091"
+		text="100;34"
+		label="Ganancias fortuitas, juegos y apuestas" />
+	<item
+		code="pj-d9092"
+		text="100;16"
+		label="Premios de loteria, hipodromos y otros similares" />
+	<item
+		code="pj-d910"
+		text="100;5"
+		label="Premios pagados a propietarios de animales de carrera" />
+	<item
+		code="pj-d911"
+		text="100;2"
+		label="Pagos a empresas contratistas y sub-contratistas" />
+	<item
+		code="pj-d912"
+		text="100;5"
+		label="Alquiler de bienes inmuebles" />
+	<item
+		code="pj-d913"
+		text="100;5"
+		label="Arrendamiento de bienes inmuebles" />
+	<item
+		code="pj-d9141"
+		text="100;5"
+		label="Tarjetas de crédito o consumos" />
+	<item
+		code="pj-d9142"
+		text="100;1"
+		label="Consumo de gasolina en estaciones de servicio" />
+	<item
+		code="pj-d915"
+		text="100;3"
+		label="Gastos de transporte por fletes" />
+	<item
+		code="pj-d916"
+		text="100;5"
+		label="Pagos a corredores y agentes de seguro" />
+	<item
+		code="pj-d917"
+		text="100;5"
+		label="Pagos por reparación de bienes y atencion hospitalaria de asegurados hechas por empresas de seguros" />
+	<item
+		code="pj-d918"
+		text="100;5"
+		label="Adquisición de fondos de comercio" />
+	<item
+		code="pj-d9191"
+		text="100;5"
+		label="Servicios de publicidad y propaganda y espacios para tal fin" />
+	<item
+		code="pj-d9192"
+		text="100;3"
+		label="Pagados a emisoras de radio exclusivamente" />
+	<item
+		code="pj-d920"
+		text="100;1"
+		label="Enajenación de acciones - bolsa de valores" />
+	<item
+		code="pj-d921"
+		text="100;5"
+		label="Enajenación de acciones de sociedades de comercio" />
+
+	<!-- ************************************************************** -->
+	<!-- persona juridica  no domicilidada -->
+	<!-- ************************************************************** -->
+	<item
+		code="pj-nd902a"
+		text="100;5"
+		label="Comisiones mercantiles Venta de bienes inmuebles" />
+	<item
+		code="pj-nd902b"
+		text="100;5"
+		label="Distintas a remuneraciones accesorias a sueldos" />
+	<item
+		code="pj-nd903b"
+		text="100;4.95"
+		label="intereses de campital tomados en prestamo" />
+	<item
+		code="pj-nd908"
+		text="30;10"
+		label="Primas de seguro y re-aseguro" />
+	<item
+		code="pj-nd9091"
+		text="100;34"
+		label="Ganancias fortuitas, juegos y apuestas" />
+	<item
+		code="pj-nd9092"
+		text="100;16"
+		label="Premios de loteria, hipodromos" />
+	<item
+		code="pj-nd910"
+		text="100;5"
+		label="Premios pagados a propietarios de animales de carrera" />
+	<item
+		code="pj-nd913"
+		text="100;5"
+		label="Arrendamiento de bienes inmuebles" />
+	<item
+		code="pj-nd914"
+		text="100;5"
+		label="Tarjetas de crédito o consumos" />
+	<item
+		code="pj-nd918"
+		text="100;5"
+		label="Adquisición de fondos de comercio" />
+	<item
+		code="pj-nd919"
+		text="100;5"
+		label="Servicios de publicidad y propaganda y espacios para tal fin" />
+	<item
+		code="pj-nd920"
+		text="100;1"
+		label="Enajenación de acciones - bolsa de valores" />
+	<item
+		code="pj-nd921"
+		text="100;5"
+		label="Enajenación de acciones sociedades de comercio" />
+
+	<!-- acumulativo -->
+	<item
+		code="pj-nd901a"
+		text="90;T2"
+		label="Actividades profesionales no mercantiles. Honorarios profecionales" />
+	<item
+		code="pj-nd903a"
+		text="95;T2"
+		label="Intereses de capitales tomados en prestamo invertidos en la producción de rentas" />
+	<item
+		code="pj-nd903c"
+		text="100;T2"
+		label="Pagados por personas naturales a otras comunidades" />
+	<item
+		code="pj-nd904"
+		text="15;T2"
+		label="Pagos a agencias de noticias internacionales" />
+	<item
+		code="pj-nd905"
+		text="5;T2"
+		label="Pagos de transportes constituidos por fletes" />
+	<item
+		code="pj-nd906"
+		text="25;T2"
+		label="Exhibición de películas para el cine o la televisíon" />
+	<item
+		code="pj-nd9071"
+		text="90;T2"
+		label="Regalias, asistencia técnica y servicios tecnológicos" />
+	<item
+		code="pj-nd9072"
+		text="30;T2"
+		label="Honorarios y pagos por asistencia técnica" />
+	<item
+		code="pj-nd9073"
+		text="50;T2"
+		label="Servicios tecnológicos usados en el país" />
+	<item
+		code="pj-nd911"
+		text="100;T2"
+		label="Pagos a empresas contratistas o subcontratistas" />
+	<item
+		code="pj-nd912"
+		text="100;T2"
+		label="Alquiler de bienes inmuebles" />
+
+	<!-- ************************************************************** -->
+	<!-- persona natural no residente  -->
+	<!-- ************************************************************** -->
+	<item
+		code="pn-nr901a"
+		text="90;34"
+		label="Actividades profesionales no mercantiles. Honorarios profesionales" />
+	<item
+		code="pn-nr901c"
+		text="90;34"
+		label="De jinetes, veterinarios, preparadores o entrenadores" />
+	<item
+		code="pn-nr901d"
+		text="90;34"
+		label="Pagados por centros de salud e instituciones profecionales no mercantiles" />
+	<item
+		code="pn-nr902a"
+		text="100;34"
+		label="Comisiones mercantiles * la venta de bienes inmuebles" />
+	<item
+		code="pn-nr902b"
+		text="100;34"
+		label="Otras distintas a remuneraciones accesorias a sueldo" />
+	<item
+		code="pn-nr903a"
+		text="95;34"
+		label="Intereses de capital tomados en prestamo: Invertidos en la producción de la renta" />
+	<item
+		code="pn-nr903c"
+		text="100;34"
+		label="Pagados por personas juridicas a otras personas o comunidades" />
+	<item
+		code="pn-nr906"
+		text="25;34"
+		label="Exhibición de películas para cine o la televisión" />
+	<item
+		code="pn-nr9071"
+		text="90;34"
+		label="Regalias, asistencia técnica y servicios tecnológicos: regalias y demas participaciones analogas" />
+	<item
+		code="pn-nr9072"
+		text="30;34"
+		label="Honorarios y pagos por asistencia técnica" />
+	<item
+		code="pn-nr9073"
+		text="50;34"
+		label="Servicios tecnológicos usados en el país" />
+	<item
+		code="pn-nr9091"
+		text="100;34"
+		label="Ganancias fortuitas: Juegos y apuestas" />
+	<item
+		code="pn-nr9092"
+		text="100;16"
+		label="Premios de loterias, hipodromos y otros iguales" />
+	<item
+		code="pn-nr910"
+		text="100;34"
+		label="Premios pagados a propietarios de animales de carrera" />
+	<item
+		code="pn-nr911"
+		text="100;34"
+		label="Pagos a empresas contratistas o sub-contratistas" />
+	<item
+		code="pn-nr912"
+		text="100;34"
+		label="Alquiler de bienes inmuebles" />
+	<item
+		code="pn-nr913"
+		text="100;34"
+		label="Arrendamiento de bienes inmuebles" />
+	<item
+		code="pn-nr914"
+		text="100;34"
+		label="Tarjetas de crédito o consumos" />
+	<item
+		code="pn-nr918"
+		text="100;34"
+		label="Adquisición de fondos de comercio" />
+	<item
+		code="pn-nr920"
+		text="100;1"
+		label="Enajenación de acciones - bolsa de valores" />
+	
+	<!-- articulo 3 -->
+	<item
+		code="pn-nr3"
+		text="0;0"
+		label="Sueldos, salarios y otros similares" />
+
+	<!-- ************************************************************** -->
+	<!-- persona natural residente  -->
+	<!-- ************************************************************** -->
+	<item
+		code="pn-r901b"
+		text="100;3"
+		label="Actividades profesionales no mercantiles. Honorarios profesionales de personas de libre ejercicio" />
+	<item
+		code="pn-r901c"
+		text="100;3"
+		label="De jinetes, veterinarios, preparadores o entrenadores" />
+	<item
+		code="pn-r901d"
+		text="100;3"
+		label="Pagados por centros de salud e instituciones profecionales no mercantiles" />
+	<item
+		code="pn-r902a"
+		text="100;3"
+		label="Comisiones mercantiles * la venta de bienes inmuebles" />
+	<item
+		code="pn-r902b"
+		text="100;3"
+		label="Otras distintas a remuneraciones accesorias a sueldo" />
+	<item
+		code="pn-r903c"
+		text="100;3"
+		label="Intereses de capitales tomados en prestamo: Pagados por personas juridicas a otra persona o comunidad" />
+	<item
+		code="pn-r9091"
+		text="100;34"
+		label="Ganancias fortuitas: Juegos y apuestas" />
+	<item
+		code="pn-r9092"
+		text="100;16"
+		label="Premios de loterias, hipodromos y otros iguales" />
+	<item
+		code="pn-r910"
+		text="100;3"
+		label="Premios pagados a propietarios de animales de carrera" />
+	<item
+		code="pn-r911"
+		text="100;1"
+		label="Pagos a empresas contratistas o sub-contratistas" />
+	<item
+		code="pn-r912"
+		text="100;3"
+		label="Alquiler de bienes inmuebles" />
+	<item
+		code="pn-r913"
+		text="100;3"
+		label="Arrendamiento de bienes inmuebles" />
+	<item
+		code="pn-r915"
+		text="100;1"
+		label="Gastos de transporte por flete" />
+	<item
+		code="pn-r916"
+		text="100;3"
+		label="Pagos a corredores y agentes de seguro" />
+	<item
+		code="pn-r917"
+		text="100;3"
+		label="Pagos por reparación de bienes y atención hospitalaria de asegurados hechos por empresas de seguros" />
+	<item
+		code="pn-r918"
+		text="100;3"
+		label="Adquisición de fondos de comercio" />
+	<item
+		code="pn-r919"
+		text="100;3"
+		label="Servicios de publicidad y propaganda y espacions para tal fin" />
+	<item
+		code="pn-r9141"
+		text="100;3"
+		label="Tarjetas de crédito o consumos" />
+	<item
+		code="pn-r9142"
+		text="100;1"
+		label="Consumo de gasolina en estaciones de servicio" />
+	<item
+		code="pn-r920"
+		text="100;1"
+		label="Enajenación de acciones - bolsa de valores" />
+	<item
+		code="pn-r921"
+		text="100;3"
+		label="Enajenación de acciones de sociedades de comercio" />
+
+	<!-- articulos 4 y 7 -->
+	<item
+		code="pn-r47"
+		text="0;0"
+		label="Sueldos, salarios y otros similares" />
+</root>

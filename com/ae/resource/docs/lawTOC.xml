@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<toc version="1.0">
+
+	<!-- **************************************************** -->
+	<!-- isrl -->
+	<!-- **************************************************** -->
+	<tocitem target="isrl" text="Ley de impuesto sobre las rentas" image="openbook" />
+	<tocitem target="reintegros" text="Resolución sobre los tramites del reintegro de los impuestos de importación" image="openbook" />
+	<tocitem target="1808" text="Impuesto sobre la renta en materia de retención" image="openbook" />
+	<tocitem target="iva" text="Impuesto al valor agregado" image="openbook" />
+	<tocitem target="risrl" text="Reglamento de la ley de impuesto sobre la renta" image="openbook" />
+	<tocitem target="cot" text="Código orgánico tributario" image="openbook" />
+
+</toc>

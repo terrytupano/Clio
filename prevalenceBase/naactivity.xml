@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<root>
+	<item code="005" text="Abogados" />
+	<item code="010" text="Administración/Financiero" />
+	<item code="015" text="Administrativo/Clericales" />
+	<item code="020" text="Agrimensores" />
+	<item code="025" text="Arquitectos" />
+	<item code="030" text="Asistente de Vuelo" />
+	<item code="035" text="Banca" />
+	<item code="040" text="Bienes Raíces" />
+	<item code="045" text="Carpinteros" />
+	<item code="050" text="Chef/Cocineros" />
+	<item code="055" text="Choferes" />
+	<item code="060" text="Construcción" />
+	<item code="065" text="Consultores" />
+	<item code="070" text="Contabilidad" />
+	<item code="075" text="Deliniantes" />
+	<item code="080" text="Dentistas" />
+	<item code="085" text="Diseñador/Gráficos" />
+	<item code="090" text="Doctores en Medicina" />
+	<item code="095" text="Educación" />
+	<item code="100" text="Educación Física" />
+	<item code="105" text="Electricistas" />
+	<item code="110" text="Enfermeras" />
+	<item code="115" text="Escritores/Editores" />
+	<item code="120" text="Estilistas" />
+	<item code="125" text="Farmacéutico" />
+	<item code="130" text="Físicos" />
+	<item code="135" text="Gerenciales" />
+	<item code="140" text="Hotelería" />
+	<item code="145" text="Importación/Exportación" />
+	<item code="150" text="Información Tecnológica" />
+	<item code="155" text="Ingenieros" />
+	<item code="160" text="Logística" />
+	<item code="165" text="Mantenimiento" />
+	<item code="180" text="Manufactura" />
+	<item code="185" text="Mecánicos/Automotriz" />
+	<item code="190" text="Mecánicos/Industriales" />
+	<item code="195" text="Mecánicos/Textiles" />
+	<item code="200" text="Medios/Publicidad" />
+	<item code="205" text="Naturópatas" />
+	<item code="210" text="Nutricionistas" />
+	<item code="215" text="Paralegal" />
+	<item code="220" text="Pilotos" />
+	<item code="225" text="Prensistas" />
+	<item code="230" text="Psicólogos" />
+	<item code="235" text="Psiquiatras" />
+	<item code="240" text="Químicos" />
+	<item code="245" text="Recursos Humanos" />
+	<item code="250" text="Salud" />
+	<item code="255" text="Secretarial/Ejecutiva" />
+	<item code="260" text="Secretarial/Legal" />
+	<item code="265" text="Secretarial/Recepcionistas" />
+	<item code="270" text="Seguridad" />
+	<item code="275" text="Seguros" />
+	<item code="280" text="Servicios al Cliente" />
+	<item code="285" text="Servicios Sociales" />
+	<item code="290" text="Tecnólogos Médicos" />
+	<item code="295" text="Telecomunicaciones" />
+	<item code="300" text="Traductores" />
+	<item code="305" text="Transcriptores" />
+	<item code="310" text="Turismo" />
+	<item code="315" text="Ventas/Mercadeo" />
+	<item code="320" text="Veterinarios" />
+</root>

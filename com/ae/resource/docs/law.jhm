@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+
+<map version="1.0">
+
+	<!-- iconos & home -->
+	<mapID target="openbook" url="openbook.gif" />
+	<mapID target="chapter" url="chapter.gif" />
+	<mapID target="topic" url="topic.gif" />
+	<mapID target="home" url="HomeLaw.htm" />
+
+	<mapID target="isrl" url="islr.htm" />
+	<mapID target="reintegros" url="reintegros.htm" />
+	<mapID target="1808" url="1808.htm" />
+	<mapID target="iva" url="iva_law.htm" />
+	<mapID target="risrl" url="reglamentoisrl.htm" />
+	<mapID target="cot" url="cot.htm" />
+</map>

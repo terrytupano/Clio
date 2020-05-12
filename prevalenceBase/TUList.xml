@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<root>
+
+		<!-- code en formato Appcode (aaaammdd) -->
+		<!-- los atributos code y tex corresponden a la fecha de emision y -->
+		<!-- y al valor de la unidad tributaria. esto es por compativilidad -->
+		<!-- con AppConstant. el resto de los valores so usados como -->
+		<!-- variables en el documento para presentar lista -->
+
+	<item
+		year="2005"
+		gazzete="38.116"
+		code="20050127"
+		text="29400" />
+	<item
+		year="2004"
+		gazzete="37.876 Reimpresa en 37.877"
+		code="20040211"
+		text="24700" />
+	<item
+		year="2003"
+		gazzete="37625"
+		code="20030205"
+		text="19400" />
+	<item
+		year="2002"
+		gazzete="37397"
+		code="20020305"
+		text="14800" />
+	<item
+		year="2001"
+		gazzete="37183 Reimpresa en 37.194"
+		code="20010510"
+		text="13200" />
+	<item
+		year="2000"
+		gazzete="36957"
+		code="20000524"
+		text="11600" />
+	<item
+		year="1999"
+		gazzete="36673"
+		code="19990405"
+		text="9600" />
+	<item
+		year="1998"
+		gazzete="36432"
+		code="19980414"
+		text="7400" />
+	<item
+		year="1997"
+		gazzete="36220"
+		code="19970604"
+		text="5400" />
+	<item
+		year="1996"
+		gazzete="36003"
+		code="19960718"
+		text="2700" />
+	<item
+		year="1994"
+		gazzete="Según el Código Orgánico Tributario. Art. N° 229 G.O.4.727 Ext."
+		code="19940527"
+		text="1000" />
+</root>

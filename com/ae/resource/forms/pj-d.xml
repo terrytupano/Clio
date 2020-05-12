@@ -1,0 +1,753 @@
+<?xml version="1.0"  encoding='ISO-8859-1'?>
+
+
+<form id="pj-d" cryptoId="f" name="Retenciones a PJ domicilidadas" infoDoc="pj-d" price="1550" declaration="ret">
+	<overse.image name="pj-d-o" />
+	<overse.title fore="255;255;255" back="70;94;190" fontN="Arial" fontF="11" fontB="yes" />
+	<overse.panel fore="70;94;190" back="255;255;255" fontN="Arial" fontF="11" fontB="no" />
+	<overse.selected back="226;234;255" />
+	<overse.background name="pj-d-l" xPos="140" yPos="280" />
+
+	<!-- valore globales -->
+	<gv.timeScope value="30" />
+	<gv.firstFace value="overse" />
+	<gv.pre-dive value="bottom" />
+	<gv.taxPayerConditions value="'{tpRetenc}' == 'true'" />
+	<gv.declarationDateStart value="ejeDes" />
+	<gv.declarationDateEnd value="ejeHas" />
+	
+	<!-- escenarios -->
+	<stage face="overse" expression="('{mesAbo}' == '') || ('{anoAbo}' == '')" message="msg07" />
+	<stage face="overse" expression="{i90} != ({pagEfe} + {pagBon}) &amp;&amp; ({pagEfe} + {pagBon}) > 0" message="msg10" />
+
+	
+	<!-- mes y año del abono en cuelta -->
+	<overse.section 
+		id="mesAbo"
+		class="SimpleList"
+		title="Mes"
+		label="Mes del pago o abono en cuenta"
+		listType="*month"
+		inputIf="1.0"
+		point="735;125" />
+
+	<overse.section
+		id="anoAbo"
+		class="SimpleList"
+		title="Año"
+		label="Año del pago o abono en cuenta"
+		inputIf="1.0"
+		listType="*year"
+		point="775;125" />
+
+	<!-- ejercicio grabable -->
+	<overse.section 
+		id="ejeDes"
+		class="EvaluatedSection"
+		expression="doubleDate({anoAbo}, {mesAbo}, 0)"  />
+
+	<overse.section 
+		id="ejeHas"
+		class="EvaluatedSection"
+		expression="doubleDate({anoAbo}, {mesAbo}, 1)"  />
+
+	<!-- *************************************************************** -->
+	<!-- I.- Personas juridicas y comunidades domiciliadas               -->
+	<!-- *************************************************************** -->
+
+	<overse.section
+		id="i125"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Actividades profesionales no mercantiles. Honorarios profesionales"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		query="ret_1b"
+		point="330;225" />
+
+	<overse.section
+		id="i126"
+		title="B Pagado o abonado en cuenta"
+		label="Actividades profesionales no mercantiles. Honorarios profesionales"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i125} > 0"
+		query="ret_1b"
+		point="490;225" />
+
+	<overse.section
+		id="i127"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d901b', {i126}, {ejeHas})"
+		point="710;225" />
+
+	<overse.section
+		id="i165"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Comisiones mercantiles por la venta de bienes inmuebles"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		query="ret_2a"
+		point="330;245" />
+
+	<overse.section
+		id="i166"
+		title="B Pagado o abonado en cuenta"
+		label="Comisiones mercantiles por la venta de bienes inmuebles"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="ret_2a"
+		inoutIf="{i165} > 0"
+		point="490;245" />
+
+	<overse.section
+		id="i167"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d902a', {i166}, {ejeHas})"
+		point="710;245" />
+
+	<overse.section
+		id="i175"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Otras distintas a remuneraciones accesorias a sueldos"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;265" />
+
+	<overse.section
+		id="i176"
+		title="B Pagado o abonado en cuenta"
+		label="Otras distintas a remuneraciones accesorias a sueldos"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i175} > 0"
+		point="490;265" />
+
+	<overse.section
+		id="i177"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d902b', {i176}, {ejeHas})"
+		point="710;265" />
+
+	<overse.section
+		id="i235"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Intereses de capitales tomados en prestamo (pagados * personas jurídicas a otra persona o comunidad"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;285" />
+
+	<overse.section
+		id="i236"
+		title="B Pagado o abonado en cuenta"
+		label="Intereses de capitales tomados en prestamo (pagados * personas jurídicas a otra persona o comunidad"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i235} > 0"
+		point="490;285" />
+
+	<overse.section
+		id="i237"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d903c', {i236}, {ejeHas})"
+		point="710;285" />
+
+	<overse.section
+		id="diaPagi385"
+		title="Conceptos sujetos a retención"
+		label="Fecha de pago: Día"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inputIf="1.0"
+		xPos="222"
+		yPos="296"
+		width="19"
+		height="14" 
+		westGap="2" 
+		eastGap="2"/>
+
+	<overse.section
+		id="mesPagi385"
+		title="Conceptos sujetos a retención"
+		label="Fecha de pago: Mes"
+		class="SimpleList"
+		inoutIf="{diaPagi385} > 0"
+		listType="*month"
+		xPos="258"
+		yPos="296"
+		width="19"
+		height="14" 
+		westGap="2" 
+		eastGap="2"/>
+
+
+	<overse.section
+		id="i385"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Ganancias fortuitas, juegos y apuestas"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Integer"
+		inoutIf="'{mesPagi385}' != ''"
+		mouseEntered="'{mesPagi385}' != '' ; xx ; msg29"
+		point="330;305" />
+
+	<overse.section
+		id="i386"
+		title="B Pagado o abonado en cuenta"
+		label="Ganancias fortuitas, juegos y apuestas"
+		query="*no"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i385} > 0"
+		mouseEntered="{i385} > 0 ; xx ; msg29"
+		point="490;305" />
+
+	<overse.section
+		id="i387"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d9091', {i386}, {ejeHas})"
+		point="710;305" />
+
+	<overse.section
+		id="i375"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Premios de loteria, hipodromos y otros similares"
+		class="SimpleInput"
+		query="ret_92"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;325" />
+
+	<overse.section
+		id="i376"
+		title="B Pagado o abonado en cuenta"
+		label="Premios de loteria, hipodromos y otros similares"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i375} > 0"
+		query="ret_92"
+		point="490;325" />
+
+	<overse.section
+		id="i377"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d9092', {i376}, {ejeHas})"
+		point="710;325" />
+
+	<overse.section
+		id="i395"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Premios pagados a propietarios de animales de carrera"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;345" />
+
+	<overse.section
+		id="i396"
+		title="B Pagado o abonado en cuenta"
+		label="Premios pagados a propietarios de animales de carrera"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i395} > 0"
+		point="490;345" />
+
+	<overse.section
+		id="i397"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d910', {i396}, {ejeHas})"
+		point="710;345" />
+
+	<overse.section
+		id="i415"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Pagos a empresas contratistas y sub-contratistas"
+		class="SimpleInput"
+		sectionValue="Integer"
+		query="ret_10"
+		inputIf="1.0"
+		point="330;365" />
+
+	<overse.section
+		id="i416"
+		title="B Pagado o abonado en cuenta"
+		label="Pagos a empresas contratistas y sub-contratistas"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="ret_10"
+		inoutIf="{i415} > 0"
+		point="490;365" />
+
+	<overse.section
+		id="i417"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d911', {i416}, {ejeHas})"
+		point="710;365" />
+
+	<overse.section
+		id="i435"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Alquiler de bienes inmuebles"
+		class="SimpleInput"
+		sectionValue="Integer"
+		query="ret_12"
+		inputIf="1.0"
+		point="330;385" />
+
+	<overse.section
+		id="i436"
+		title="B Pagado o abonado en cuenta"
+		label="Alquiler de bienes inmuebles"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="ret_12"
+		inoutIf="{i435} > 0"
+		point="490;385" />
+
+	<overse.section
+		id="i437"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d912', {i436}, {ejeHas})"
+		point="710;385" />
+
+	<overse.section
+		id="i455"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Arrendamiento de bienes inmuebles"
+		class="SimpleInput"
+		sectionValue="Integer"
+		query="ret_13"
+		inputIf="1.0"
+		point="330;405" />
+
+	<overse.section
+		id="i456"
+		title="B Pagado o abonado en cuenta"
+		label="Arrendamiento de bienes inmuebles"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="ret_13"
+		inoutIf="{i455} > 0"
+		point="490;405" />
+
+	<overse.section
+		id="i457"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d913', {i456}, {ejeHas})"
+		point="710;405" />
+
+	<overse.section
+		id="i475"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Tarjetas de crédito o consumos"
+		class="SimpleInput"
+		sectionValue="Integer"
+		query="ret_14a"
+		inputIf="1.0"
+		point="330;425" />
+
+	<overse.section
+		id="i476"
+		title="B Pagado o abonado en cuenta"
+		label="Tarjetas de crédito o consumos"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i475} > 0"
+		query="ret_14a"
+		point="490;425" />
+
+	<overse.section
+		id="i477"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d9141', {i476}, {ejeHas})"
+		point="710;425" />
+
+	<overse.section
+		id="i485"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Consumo de gasolina en estaciones de servicio"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;445" />
+
+	<overse.section
+		id="i486"
+		title="B Pagado o abonado en cuenta"
+		label="Consumo de gasolina en estaciones de servicio"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i485} > 0"
+		point="490;445" />
+
+	<overse.section
+		id="i487"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d9142', {i486}, {ejeHas})"
+		point="710;445" />
+
+	<overse.section
+		id="i525"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Gastos de transporte por fletes"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;460" />
+
+	<overse.section
+		id="i526"
+		title="B Pagado o abonado en cuenta"
+		label="Gastos de transporte por fletes"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i525} > 0"
+		point="490;460" />
+
+	<overse.section
+		id="i527"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d915', {i526}, {ejeHas})"
+		point="710;460" />
+
+	<overse.section
+		id="i545"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Pagos a corredores y agentes de seguro"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;480" />
+
+	<overse.section
+		id="i546"
+		title="B Pagado o abonado en cuenta"
+		label="Pagos a corredores y agentes de seguro"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i545} > 0"
+		point="490;480" />
+
+	<overse.section
+		id="i547"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d916', {i546}, {ejeHas})"
+		point="710;480" />
+
+	<overse.section
+		id="i515"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Pagos por reparación de bienes y atencion hospitalaria de asegurados hechas por empresas de seguros"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;500" />
+
+	<overse.section
+		id="i516"
+		title="B Pagado o abonado en cuenta"
+		label="Pagos por reparación de bienes y atencion hospitalaria de asegurados hechas por empresas de seguros"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i515} > 0"
+		point="490;500" />
+
+	<overse.section
+		id="i517"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d917', {i516}, {ejeHas})"
+		point="710;500" />
+
+	<overse.section
+		id="i535"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Adquisición de fondos de comercio"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;520" />
+
+	<overse.section
+		id="i536"
+		title="B Pagado o abonado en cuenta"
+		label="Adquisición de fondos de comercio"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i535} > 0"
+		point="490;520" />
+
+	<overse.section
+		id="i537"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d918', {i536}, {ejeHas})"
+		point="710;520" />
+
+	<overse.section
+		id="i555"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Servicios de publicidad y propaganda y espacios para tal fin"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;540" />
+
+	<overse.section
+		id="i556"
+		title="B Pagado o abonado en cuenta"
+		label="Servicios de publicidad y propaganda y espacios para tal fin"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i555} > 0"
+		point="490;540" />
+
+	<overse.section
+		id="i557"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d9191', {i556}, {ejeHas})"
+		point="710;540" />
+
+	<overse.section
+		id="i565"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Pagados a emisoras de radio exclusivamente"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;560" />
+
+	<overse.section
+		id="i566"
+		title="B Pagado o abonado en cuenta"
+		label="Pagados a emisoras de radio exclusivamente"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i565} > 0"
+		point="490;560" />
+
+	<overse.section
+		id="i567"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d9192', {i566}, {ejeHas})"
+		point="710;560" />
+
+	<overse.section
+		id="i675"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Enajenación de acciones - bolsa de valores"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;580" />
+
+	<overse.section
+		id="i676"
+		title="B Pagado o abonado en cuenta"
+		label="Enajenación de acciones - bolsa de valores"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i675} > 0"
+		point="490;580" />
+
+	<overse.section
+		id="i677"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d920', {i676}, {ejeHas})"
+		point="710;580" />
+
+	<overse.section
+		id="i735"
+		title="A Número de pagos o de abonos en cuenta"
+		label="Enajenación de acciones de sociedades de comercio"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="330;600" />
+
+	<overse.section
+		id="i736"
+		title="B Pagado o abonado en cuenta"
+		label="Enajenación de acciones de sociedades de comercio"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{i735} > 0"
+		point="490;600" />
+
+	<overse.section
+		id="i737"
+		class="EvaluatedSection"
+		expression="taxKeeping('pj-d921', {i736}, {ejeHas})"
+		point="710;600" />
+	
+	<overse.section
+		id="i90"
+		class="EvaluatedSection"
+		expression="{i127} + {i167} + {i177} + {i237} + {i387} + {i377} + {i397} + {i417} + {i437} + {i457} + {i477} + {i487} + {i527} + {i547} + {i517} + {i537} + {i557} + {i567} + {i677} + {i737}"
+		point="710;660" />
+
+	<!-- ************************************************************** -->
+	<!-- II. Informacion del agente de retencion                        -->
+	<!-- ************************************************************** -->
+
+	<overse.section
+		id="iiNom"
+		class="SimpleInput"
+		title="Información del agente de retención"
+		label="Si actúa para el sector publico, indique el nombre del organismo"
+		sectionValue="String"
+		inputIf="1.0"
+		point="340;720" westGap="20" />
+
+	<overse.section
+		id="iiCod"
+		class="SimpleInput"
+		title="Información del agente de retención"
+		label="Código del organismo"
+		sectionValue="String"
+		inputIf="1.0"
+		point="720;720" />
+	
+	<overse.section
+		id="iiDir"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="*complete"
+		point="300;755" />
+
+	<overse.section
+		id="iiZonPos"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adZonPos"
+		point="550;755" />
+
+	<overse.section
+		id="iiTlf"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adTlf1"
+		point="700;755" />
+
+	<!-- ************************************************************** -->
+	<!-- planilla de pago                                               -->
+	<!-- ************************************************************** -->
+
+	<!-- rif -->
+	<overse.section
+		id="pagRif"
+		class="SpacedOutput"
+		variable="tpRif"
+		xPos="598"
+		yPos="844"
+		width="190"
+		height="28"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- nombre -->
+	<overse.section
+		id="pagNombre"
+		class="SimpleOutput"
+		variable="tpNombre"
+		point="145;900" />
+
+	<!-- nit -->
+	<overse.section
+		id="pagNit"
+		class="SpacedOutput"
+		variable="tpNit"
+		xPos="599"
+		yPos="887"
+		width="190"
+		height="28"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- serial -->
+	<overse.section
+		id="pagSerialF"
+		class="SimpleOutput"
+		constant="03"
+		point="420;950" eastGap="0" westGap="0"/>
+
+	<overse.section
+		id="pagSerial"
+		title="Declaración"
+		label="Nro. de serial"
+		sectionValue="Integer"
+		inputIf="1.0"
+		class="SimpleInput"
+		query="*no"
+		point="495;950" />
+
+	<!-- porcion (desde/hasta) -->
+	<overse.section
+		id="pagPorDesde"
+		class="SimpleOutput"
+		constant="1"
+		point="645;950" />
+
+	<overse.section
+		id="pagPorHasta"
+		class="SimpleOutput"
+		constant="1"
+		point="680;950" />
+
+	<!-- monto a pagar -->
+	<overse.section
+		id="pag90"
+		class="EvaluatedSection"
+		ifBlank="----- O -----" 
+		expression="{i90}"
+		point="660;995" />
+
+	<!-- periodo de pago -->
+	<overse.section
+		id="pag15"
+		class="EvaluatedSection"
+		expression="{mesAbo}"
+		point="65;1040" />
+
+	<overse.section
+		id="pag16"
+		class="EvaluatedSection"
+		expression="{anoAbo}"
+		point="120;1035" />
+
+	<!-- pago en efectivo -->
+	<overse.section
+		id="pagEfe"
+		title="Forma de pago"
+		label="Efectivo"
+		class="SimpleInput"
+		query="*no"
+		ifBlank="----- O -----" 
+		sectionValue="Double"
+		inputIf="1.0"
+		point="330;1035" westGap="30"/>
+
+	<!-- bonos -->
+	<overse.section
+		id="pagBon"
+		title="Forma de pago"
+		label="Bonos"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="*no"
+		ifBlank="----- O -----" 
+		inputIf="1.0"
+		point="620;1035"  westGap="30"/>
+
+	<!-- ciudad -->
+	<overse.section
+		id="pagCda"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adCiudad"
+		point="240;1060" />
+
+</form>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+
+<!-- sintaxis 
+	* las consultas estan descritas en las secciones. 
+	* toda palabra dentro del atributo expression es sustituida por el 
+	contenido del atributo meaning del elemento word
+	cuyo id sea igua a dicha palabra. 
+	
+	el atributo precal indica una expresion matematica que es ejecutada por la 
+	aplicacion para alterar el monto. dentro de esta, la variable {val}
+	que sera reemplazada por el monto que presente esta cuenta
+	al momento de evaluar la funcion.
+	
+	el atributo query dentro de la configuracion de la forma puede contener
+	una sola consulta o varias separadas por ; 
+-->
+<kb>
+
+	<query id="expota" expression="+act01 +exp1" />
+	<query id="sueldo" expression="+gas1 +sue1 -via1"/>
+	<query id="c*c" expression="+cue1 +cob1" />
+	<query id="c*p" expression="(+cue1 +pag1) || deu1" />
+	<query id="cocoma" expression="+cos1 +com2 +mat1"/>
+	<query id="cocomano" expression="+cos1 +com2 +obr1"/>
+	<query id="coveco" expression="+cos1 +ven01 +com2" />
+	
+	<query id="covede" expression="+cos1 +ven01 +(dev1 || reb1)" precal="ISing({var})"/>
+	
+	<query id="coveinin" expression="+cos1 +ven01 +inv01 +ini1" />
+	<query id="coveinfi" expression="+cos1 +ven01 +inv01 +fin1" />
+	<query id="cose" expression="+cos1 +ser1" />
+	<query id="gaco" expression="+gas1 +(con3 || poh1 || pafo || sso1)" />
+	<query id="gade" expression="+gas1 +(dep1 || amo01)" />
+	<query id="gain" expression="+gas1 +int1" />
+	<query id="gasu" expression="+gas1 +(sue1 || vac1 || uti1 || com1)" />
+	<query id="gaprso" expression="+gas1 +(pre1 || ant01 || soc1)" />
+	<query id="inar" expression="+ing1 +(arr01 alq01)" />
+	<query id="inint" expression="+ing1 +int1" />
+	<query id="inveincr" expression="+ing1 +ven01 +inm1 +cre1" />
+	<query id="inve" expression="+ing1 +ven01 -inm1 -cre1 -dev1" />
+	<query id="invede" expression="+ing1 +ven01 +(dev1 || reb1)" />
+	<query id="ret_1b" expression="+cpp1 +sue1 " />
+	<query id="ret_1c" expression="+cpp1 +hip_rel" />
+	<query id="ret_2a" expression="+cpp1 +ven01 +inm1 +cob1on" />
+	<query id="ret_92" expression="+cpp1 +pre2 +(lot1 hip1)" />
+	<query id="ret_10" expression="+cpp1 +con2" />
+	<query id="ret_12" expression="+cpp1 +alq01" />
+	<query id="ret_13" expression="+cpp1 +arr01" />
+	<query id="ret_14a" expression="((+cue1 +pag1) || deu1) +(t_c con4)" />
+
+	<!-- estar atento que para cada atributo meaning, no exista una
+		palabra que se encuentre en id porque causa doble reemplazo 
+	-->
+	<word id="act01" meaning="activ*" />
+	<word id="adm01" meaning="(administra* direcci* gerencia gesti*)" />
+	<word id="amo01" meaning="(amortiz* abon*)" />
+	<word id="ant01" meaning="antig?ed*" />
+	<word id="arr01" meaning="(arrendamient* renta* subarriend*)" />
+	<word id="alq01" meaning="alquil*" />
+	<word id="bie01" meaning="(bien product* mercanc*)" />
+	<word id="bru01" meaning="(brut* net*)" />
+	<word id="cue1" meaning="cuenta* efecto*" />
+	<word id="cob1" meaning="(cobr* recog* recaud* recolect* percib* deveng*)" />
+	<word id="com1" meaning="comisi* bono bonificaci*" />
+	<word id="com2" meaning="(compr* adquiri* obtene* consegu* capt*)" />
+	<word id="con1" meaning="contad*" />
+	<word id="con2" meaning="(contrat* subcontrat* sub-contrat*)" />
+	<word id="con3" meaning="(contribuc* aportac* colaborac* cooperac* beneficencia ayuda* auxilio* asistencia* favor* apoyo*)" />
+	<word id="con4" meaning="consum*" />
+	<word id="cos1" meaning="(cost* importe* val?a* coste*)" />
+	<word id="cpp1" meaning="((+cuenta* +pagar*) || (+deuda* +comercial*))" />
+	<word id="cre1" meaning="(cr?dit* pr?stam* adelant* anticip* abon* fianza* hipoteca*)" />
+	<word id="dep1" meaning="(depreciaci* disminuci* baja* devaluaci* mengua* desvalorizaci* dem?rito*)" /> 
+	<word id="dev1" meaning="(devoluci* retorn* restituci* reintegr* reembols* compensaci* recuperaci* reposici* disminuci* reducci*)" />
+	<word id="dir1" meaning="(directiv* dirigente* regente* rector*)" />
+	<word id="exc1" meaning="(excedente* exceso* sobra*)" />
+	<word id="exp1" meaning="(exportaci* envi* remesa*)" />
+	<word id="fin1" meaning="(final* termin* terminaci* limite extremo*)" />
+	<word id="gas1" meaning="gast*" />
+	<word id="hip_rel" meaning="(jinet* veterinari* entrenado* preparado*)" />
+	<word id="hip1" meaning="hipodromo" />
+	<word id="ing1" meaning="ingreso*" />
+	<word id="ini1" meaning="(inicial* originario* inaugural* preliminar* anterior* primitivo* original*)" />
+	<word id="inm1" meaning="(inmueble* casa* vivienda* edificio* construcci* finca* propiedad* hacienda* predio* tierra*)" />
+	<word id="int1" meaning="intere*" />
+	<word id="inv01" meaning="(inventario* lista* catalogo* repertorio* enumeraci* compilaci*)" />
+	<word id="mat1" meaning="(materia* componente* ingrediente* parte* pieza*)" />
+	<word id="min1" meaning="(mina* fil?n* yacimiento* vena* veta* cantera*)" />
+	<word id="mul1" meaning="(multa* sanci* recarg*)" />
+	<word id="lot1" meaning="(loter* rifa* t?mbola* sorteo* juego*)" />
+	<word id="obr1" meaning="(obra* labor* faena* trabajo* tarea* operaci* cometido*)" />
+	<word id="pafo" meaning="+(paro forzoso)" />
+	<word id="pag1" meaning="(pagar consignar retribuir compensar cancelar liquidar saldar finiquitar)" />
+	<word id="pec1" meaning="(pecuaria ganadera porcina vacuna equina bovina)" />
+	<word id="pec2" meaning="(pecuniaria monetaria fiduciaria económica numeraria)" />
+	<word id="poh1" meaning="+(pol?tica habitacional) || +(ahorr* habitacional)" />
+	<word id="pre1" meaning="(prestaci* obligaci* canon* tributo* beneficio* renta* servicio*)" />
+	<word id="pre2" meaning="premio*" />
+	<word id="pri1" meaning="prima*" />
+	<word id="pro1" meaning="(proceso* transcurso paso* fase* desarrollo* progreso* transformaci* evoluci*)" />
+	<word id="pro2" meaning="(producto* articulo* mercanc* objeto* pieza*)" />
+	<word id="reb1" meaning="(rebaja* disminu* desinfla* descuento* reducci* disminuci*)" />
+	<word id="reg1" meaning="(regal?a* privilegio* prerrogativa* preeminencia* concesi*)" />
+	<word id="res1" meaning="(reserva* ahorro* resguardo* provisi* apartado*)" />
+	<word id="ser1" meaning="(servicio* oficio* aplicaci* trabajo* encargo* misi*)" />
+	<word id="sue1" meaning="(sueldo* salario* honorario*)" />
+	<word id="soc1" meaning="(social* sindical* nacional* laboral*)" />
+	<word id="sso1" meaning="(SSO S.S.O +(seguro social))" />
+	<word id="t_c" meaning="(+tarjeta +cr?dito)" />
+	<word id="ven01" meaning="(venta* transacci* trato* necociaci*)" />
+	<word id="vac1" meaning="(vacaci* fiesta* recreo* asueto* festividad* diversi* veraneo* descanso* reposo* inactividad*)" />
+	<word id="via1" meaning="vi?tico*" />
+	<word id="uti1" meaning="(utilidad* provecho* beneficio* ventaja* fruto*)" />
+	
+</kb>

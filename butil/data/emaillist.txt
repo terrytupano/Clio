@@ -1,0 +1,574 @@
+;f; **************** Amazonas       ************************ ;clio@clio-ve.com
+;f;Lic. Alcira López ;alciralopez@hotmail.com 
+;m;Lic. José L. Tovar ;maripilijerez@hotmail.com 
+;f; **************** Anzoategui     ************************ ;clio@clio-ve.com
+;m;Lic. Alessandro J. Tuttocuore M. ;atottocuore2@hotmail.com 
+;m;Lic. Américo A. España R. ;aaer12@cantv.net 
+;m;Lic. Andres J. Kossuth J. ;akossuth@telcel.net.ve  
+;m;Lic. Aximar Collantes P. ;axcollantes@cantv.net
+;m;Lic. Carlos E. Padilla L. ;carlosepl@yahoo.com 
+;f;Lic. Carmen M. Millan R. ;carmenmariamr@cantv.net 
+;f;Lic. Enma C. Uranga G. ;sovies@hotmail.com 
+;m;Lic. Franklin C. Ron L. ;ronf@cantv.net 
+;f;Lic. Ingrid M. Naveda J. ;ingridnaveda@cantv.net 
+;f;Lic. Israel D. González C. ;israelgc@cantv.net 
+;m;Lic. Jesús A. González G. ;gonsiuli@cantv.net  
+;m;Lic. Jimmy J. Ruiz G. ;ruizmillan@iamnet.com 
+;m;Lic. Joel D. Méndez N. ;joelmendez7@hotmail.com 
+;m;Lic. Jorge Sánchez R. ;aasn@cantv.net 
+;m;Lic. José F. Sosa S. ;jfelixsosa@cantv.net 
+;m;Lic. José L. Guzmán ;jguzm4@cantv.com.ve 
+;m;Lic. José L. Marcano G. ;marcano_jos@hotmail.com  
+;m;Lic. José M. Bravo C. ;manulu50@hotmail.com 
+;f;Lic. Karelys Alvarez ;alfaro_le@yahoo.com 
+;m;Lic. Luis E. Vargas R. ;luis-vargas1@cantv.net  
+;m;Lic. Luis R. Aguilar ;accaguilar@hotmail.com 
+;m;Lic. Luis V. Polanco R. ;luisp@gyrodata.com 
+;f;Lic. Nobelma C. Villegas V. ;nvillegas@cantv.net 
+;f;Lic. Noremys A. Cordova E. ;ncordova@hotmail.com 
+;f;Lic. Omaira M. Barca P. ;omaira_margaritab@hotmail.com  
+;m;Lic. Rafael L. Moreyr ;rmorey@cantv.net  
+;m;Lic. Ramón Cordova ;cordoves0448@cantv.net 
+;m;Lic. Rujano Martínez ;irujano@cantv.net 
+;f;Lic. Tania C. De Sousa M. ;losproceres8@hotmail.com 
+;m;Lic. Vladimir A. Martínez S. ;vlarafael@hotmail.com 
+;f; **************** Apure          ************************ ;clio@clio-ve.com
+;m;Lic. Edirso A. Fleitas A. ;edirsofleitas@cantv.net  
+;f;Lic. Nuris Y. Rubio C. ;nurisrubio@hotmail.com 
+;m;Lic. Ricardo J. Chaparro T. ;ricardojchaparrot@hotmail.com 
+;f; **************** Aragua          ************************ ;clio@clio-ve.com
+;f;Lic. Adela C. Navarrete ;aman2@telcel.net.ve 
+;m;Lic. Alberto J. Guerra M. ;albertguerra@cantv.net 
+;m;Lic. Alvis de J. Manzanilla B. ;amanzanilla63@yahoo.com 
+;f;Lic. Amalia R. Sánchez M. ;rsaudit@cantv.net 
+;m;Lic. Ángel J. Uricare N. ;auricare@yahoo.com 
+;m;Lic. Antonio Laricchina C. ;faroca@telecel.net.ve 
+;f;Lic. Beatríz M. Moreno M. ;bmoreno45@latinmail.com 
+;f;Lic. Belkys Y. Gutiérrez G. ;licgbb@telcel.net.ve 
+;f;Lic. Carmen G. Santos R. ;sgraciela@cantv.net 
+;f;Lic. Carmen Y. Rodríguez R. ;carmenyaritza@yahoo.com 
+;f;Lic. Caterina Mammoliti M. ;catymammoliti@hotmail.com 
+;f;Lic. Charlene del C. Riera G. ;rierahnas@cantv.net 
+;m;Lic. Croquer S. Miguel ;migcro@hotmail.com 
+;f;Lic. Dalia M. Sánchez A. ;asococonsultores@hotmail.com 
+;f;Lic. Dorys M. Mujica Z. ;dorysma@latinmail.com 
+;m;Lic. Eduardo A. López G. ;eduardogaranton@cantv.net 
+;m;Lic. Edwar G. Rojas P. ;edwar_rojas@hotmail.com 
+;f;Lic. Elsa J. Mendoza de M. ;elsademaury@icnet.com.ve 
+;f;Lic. Elvia Y. Arteaga V. ;elvia_ynma@hotmail.com 
+;f;Lic. Eudes J. Pereira M. ;eudes69@cantv.net 
+;m;Lic. Eyra E. Fuentes M. ;eyrafuentes@starmedia.com 
+;f;Lic. Fatima M. De Nobrtega ;fatimadeno@cantv.net 
+;m;Lic. Francisco J. Flores S. ;fcojavcont@hotmail.com 
+;f;Lic. Geny E. Tanzella L. ;genyest@cantv.net 
+;f;Lic. Germinia T. Valera ;germiniavalera@latinmail.com 
+;m;Lic. Gustavo A. Salas B. ;gustavo_contadorve@yahoo.com 
+;m;Lic. Gustavo A. Segnini G. ;gustavosegnini@icnet.com.ve 
+;m;Lic. Heberto R. Mendoza M. ;hebertomendoza@yahoo.com 
+;m;Lic. Héctor E. Dmilita R. ;hectordmilita@hotmial.com 
+;m;Lic. Héctor J. Martínez S. ;hectormartinez23@hotmail.com 
+;m;Lic. Henry E. Medina A. ;mhenry@intercable.com.ve 
+;f;Lic. Hilda M. Muguerza B. ;hilda_marielenam@hotmail.com 
+;m;Lic. Jairo E. Romero P. ;rsaudit@cantv.net 
+;f;Lic. Jackeline Z. Rosario ;quinterlej1@cantv.net 
+;f;Lic. Janett M. Castillo S. ;janettmarina@cantv.net 
+;m;Lic. Javier E. Kleber G. ;javierkleber@latinmail.com 
+;m;Lic. Jesús G. González G. ;rodima1@cantv.net 
+;f;Lic. Joiseth E. Mieris S. ;elvimarm@hotmail.com 
+;m;Lic. José H. Ramírez Q. ;ramirezryasociados@hotmail.com 
+;m;Lic. José M. Palma V. ;jmpalma@cantv.net 
+;m;Lic. Juan C. Macías H. ;maciascontat@latinmail.com 
+;f;Lic. Lemil C. Brito M. ;licmax@hotmail.com 
+;f;Lic. Magdalena Audisio ;jemada71@hotmail.com 
+;f;Lic. Maglys A. Delgado F. ;maglys_delfin@hotmail.com 
+;m;Lic. Manuel E. Tablante ;surieavi@telcel.net.ve 
+;m;Lic. Manuel O. Paolini G. ;licmanuelpaolini@hotmail.com 
+;m;Lic. Marco A. Castillo F. ;marcocast126@hotmail.com 
+;f;Lic. María L. De Sousa R. ;mlsousa@hotmail.com 
+;f;Lic. María R. Trinidade G. ;ritatrinidade@hotmail.com 
+;m;Lic. Mario A. Jiménez M. ;marioarturo_ve@yahoo.com 
+;m;Lic. Mario M. J. Rodríguez D. ;mariomjrd@cantv.net 
+;m;Lic. Maxwell J. Martínez M. ;licmaxwell@telcel.net.ve 
+;m;Lic. Miguel A. Mayorca F. ;mmayorca0103@telcel.net.ve 
+;m;Lic. Moises E. Espinoza T. ;meetwar@latinmail.com 
+;f;Lic. Monica I. Bolívar V. ;bolvid@cantv.net 
+;f;Lic. Nairobi Ochoa C. ;nairobiochoa@hotmail.com 
+;m;Lic. Nelson A. Espinel ;nelsoname@cantv.net 
+;m;Lic. Nelson O. Aguirre S. ;nelson.aguirre@conduven.com.ve 
+;m;Lic. Nicolás de J. Ramos P. ;ramoscpc@cantv.net 
+;f;Lic. Sara M. Celis M. ;sara_celis@hotmail.com 
+;f;Lic. Sisbell H. Hernández M. ;sibellcontador@latinmail.com 
+;f;Lic. Stella Pedotta A. ;ruquiruqui@uole.com 
+;m;Lic. Roger A. Romero O. ;rogeromo@latinmail.com 
+;m;Lic. Rommell Ramírez R ;rommellr@hotmail.com 
+;f;Lic. Rosmary Carrero C. ;rosmary2001@mipunto.com 
+;m;Lic. Otto J. Medina G. ;loboven1@hotmail.com 
+;f;Lic. Ximena Bravo ;paxibravo@net-uno.net 
+;f;Lic. Yolanda M. Jiménez R. ;yolandamj@cantv.net 
+;f;Lic. Yelitza J. Verde Mujica ;yelitzaverde@yahoo.com 
+;f;Lic. Yleni de Gouveia S. ;yleni26@hotmail.com 
+;f;Lic. Yvelisse García ;yvevi@cantv.net 
+;f;Lic. Zoraida M. Jaime P. ;zoraidajp@hispavista.com 
+;f; **************** Barinas          ************************ ;clio@clio-ve.com
+;f;Lic. Alida González P. ;agonzal@reacciun.ve
+;f;Lic. Aurelia Silveri ;aureliasilveri@yahoo.com
+;m;Lic. Bernardo Azocar ;berazocar@cantv.net
+;f;Lic. Diosa E. Moreno N. ;diosa121@latinmail.com
+;m;Lic. Fabio Torres ;contafabio@mixmail.com 
+;m;Lic. Freddy E. Montilla ;danieeuc@cantv.net
+;m;Lic. Jairo A. Sánchez M. ;jairosanchez@cantv.net
+;f;Lic. Luz O. Cuéllar B. ;ocuellar@brn.reacciun.ve
+;m;Lic. Paucides E. Pérez P. ;paucidesperez@hotmail.com
+;f;Lic. Rita E. Porras C. ;ritaporras@hotmail.com 
+;m;Lic. Roberto R. Farfan L. ;farfanroberto@latinmail.com
+;f;Lic. Rocio del V. Barrueta P. ;eleazarmf@hotmail.com
+;f; **************** Bolivar          ************************ ;clio@clio-ve.com
+;f;Lic. Ana L. Rodríguez L. ;aldila01@cantv.net 
+;m;Lic. Abel G. Caballero A. ;caballero_abel@hotmail.com 
+;m;Lic. Agustin R. Quijada L. ;aquijada@pzo.cvg.com 
+;f;Lic. Amneris V. Urbáez Z. ;amnerisu@uole.com.ve 
+;m;Lic. Andrés E. Biviano ;ebiviano@cantv.net 
+;m;Lic. Ángel E. García S. ;sarrameda@yahoo.com 
+;m;Lic. Ángel W. Torres A. ;angtorres@edelca.com.ve 
+;m;Lic. Antonio C. Previte I. ;previte@hotmail.com 
+;m;Lic. Antonio J. Vera F. ;antoniovera@cantv.net 
+;f;Lic. Beatriz Piertrantoni ;beatpietr@mipunto.com 
+;f;Lic. Betzabeth C. Muñoz B. ;betzabethcmb@cantv.net 
+;f;Lic. Blanca R. Giraldez G. ;giraldezbr@cantv.net 
+;f;Lic. Carla J. López P. ;carlalopezp@hotmail.com 
+;f;Lic. Carmen C. Sánchez R. ;ccpeb@telcel.net.ve 
+;m;Lic. Cesar A. Caraballo M. ;caraballomoya@cantv.net 
+;f;Lic. Cruz R. González ;cruz_gt@hotmail.com 
+;m;Lic. Daniel Duran ;jdduran@telcel.net.ve 
+;f;Lic. Elizabeth Brito G. ;e8964@hotmail.com 
+;m;Lic. Euro J. Stefanelli G. ;euro1118@cantv.net 
+;m;Lic. Fulvio A. Godoy B. ;fulviogodoy@cantv.net 
+;m;Lic. Gilberto A. Moreno ;licgilbertomoreno@hotmail.com 
+;f;Lic. Glenda I. Lira C. ;m0829df@telcel.net.ve 
+;f;Lic. Henny M. Todd C. ;henny.todd@ve.arthurandersen.com 
+;f;Lic. Irma Villaroel C. ;titorrera@cantv.net 
+;f;Lic. Isabel del V. Campos de R. ;icampos@telcel.net.ve 
+;f;Lic. Isis N. Martínez M. ;isismartinez@cantv.net 
+;m;Lic. Ivan Amador ;ivan.amador@ve.andersen.com 
+;m;Lic. Jesús A. Gómez G. ;jesusalbertogomez@hotmail.com 
+;m;Lic. Jesús D. Durán B. ;jdduran@telcel.net.ve 
+;m;Lic. Jesús E. Jiménez C. ;jimenezj2@cantv.net 
+;m;Lic. Jesús M. Medina C. ;jesus-medina@cantv.net 
+;m;Lic. Jon Uribe A. ;jonuribe@cantv.net 
+;m;Lic. José A. Herrera ;jahcontador@yahoo.com 
+;m;Lic. José A. Ramírez N. ;jramirez_noa@hotmail.com 
+;m;Lic. José M. Barrio F. ;jmbyas@cantv.net 
+;m;Lic. Jorge L. Mujica A. ;jorgemujica@cantv.net 
+;f;Lic. Liliam j. Méndez B. ;liliammendez@mipunto.com 
+;m;Lic. Mariela J. Ramírez M. ;jarmar1@cantv.net 
+;f;Lic. Marvillanet Mata R. ;matarivaslondon@telcel.net.ve 
+;f;Lic. Mayulis M. González M. ;mayulismgm@hotmail.com 
+;m;Lic. Merlyn E. Henríquez R. ;sichubita@yahoo.com 
+;f;Lic. Mirna E. Torres de G. ;tormca@telcel.net.ve 
+;m;Lic. Norman A. Valdez S. ;nvaldez@cantv.net 
+;m;Lic. Odin A. Granados F. ;oding@cantv.net 
+;m;Lic. Pedro E. Cambridge D. ;cambridge_p@hotmail.com 
+;m;Lic. Pedro J. Andrade M. ;riperpirr@hotmail.com 
+;m;Lic. Pedro L. Fuentes T. ;pedro.fuentes@cvg.com 
+;m;Lic. Ramón E. Dasilva F. ;dasilvaramon@cantv.net 
+;f;Lic. Rosario Valiente O. ;valmatt@telcel.net.ve 
+;f;Lic. Rosvict Dellán ;rosvictdellan@mipunto.com 
+;m;Lic. Rubén R. Ojeda G. ;ojsdar@cantv.net 
+;m;Lic. Simón H. Escalante M. ;ortizr@cantv.net 
+;f;Lic. Tomasa del C. Figueroa M. ;tomasa@telcel.net.ve 
+;f;Lic. Thais Fajardo C. ;thainel_l@hotmail.com 
+;f;Lic. Yamilet J. Rodríguez M. ;maderasisacas@cantv.net 
+;f;Lic. Yelitza C. Guevara de R. ;yelitza6@cantv.net 
+;f;Lic. Yumaly M. González M. ;yumalygonzalez@msn.com 
+;f; **************** Carabobo          ************************ ;clio@clio-ve.com
+;f; **************** Cojedes           ************************ ;clio@clio-ve.com
+;f;Lic. Amanda Y. Torrealba J. ;amandatorrealba@cantv.net 
+;m;Lic. Carlos R. Rivas G. ;kenichi@cantv.net
+;f;Lic. Criseida J. Hernández de S. ;crisher@cantv.net 
+;m;Lic. Teodoro J. Mercado ;contradanca@cantv.net
+;f; **************** delta amacuro          ************************ ;clio@clio-ve.com
+;m;Lic. Alexis J. Moreno ;almo33@cantv.net  
+;m;Lic. Antonio J. Mata R. ;antonio137@hotmail.com 
+;f;Lic. Dellis D. Cuervas P ;dellisdc@cantv.net 
+;m;Lic. Flavio R. Ciancone ;ciancone@hotmail.com 
+;m;Lic. Isidro J. Gerdez N. ;isidrojgn@cantv.net 
+;f;Lic. Marbelys del V. Mújica V. ;marbelysmujica@cantv.net
+;f;Lic. Maria E. Marrón de V. ;maema2001@latinmail.com 
+;m;Lic. Rosendo R. Mata ;chendito@cantv.net 
+;f;Lic. Yulitza C. Garmendia S. ;yuligarmendia@hotmail.com 
+;f; **************** distrito capital       ************************ ;clio@clio-ve.com
+;f; **************** falcon               ************************ ;clio@clio-ve.com
+;f;Lic. Amely E. Guanipa G. ;amelyguanipa@cantv.net
+;m;Lic. Aristoteles J. Millan S. ;ariane@telcel.net.ve 
+;m;Lic. Carlos J. Anderson M. ;andersoncarlos@cantv.net
+;f;Lic. Daisi Y. Moreno R. ;licdaisimoreno@yahoo.com
+;f;Lic. Delia Y. Rivas C. ;rivascdeliai@hotmail.com 
+;f;Lic. Digna Molina de A. ;dignamolina@hotmail.com
+;f;Lic. Doralys J. Rosell ;roselld@hotmail.com
+;m;Lic. Edwing R. Rodrìguez ;edwing39@cantv.net
+;m;Lic. Eligio S. Gutiérrez C. ;eligiogutierrez@hotmail.com
+;f;Lic. Gladyelly del V. Chang L. ;gladyelly@yahoo.com
+;f;Lic. Glenda Blanchard ;nhlia@telcel.net.ve
+;m;Lic. Jairo R. Morles R. ;jairomorles@hotmail.com
+;m;Lic. José G. Puentes R ;licjosepuente@yahoo.com
+;m;Lic. Jorge L. Velasco N. ;jorgevelas@hotmail.com
+;m;Lic. Juan J. Talavera ;juancho2@cantv.net
+;m;Lic. Juan N. Amaya G. ;amayajj@pdvasa.com
+;m;Lic. Julio G. González S. ;gonzalez_julio@latinmail.com
+;f;Lic. Lerida E. Valles L. ;leridavalles@hotmail.com
+;f;Lic. Magda P. Alcalá P. ;pierineven@hotmail.com
+;f;Lic. María Rivas ;mariaauxi@yahoo.com
+;f;Lic. María R. Corredor ;maria.corredor@grupoede.com
+;f;Lic. Nubia A. Marchena B. ;nubiam@latinmail.com
+;m;Lic. Ramón S. Ruiz M. ;ramon_ruiz75@hotmail.com
+;m;Lic. William Escobar ;escobarw@cantv.net
+;m;Lic. Willians J. Goitia R. ;wgoitia@unefm.edu.ve
+;f; **************** guarico               ************************ ;clio@clio-ve.com
+;m;Lic. Ana J. Rodríguez R. ;andejerro@hotmail.com 
+;f;Lic. Elys O. Santaella H. ;santashe@hotmail.com  
+;m;Lic. Franklin J. Padrón ;franklinpadron@hotmail.com 
+;m;Lic. Jhonny R. Gota M. ;jgota@cantv.net  
+;m;Lic. Rafael V. Mota H. ;rafaelvmota@hotmail.com 
+;m;Lic. Tony A. Pérez C. ;tapc-cpc@cantv.net  
+;f; **************** Lara               ************************ ;clio@clio-ve.com
+;m;Lic. Alejandro A. Mendoza ;alejandroasf@hotmail.com 
+;m;Lic. Alexander A. Zerpa L. ;alexzerpa@cantv.net 
+;m;Lic. Alexis de J. Meza C. ;alexmeza70@hotmail.com 
+;m;Lic. Alfredo J. Perez P. ;alfred_javier_perez@cantv.net 
+;m;Lic. Alfredo P. Pérez L. ;alfredo_perez@cantv.net 
+;m;Lic. Angel A. Díaz G. ;a0307g@hotmail.com 
+;m;Lic. Anibal R. Barraez G. ;aniblili@cantv.net 
+;m;Lic. Antonio J. Asuaje V. ;asuajevalenzuela@latinmail.com 
+;m;Lic. Audelino Da Silva ;audelino@cantv.net 
+;m;Lic. Augusto R. Montilla G. ;augmont@cantv.net 
+;f;Lic. Beatriz H. Restrepo de S. ;contraloriainterna@hodrolara.com.ve 
+;m;Lic. Carlos E. Mosquera V. ;cmosquerav@hotmail.com 
+;m;Lic. Carlos J. Trujillo R. ;carlostru@hotmail.com 
+;f;Lic. Carmen Rodríguez ;cprodrigueza@latinmail.com 
+;f;Lic. Carmen M. Rivero L. ;marelnylr@cantv.net 
+;f;Lic. Carmen O. Ramos de A. ;corito@hotmail.com 
+;f;Lic. Candy S. Barráez de P. ;candybarraez@hotmail.com 
+;f;Lic. Carolina Graterol B. ;carolinagraterol@latinmail.com 
+;m;Lic. César A. Bullones H. ;cbullones@hotmail.com 
+;m;Lic. César A. Méndez B. ;cesarmen20@hotmail.com 
+;f;Lic. Clondy Garcia ;gclondy@intercable.com.ve 
+;f;Lic. Crisbell T. Salas V. ;tibarob@cantv.net 
+;m;Lic. Daniel A. Goyo ;danielgoyo@hotmail.com 
+;f;Lic. Danny C. Ramos P. ;dannyramos@cantv.net 
+;f;Lic. Digna del C. Escalona D. ;inoave@yahoo.com 
+;f;Lic. Dilcia M. García A. ;mongar@cantv.net 
+;m;Lic. Dimas C. Morón T. ;moroncontadores@yahoo.es 
+;m;Lic. Douglas R. Cordero C. ;douglarcorderoc@yahoo.com 
+;m;Lic. Edgar García G. ;edgarg05@hotmail.com 
+;m;Lic. Edward E. Gómez S. ;edwardgomez40@hotmail.com 
+;m;Lic. Eladio G. Jiménez ;eladiojimenez@yahoo.com 
+;m;Lic. Eliannis A. Sarabia R. ;eliannis76@hotmail.com 
+;f;Lic. Elizabeth Noguera ;eliza3016@latinmail.com 
+;f;Lic. Elizabeth Hewitson C. ;lizacastellanos@latimail.com 
+;f;Lic. Ennyd M. Silva V. ;ennyd9@hotmail.com 
+;f;Lic. Ericka Hoyos M. ;ehmadrid@cantv.net 
+;f;Lic. Erika Y. Flores H. ;yoselin@cantv.net 
+;f;Lic. Eyanir del C. Torres L. ;eyatorreslo0809@cantv.net 
+;f;Lic. Fanny A. Pérez R. ;faperez@cantv.net 
+;m;Lic. Félix R. Aguirre L. ;fral38@hotlmail.com 
+;m;Lic. Gerardo A. Márquez R. ;gerarquez@cantv.net 
+;m;Lic. Henry G. Santeliz B. ;henrygerardos@latinmail.com 
+;f;Lic. Henryumar B. González B. ;henryumar@cantv.net 
+;m;Lic. Humberto S. Rodríguez R. ;humbertor@cantv.net 
+;m;Lic. Iván A. Freites R. ;ifreitez@icnet.com.ve 
+;f;Lic. Janeth M. Martínez G. ;janethm@icenet.com.ve 
+;m;Lic. Jesús E. Cruz ;jesuscruz@cantv.net 
+;m;Lic. Jim A. Rincones C. ;jimrincones@yahoo.com 
+;f;Lic. Jenny E. Contreras R. ;jennycontreras@yahoo.com 
+;f;Lic. Jenny C. Rodríguez  S. ;lic_jenny@latinmail.com 
+;f;Lic. Jenny R. Castillo E. ;castillojenny@latinmail.com 
+;m;Lic. Jonny J. Duque P. ;el_duque@hotmail.com 
+;m;Lic. John G. Tellechea P. ;tellecheajohn@hotmail.com 
+;m;Lic. Jorge L. Lucena E. ;jile_37170@hotmail.com 
+;m;Lic. Jorge L. Rosales V. ;colinascont@cantv.net 
+;m;Lic. José Corrales ;corralesjose@cantv.net 
+;m;Lic. José A. Sivira ;joseantoniosivira@latinmail.com 
+;m;Lic. José A. Mujica P. ;josecanima83@hotmail.com 
+;m;Lic. José A. Noguera Y. ;cheonoguera@yahoo.com 
+;m;Lic. José E. Corrales V. ;corralesjose@cantv.net 
+;m;Lic. José J. Martínez C. ;martinezcjj@cantv.net 
+;m;Lic. José L. Guedez P. ;licjlgp@hotmail.com 
+;m;Lic. José L. Ramírez B. ;jlramirezb@cantv.net 
+;m;Lic. José R. Barradas G. ;josebarradas71@hotmail.com 
+;m;Lic. Julio C. Mujica O. ;jcmujica1@hotmail.com 
+;f;Lic. Lilian J. Pérez O. ;lilian.perez@quibarca.com 
+;f;Lic. Lili S. Vargas ;lilianvargdz@cantv.net 
+;f;Lic. Lisbeth C. Milanes B. ;lisbecaro@yahoo.com 
+;m;Lic. Luis Sánchez ;luisa2000@uole.com.ve 
+;m;Lic. Luis S. Guerra P. ;luissantiagoguerra@hotmail.com 
+;f;Lic. Luz M. Mora Medina ;moralesreyes@cantv.net 
+;m;Lic. Marco A. Villanueva ;marcovilla@cantv.net 
+;f;Lic. María A. Bustamante V. ;tatumcita@mipunto.com 
+;f;Lic. María A. Yznaga D. ;marialeyz@latinmail.com 
+;f;Lic. María O. Tomada M. ;lindie@cantv.net 
+;f;Lic. Marilu Navarro de P. ;wilmer@cantv.net 
+;f;Lic. Marelys J. García A. ;mongar@cantv.net 
+;f;Lic. Marlene C. Valera ;marlenevalera@hotmail.com 
+;m;Lic. Marlon R. Navas F. ;marlonavasf@hotmail.com 
+;m;Lic. Maximiliao Leone D. ;0145098368@mipunto.com 
+;m;Lic. Miguel J. Ramones ;nutriven@telcel.net.ve 
+;m;Lic. Montserrat G. Rado ;montse_gr@hotmail.com 
+;m;Lic. Neumann L. Yanez Y. ;neumann32@hotmail.com 
+;m;Lic. Obdulio J. Díaz C. ;obduliodiaz@trompo.com 
+;m;Lic. Omar W. Marín A. ;owma@hotmail.com 
+;m;Lic. Oswaldo Rodríguez B. ;poswaldorodriguezb@cantv.net 
+;m;Lic. Pedro A. Hernández T. ;pernan@starmedia.com 
+;m;Lic. Pedro A. Salas D. ;pedro.salas@grupounivensa.com 
+;f;Lic. Penélope Amaya ;penelope_amaya@terra.com.ve 
+;m;Lic. Rafael Y. Carvajal O. ;rafaelcc@cantv.net 
+;f;Lic. Ragmasel C. Giménez M. ;ragmasel@hotmail.com 
+;m;Lic. Reinaldo Ledezma ;rledez@yahoo.com 
+;m;Lic. Rodolfo Zurita ;rudolff@email.com 
+;f;Lic. Rosalba I. Fernández R. ;rosifer76@cantv.net 
+;m;Lic. Saulo A. Vásquez G. ;saulovag@hotmail.com 
+;f;Lic. Thais Arroyo ;thais_arroyo@hotmail.com 
+;m;Lic. Tulio J. Rodríguez ;tuliorodriguez@cantv.net 
+;f;Lic. Vanessa Velásquez S. ;v_santamaria@hotmail.com 
+;m;Lic. Vicente C. Ramos P ;carape1@cantv.net 
+;m;Lic. Víctor H. Martínez E. ;vhmartinez77@hotmail.com 
+;m;Lic. Vidal J. Castro U. ;castrouvidalj@latinmail.com 
+;m;Lic. Wilfredo Briceño F. ;wbric2000@yahoo.com 
+;m;Lic. Wilkis A. Riera P. ;wilkisrp@telcel.net.ve 
+;m;Lic. Yvan Soto ;ysodata@cantv.net 
+;f; **************** Merida               ************************ ;clio@clio-ve.com
+;m;Lic. Alirio Peña M. ;ulaliriopml@hotmail.com  
+;m;Lic. Carlos J. Vollaroel P. ;carlosviprie@hotmail.com  
+;f;Lic. Carolina del V. Chacón P. ;cvchaconve@yahoo.com 
+;m;Lic. Edmundo Cordero ;edmundocorderous@yahoo.com 
+;f;Lic. Eidimary Dugarte A. ;evv@latinmail.com  
+;f;Lic. Elizabeth Lobo D. ;elizalodu@hotmail.com  
+;m;Lic. Epitacio Vergara V. ;epitaciov@hotmail.com 
+;f;Lic. Franybel Calderon Z. ;franybelcalderon@latinmail.com  
+;m;Lic. José R. Pérez ;jrperez@icnet.com.ve 
+;m;Lic. José N. Maicán A. ;josenma@hotmail.com  
+;m;Lic. Juvencio R. Duque P. ;mcduke@cantv.net 
+;f;Lic. Laura Lucianni T ;rosat@faces.ula.ve 
+;f;Lic. Ligia C. Vargas ;ligiavargas@hotmail.com 
+;f;Lic. Lismaty C. Terán M. ;mattyteran@hotmail.com 
+;f;Lic. Lissette Pérez M. ;lissette_pm_2000@yahoo.com 
+;f;Lic. María A. Pineda B. ;andreina31@mipunto.com  
+;f;Lic. Maritza Lobo G. ;maritzalobo@cantv.net  
+;f;Lic. Mary E. Fernández V. ;maryeli01@hotmail.com  
+;m;Lic. Nerio A. Castro C. ;ncastro@telcel.net.ve
+;m;Lic. Nestor H. Ruíz G. ;nruiz331@yahoo.com 
+;f;Lic. Norka J. Viloria O. ;ggalarraga@cantv.net 
+;m;Lic. Pablo H. Chacón B. ;hoacio@hotmail.com  
+;f;Lic. Sonereysi Roa C. ;sony@cida.ve 
+;f;Lic. Yasmira Rojas ;yasmirarojas@starmedia.com 
+;f; **************** Miranda               ************************ ;clio@clio-ve.com
+;f; **************** Monagas               ************************ ;clio@clio-ve.com
+;m;Lic. Alberto Sánchez R. ;asanchez@ipm.upel.edu.ve
+;m;Lic. Aníbal J. Rondón ;anibal_rondon@hotmail.com 
+;m;Lic. Baudilio A. Navas F. ;banf6088@cantv.net 
+;m;Lic. Eliud D. Coronado V. ;celiud@cantv.net 
+;f;Lic. Gisela B. Da Silva de G. ;giscar@cantv.net  
+;m;Lic. Gregorio K. Campbell R. ; campbellg@pdvsa.com 
+;m;Lic. Honimer Cabeza V. ;honimercv@hotmail.com  
+;m;Lic. José G. Zapata H. ;jogazaher@hotmail.com 
+;m;Lic. José M. Millán V. ;jmmillan@cantv.net 
+;m;Lic. Jesús B. Davila C. ;jesusblad@cantv.net 
+;m;Lic. Jesús E. Rojas R. ;rojasjesuse@hotmail.com  
+;m;Lic. Luis A. González T. ;lgonzalez01@telcel.net.ve 
+;m;Lic. Luis J. Larez ;jllarez5@hotmail.com  
+;m;Lic. Luis S. Morales S. ;lmorales@rbfalcon.com 
+;m;Lic. Rubén O. Espinoza E. ;respinoza@monagas.udo.edu.ve  
+;f; **************** Nueva esparta               ************************ ;clio@clio-ve.com
+;f;Lic. Carmen Suarez H. ;carmensuarez1@starmedia.com
+;f;Lic. Carmenza P. Gimenez R. ;carmenzagimenez@hotmail.com
+;f;Lic. Damary R. García de F. ;damaryreyes@cantv.net
+;m;Lic. Enrique Salazar H. ;enriquesalazarh@hispavista.com
+;m;Lic. Gilberto González ;gigacon@unete.com.ve
+;m;Lic. Gustavo J. Aguilera G. ;noujad@enlared.net
+;m;Lic. Ismael A. Leblanc O. ;ismael_leblanc@latinmail.com
+;m;Lic. José G. Aguilera A. ;contador@enlared.net
+;m;Lic. José F. Rivas E. ;casparisla@cantv.net
+;m;Lic. Juan Vila G. ;vilaasociados@cantv.net
+;f;Lic. Marisela C. Bermúdez F. ;mariselabf@cantv.net
+;m;Lic. Oscar A. Lovera M. ;oscar_lovera@cantv.net
+;f;Lic. Tomasita Salazar de M. ;ivannys@cantv.net 
+;f;Lic. Yrma N. Silva P. ;neoleydis@hotmail.com 
+;f; **************** Portugesa               ************************ ;clio@clio-ve.com
+;m;Lic. Armando R. Gómez O. ;armandog4@hotmail.com 
+;m;Lic. Carlos E. Sánchez A. ;cesacp@hotmail.com 
+;f;Lic. Carmen D. Rengel de T. ;carmenrengel@hotmail.com 
+;f;Lic. Emilu V. Sánchez P. ;emilu_s@hotmail.com 
+;m;Lic. Fernando E. Álvarez P. ;afernando@cantv.net 
+;m;Lic. Francisco M. Gómez G. ;fmgomez@cantv.net 
+;m;Lic. Gerger A. Alzuru A. ;gergeralzuru@hatmail.com 
+;f;Lic. Gladys A. Parra ;p_gladys_aleida@hotmail.com 
+;m;Lic. Henry R. Castillo Y. ;hcasti@cantv.net 
+;m;Lic. Jesús J. Cariel G. ;jcariel777@yahoo.com 
+;m;Lic. Jesús M. Medina G. ;jmgualdron@hotmail.com 
+;m;Lic. Jesús R. Garban R. ;jesusrafaelgarban@latinmail.com 
+;f;Lic. Julieta M. Amaro A. ;julietaamaro@hotmail.com 
+;m;Lic. Julio J. Casamayor L. ;jcasamayor@cantv.net 
+;f;Lic. María Y. Valderrama R. ;yumira@terra.com 
+;f;Lic. Nancy M. Gómez L. ;namergo@cantv.net 
+;m;Lic. Raúl A. Soto M. ;rasotom@cantv.net 
+;f;Lic. Tanya P. Lara B. ;tanyalara@uole.com 
+;m;Lic. Trino M. Melean Y. ;tmelean@biv.com.ve 
+;f; **************** sucre               ************************ ;clio@clio-ve.com
+;m;Lic. Armando I. Nuñez ;irureta@raudo.edu.ve 
+;m;Lic. Jairo A. Latan L. ;jairinho@cantv.net 
+;m;Lic. Livian N. Márquez V. ;livian23@hotmail.com 
+;m;Lic. Luis L. Martínez V. ;martinezmv@cantv.net 
+;f;Lic. Marlen Noriega ;audi@telcel.net.ve 
+;m;Lic. Rafael A. Rodríguez R. ;rarr@telcel.net.ve
+;m;Lic. Saide Tarabay K. ;saidetarabay@cantv.net 
+;f; **************** Tachira               ************************ ;clio@clio-ve.com
+;m;Lic. Alejo Escalante T. ;aescalan@cantv.net 
+;f;Lic. Adriana Pacheco de S. ;adrianapv@cantv.net 
+;f;Lic. Ana L. Peña B. ;analisbeth.pena@correoweb.com 
+;f;Lic. Andreina B. de Cárdenas ;andreinabecerra@latinmail.com 
+;f;Lic. Aura M. Maldonado ;147073256@mipunto.com 
+;f;Lic. Benigna González ;kakeys@cantv.net 
+;m;Lic. Carlos V. Isturiz A. ;mtci56@cantv.net 
+;f;Lic. Carolina Nieves G ;nieves@truevision.net 
+;f;Lic. Carmen J. Escobar de C. ;cari955@telcel.net.ve 
+;f;Lic. Carmen L. Pico S. ;c_picco24@hotmail.com 
+;f;Lic. Carmen M. Villasmil de C. ;asesoriani@cantv.net 
+;f;Lic. Carmen Y. Romero R. ;cyrr66@hotmial.com 
+;m;Lic. Daniel A. Colmenares M. ;daniel_colmenares@hotmail.com 
+;f;Lic. Deysi P. Silva C. ;deisypsilva@hotmail.com 
+;f;Lic. Diana Carrio ;carrio_diana@hotmail.com 
+;f;Lic. Dorys J López D ;dojalodu@tutopia.com 
+;m;Lic. Edgar E. Bastidas C. ;ebdos@hotmail.com 
+;m;Lic. Eduardo Chaparro ;cari955@telcel.net.ve 
+;f;Lic. Fabiola Guarino O. ;fguarino@cantv.net 
+;m;Lic. Gerson D. Contreras R. ;gersondavidcontreras@cantv.net 
+;m;Lic. Hender G. Ochoa V. ;hender.ochoa@uniliver.com 
+;m;Lic. Idelmaro Pacheco R. ;ipr_lic@hotmail.com 
+;m;Lic. Jairo Méndez M. ;jairomen@mipunto.com 
+;m;Lic. Jesús E. Zambrano ;zambrano_j@cantv.net 
+;m;Lic. Jesús G. Villamizar ;jgvillamizar@mipunto.com 
+;m;Lic. Jhonnathan Ver E. ;jhonnathanve@hotmail.com 
+;m;Lic. José D. Borrero V. ;jdarioborrerov@hotmail.com 
+;m;Lic. Joel A. Pernia N. ;joelpernia@hotmail.com 
+;m;Lic. Juan C. Vásquez C. ;servicioscontables@yahoo.com 
+;m;Lic. Julio C. García V. ;juliogarciav@hotmail.com 
+;m;Lic. Julio L. Silvera C. ;leosilvera@yahoo.com.ar 
+;f;Lic. Keyla Y. Mora C. ;keylamora@hotmail.com 
+;f;Lic. Lianet de J. Ferrer H. ;lianetferer@cantv.net 
+;f;Lic. Liliana Jiménez de J. ;lilianajdj@hotlmail.com 
+;f;Lic. Luz M. Tolosa ;lumato@hotmail.com 
+;f;Lic. Magaly Rivera de P. ;osiprubio@latinmail.com 
+;m;Lic. Marcos E. Galvis ;marcosegalvis@latimail.com 
+;f;Lic. María A. Davila V. ;alejadavila@latinmail.com 
+;f;Lic. Mariela de la C. Contreras M. ;mmarrieta28@hotmail.com 
+;m;Lic. Miguel A. Hernández R. ;mahernanri@hotmail.com 
+;f;Lic. Mireya Castillo de M. ;mirecas@yahoo.com 
+;f;Lic. Morayma Peñaloza V. ;morayma@cantv.net 
+;f;Lic. Neida del C. Zambrano V. ;neidazv@hotmail.com 
+;f;Lic. Neyi L. Hulett R. ;lizzethulrttt@cantv.net 
+;m;Lic. Oscar E. Salcedo R. ;oscarsalro@yahoo.com 
+;m;Lic. Raúl Vásquez S. ;raulvasq@telcel.net.ve 
+;m;Lic. Reyes E. Morales P. ;moralesreyes@cantv.net 
+;m;Lic. Richard H. Quintero V. ;quintero_rochard@hotmail.com 
+;f;Lic. Rita E. Gandica A. ;ritagandica@cantv.net 
+;m;Lic. Ronald A. Zerpa M. ;ronaldabdelzerpa@hotmail.com 
+;m;Lic. Ronald E. Duarte C. ;ronalduarte@telcel.net.ve 
+;f;Lic. Sandy M. Galviz G. ;sandymanuel@cantv.net 
+;m;Lic. Socrates J. García R. ;socratesjgarcia@hotmail.com 
+;f;Lic. Sonia I. González R. ;ignamarg@hotmail.com 
+;f;Lic. Tatiana R. Faillace R. ;tatifa17@yahoo.com 
+;m;Lic. Wilson H. Espinel V. ;wilsonhev@hotmail.com 
+;m;Lic. Yoer A. Vargas P. ;yvconsultores@cantv.net 
+;f; **************** Trujillo               ************************ ;clio@clio-ve.com
+;f;Lic. Ana M. Romano de G. ;anaromano@telcel.net.ve 
+;m;Lic. Edgar J. Ruiz R. ;edjorura@cantv.net 
+;f;Lic. Flora Montilla A. ;kathiana90@hotmail.com 
+;m;Lic. Jhonnatan A. Avila T. ;javilat@cantv.net 
+;f;Lic. Ligia M. Rodríguez ;ligiam_rodriguez@hotmail.com
+;f;Lic. Mercedes B. Lainez M. ;mlainez38@hotmail.com  
+;f;Lic. Rosa A. Montilla de C. ;rosalbamontilla@hotlmail.com  
+;f; **************** Yaracuy               ************************ ;clio@clio-ve.com
+;m;Lic. Cesar Tovar ;tovarcesar@latinmail.com 
+;m;Lic. Ernesto L. Rodríguez P. ;ernestorodriguez99@cantv.net 
+;m;Lic. José G. Acevedo A. ;jgaceace@hotmail.com 
+;m;Lic. José P. García ;garjp23@hotmail.com 
+;f;Lic. Josefina C. Lugo M. ;jolugomo@hotmail.com 
+;m;Lic. Jesús D. Ortiz P. ;jesusdavid-2@cantv.net 
+;m;Lic. Leufer A Montesino ;leuferm@latinmail.com 
+;f;Lic. Noris D. Rivero Q. ;ndrivero@cantv.net 
+;f;Lic. Otilia A. Gil ;otilia17@latinmail.com
+;m;Lic. Rafael A. Segura L. ;rafasegura50@hotmail.com 
+;f;Lic. Yajaira J. Alavarez S. ;yajairaa@cantv.net 
+;f;Lic. Yuslym M. Mora V. ;yuslym@latinmail.com 
+;f; **************** Zulia               ************************ ;clio@clio-ve.com
+;m;Lic. Alirio G. Fernández M. ;aliriofm@telcel.net.ve 
+;m;Lic. Alfredo J. Monasterios O. ;amonasterios@iamnet.com 
+;f;Lic. Ana C. Lugo O. ;anac_lugo@hotmail.com 
+;f;Lic. Ana V. López V. ;anavioletalopez@hotmail.com 
+;m;Lic. Ángel A. Velazco B. ;angelvelazco_2000@yahoo.com 
+;m;Lic. Arquimedes D. Ortega C. ;danilo29@hotmail.com 
+;f;Lic. Carolina de los A. Vázquez ;victorespina@cantv.net 
+;m;Lic. Carlos J. González G. ;carja01@cantv.net 
+;m;Lic. Carlos L. Ferrer ;ferrer@las-morochas.oilfield.slb.com 
+;m;Lic. Carlos L. Ortega G. ;hablar_con_cafe@hotmail.com 
+;m;Lic. Cristóbal J. Donado M. ;cdonado@cantv.net 
+;m;Lic. Daniel A. Montero R. ;daniel.montero@halliburton.com 
+;m;Lic. Danilo J. Borjas C. ;borjacamargo@hotmail.com 
+;m;Lic. Darwing G. Torres H. ;darwing.torres@woodgroup.com 
+;f;Lic. Deyalid I. Leidenz A. ;deya2001@hotmail.com 
+;m;Lic. Edilio A. Angulo G. ;anguloe@pdvsa.com 
+;m;Lic. Edwin J. Laya S. ;elaya22@hotmail.com 
+;f;Lic. Eleuniz del V. González A. ;eleugonza@hotmail.com 
+;f;LIc. Emily C. Sánchez C. ;emily_chevi@yahoo.es 
+;m;Lic. Ender G. Nava S. ;endern@telcel.net.ve 
+;m;Lic. Enrique Maldonado N. ;mariensa@cantv.net 
+;m;Lic. Ernesto Ramírez ;eramirez@telcel.net.ve 
+;f;Lic. Esnalu A. Contreras V. ;esnalu.contreras@ve.pwcglobal.com 
+;m;Lic. Fernando Baula G. ;bulaf@pdvsa.com 
+;m;Lic. Fernando J. Palmar R. ;fipalmar@cantv.net 
+;m;Lic. Gustavo J. León V. ;lmagleon@iamnet.com 
+;m;Lic. Henry J. Hernández E. ;hhernandez@guasare.com 
+;m;Lic. Hugo R. Cubillan ;cupraca@latinmail.com 
+;f;Lic. Irene M. Montero de A. ;aragon@telcel.net.ve 
+;m;Lic. Ismael A. Luzardo M. ;iluzardo@telcel.net.ve 
+;m;Lic. Jairo N. Aragón A. ;aragon@telcel.net.ve 
+;m;Lic. Jesús E. Fernández P. ;fgcontadores@cantv.net 
+;m;Lic. Jesús E. Navarro P. ;jesus.navarro@mdselva.com 
+;m;Lic. Jorge J. Gómez ;glamil@cantv.net 
+;m;Lic. José A. Olivar ;olivarjose@cantv.net 
+;m;Lic. José G. Reyes D. ;josgr2000@yahoo.com 
+;m;Lic. José E. Barrios R. ;barriosrojas@cantv.net 
+;m;Lic. José E. González P. ;sga@icnet.com.ve 
+;m;Lic. José J. Montiel C. ;joemonc@cantv.net 
+;m;Lic. Juan E. Benítez M. ;juanbenitez12@latinmail.com 
+;m;Lic. Juan J. Castro A. ;irajus@cantv.net 
+;f;Lic. Julia C. Parra R. ;juparra@polinter.com.ve 
+;f;Lic. Kaoly Y. Barboza G. ;kaolyyusey@hotmail.com 
+;f;Lic. Kenyc J. Labarca S. ;kenyclab@cantv.net 
+;f;Lic. Levy D. Villegas N. ;parmalap2000@latinmail.com 
+;m;Lic. Luis A. Rincón R. ;lrrincon@iamnet.com 
+;m;Lic. Luis A. Rincón R. ;lrrincon@iamnet.com 
+;m;Lic. Mario G. Socorro C ;masoc@mipunto.com 
+;m;Lic. Nergio E. Prieto U. ;nergiou@telcel.net.ve 
+;m;Lic. Nerio A. Nieto N. ;nerionieto2@hotmail.com 
+;m;Lic. Nestor E. Añez G. ;nestoranezgarcia@hotmail.com 
+;m;Lic. Noé J. Páez C. ;noepaez@hotmail.com 
+;f;Lic. Oda H. Gómez de A. ;odagomez@latinmail.com 
+;f;Lic. Olga J. González de V. ;olga.verde@halliburton.com 
+;m;Lic. Orlando A. Guanipa P. ;orlandoguanipa@cantv.net 
+;m;Lic. Osbel J. Jiménez A. ;ojimeneza@hotmail.com 
+;m;Lic. Osmar S. Cordero A. ;corsar@cantv.net 
+;m;Lic. Ramón S. Ruiz M. ;ramon-ruiz@cantv.net 
+;m;Lic. Reinaldo A. Pirela V. ;pirelar@cantv.net 
+;m;Lic. Reinaldo J. Portillo B. ;riportillo@petrolago.com 
+;m;Lic. Richard C. Prieto R. ;citrif@mail.com 
+;m;Lic. Richard J. Vera L. ;rveral@cantv.net 
+;f;Lic. Rosa V. Barrios de M. ;rosivir@cantv.net 
+;m;Lic. Senón E. Abreu D. ;senonabreu@cantv.net 
+;f;Lic. Sonia E. Mondol C. ;ipv@ianet.com 
+;m;Lic. Wilson Betancourt ;wbetancourtd@hotmail.com 
+;f;Lic. Yadira B. Molero F. ;yadiramolero@hotmail.com 
+;f;Lic. Yamiri J. Sebriahant T. ;yamist@hotmail.com 
+;f;Lic. Yelitza C. Angulo G. ;corpito@mixmail.com 
+;f;Lic. Yilmer J. Rodríguez ;yjrodriguez@hotmail.com 
+;f;Lic. Yoli del C. Castro G. ;yccastrog@hotmail.com 
+;f; **************** Especiales               ************************ ;clio@clio-ve.com

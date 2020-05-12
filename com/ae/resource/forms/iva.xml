@@ -1,0 +1,743 @@
+<?xml version="1.0"  encoding='ISO-8859-1'?>
+
+<form id="iva" cryptoId="g" name="I. valor agregado" infoDoc="iva" price="1930" declaration="iva">
+	<overse.image name="iva_a" />
+	<overse.title fore="63;76;162" back="255;255;255" fontN="Arial" fontF="11" fontB="yes" />
+	<overse.panel fore="63;76;162" back="255;255;255" fontN="Arial" fontF="11" fontB="no" />
+	<overse.selected back="226;234;255" />
+	<overse.background name="" xPos="" yPos="" />
+
+	<!-- valore globales -->
+	<gv.timeScope value="30" />
+	<gv.firstFace value="overse" />
+	<gv.pre-dive value="bottom" />
+	<gv.taxPayerConditions value="(&apos;{tpTipPer}&apos; == &apos;ju&apos;)" />
+	<gv.declarationDateStart value="ejeDes" />
+	<gv.declarationDateEnd value="ejeHas" />
+
+	<!-- 
+	<gv.debugg value="yes" />
+-->
+	<!-- escenarios -->
+	<stage face="overse" expression="('{anoImp}' == '') || ({mesImp} == 0)" message="msg19" />
+	<stage
+		face="overse"
+		expression="{pag91} != ({pagEfe} + {pagChe} + {pagBon} + {pagCer}) &amp;&amp; ({pagEfe} + {pagChe} + {pagBon} + {pagCer}) > 0"
+		message="msg17" />
+
+	<stage face="overse" expression="({nroDecSus} > 0) &amp;&amp; ({d52} &lt; 0)" message="msg18" />
+	<stage face="overse" expression="({a49} &lt; 0)" message="msg33" />
+	<stage face="overse" expression="({c39} &lt; 0)" message="msg34" />
+
+	<!-- A. datos del contribuyente 									-->
+	<!--*************************************************************** -->
+
+	<!-- rif -->
+	<overse.section 
+		id="rif" 
+		class="SpacedOutput" 
+		mask="#-########-#" 
+		variable="tpRif" 
+		xPos="25" yPos="109" width="216" height="17" westGap="0" eastGap="0" />
+
+	<!-- tipo de contribuyente -->
+	<overse.section
+		id="tipCon_or"
+		class="BooleanOutput"
+		outputIf="'{tpTipCon}' == 'or'"
+		point="405;140"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="tipCon_fo"
+		class="BooleanOutput"
+		outputIf="'{tpTipCon}' == 'fo'"
+		point="555;140"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- declaracion sustitutiva -->
+	
+	<overse.section
+		id="nroDecSus"
+		title="Nro de declaración a sustituir"
+		query="*no"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="565;165" />
+
+		<overse.section
+		id="nroDecF"
+		class="SimpleOutput"
+		constant="04"
+		outputIf="{nroDecSus} > 0"
+		point="516;165" westGap="2" eastGap="0"/>
+
+	<overse.section
+		id="fecDecSus"
+		title="Fecha declaración a sustituir"
+		class="DateInput"
+		inputIf="{nroDecSus} > 0"
+		outputIf="{nroDecSus} > 0"
+		union="660;165;715;165" />
+
+	<!-- nombre -->
+	<overse.section id="nombre" class="SimpleOutput" variable="tpNombre" point="300;215" />
+
+	<!-- año, mes de imposicion y datos relacionados con fechas -->
+	<overse.section
+		id="anoImp"
+		class="SimpleList"
+		title="Año"
+		label="Año de imposición"
+		listType="*year"
+		inputIf="1.0"
+		point="570;220"
+		westGap="0"
+		eastGap="0" />
+	<!--
+	<overse.section
+		id="month"
+		class="SimpleOutput"
+		variable="*month" 
+		saveSpecial="*yes" />
+	-->
+
+	<overse.section id="m01" inputIf="1.0" init="{MONTH} == 1" class="BooleanInput" group="mesImp" point="585;228" westGap="0" eastGap="0" />
+	<overse.section id="m02" inputIf="1.0" init="{MONTH} == 2" class="BooleanInput" group="mesImp" point="605;228" westGap="0" eastGap="0" />
+	<overse.section id="m03" inputIf="1.0" init="{MONTH} == 3" class="BooleanInput" group="mesImp" point="625;228" westGap="0" eastGap="0" />
+	<overse.section id="m04" inputIf="1.0" init="{MONTH} == 4" class="BooleanInput" group="mesImp" point="645;228" westGap="0" eastGap="0" />
+	<overse.section id="m05" inputIf="1.0" init="{MONTH} == 5" class="BooleanInput" group="mesImp" point="660;228" westGap="0" eastGap="0" />
+	<overse.section id="m06" inputIf="1.0" init="{MONTH} == 6" class="BooleanInput" group="mesImp" point="680;228" westGap="0" eastGap="0" />
+	<overse.section id="m07" inputIf="1.0" init="{MONTH} == 7" class="BooleanInput" group="mesImp" point="695;228" westGap="0" eastGap="0" />
+	<overse.section id="m08" inputIf="1.0" init="{MONTH} == 8" class="BooleanInput" group="mesImp" point="715;228" westGap="0" eastGap="0" />
+	<overse.section id="m09" inputIf="1.0" init="{MONTH} == 9" class="BooleanInput" group="mesImp" point="730;228" westGap="0" eastGap="0" />
+	<overse.section id="m10" inputIf="1.0" init="{MONTH} == 10" class="BooleanInput" group="mesImp" point="750;228" westGap="0" eastGap="0" />
+	<overse.section id="m11" inputIf="1.0" init="{MONTH} == 11" class="BooleanInput" group="mesImp" point="765;228" westGap="0" eastGap="0" />
+	<overse.section id="m12" inputIf="1.0" init="{MONTH} == 12" class="BooleanInput" group="mesImp" point="785;228" westGap="0" eastGap="0" />
+
+	<overse.section 
+		id="mesImp"
+		class="EvaluatedSection"
+		expression="('{m01}' == 'true') + ('{m02}' == 'true') * 2 + ('{m03}' == 'true') * 3 + ('{m04}' == 'true') * 4 + ('{m05}' == 'true') * 5 + ('{m06}' == 'true') * 6 + ('{m07}' == 'true') * 7 + ('{m08}' == 'true') * 8 + ('{m09}' == 'true') * 9 + ('{m10}' == 'true') * 10 + ('{m11}' == 'true') * 11 + ('{m12}' == 'true') * 12" />
+
+	<overse.section 
+		id="ejeDes"
+		class="EvaluatedSection"
+		expression="doubleDate({anoImp}, {mesImp}, 0)" />
+
+	<overse.section 
+		id="ejeHas"
+		class="EvaluatedSection"
+		expression="doubleDate({anoImp}, {mesImp}, 1)" />
+
+	<overse.section id="descActEco" class="ConstantOutput" variable="tpActEco" constantElement="*value" point="300;255" />
+
+	<!-- representante legal -->
+	<!--*************************************************************** -->
+
+	<overse.section id="repNom" class="SimpleOutput" variable="tpNomRep" point="300;280" />
+
+	<overse.section id="repRif" class="SpacedOutput" variable="tpRifRep" point="460;280" />
+
+	<overse.section
+		id="email"
+		class="SimpleInput"
+		tiltle="Representante legal"
+		label="Correo electrónico"
+		sectionValue="String"
+		inputIf="1.0"
+		point="600;280" />
+
+	<!-- A. Debitos fiscales -->
+	<!-- *************************************************************** -->
+
+	<overse.section
+		id="ali_general"
+		class="EvaluatedSection"
+		expression="Aliquot({ejeHas}, 0)" />
+
+	<overse.section
+		id="ali_gen_adi"
+		class="EvaluatedSection"
+		expression="Aliquot({ejeHas}, 1)" />
+
+	<overse.section
+		id="ali_reducida"
+		class="EvaluatedSection"
+		expression="Aliquot({ejeHas}, 2)" />
+
+	<overse.section
+		id="a40"
+		title="Base imponible"
+		label="Ventas internas no gravadas"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;318" />
+
+	<overse.section
+		id="a41"
+		title="Base imponible"
+		label="Ventas de exportación"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;334" />
+
+	<overse.section
+		id="a42"
+		title="Base imponible"
+		label="Ventas internas gravadas por alícuota general"
+		class="SimpleInput"
+		sectionValue="Double"
+		query="c*c"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;351" />
+
+	<overse.section id="a43" class="EvaluatedSection" expression="{a42} * {ali_general} / 100" eastGap="15" point="700;351" />
+
+	<overse.section
+		id="a442"
+		title="Base imponible"
+		label="Ventas internas gravadas por alícuota general + adicional"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;367" />
+
+	<overse.section id="a452" 
+		class="EvaluatedSection" 
+		expression="{a442} * {ali_gen_adi} / 100" 
+		eastGap="15" point="700;367" />
+
+	<overse.section
+		id="a443"
+		title="Base imponible"
+		label="Ventas internas gravadas por alícuota reducida"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;383" />
+
+	<overse.section id="a453" class="EvaluatedSection" expression="{a443} * {ali_reducida} / 100" eastGap="15" point="700;383" />
+
+	<overse.section
+		id="a46"
+		class="EvaluatedSection"
+		expression="{a40} + {a41} + {a42} + {a442} + {a443}"
+		eastGap="15"
+		point="505;400" />
+
+	<overse.section id="a47" class="EvaluatedSection" expression="{a43} + {a452} + {a453}" eastGap="15" point="700;400" />
+
+	<overse.section
+		id="a48"
+		title="Débito fiscal"
+		label="Ajuste de los debitos fiscales de périodos anteriores"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="700;416" />
+	<!-- usado por stage -->
+
+	<overse.section id="a49" class="EvaluatedSection" expression="{a47} + {a48}" point="700;433" eastGap="15" />
+
+	<!-- B. Créditos fiscales -->
+	<!-- *************************************************************** -->
+
+	<overse.section
+		id="b30"
+		title="Base imponible"
+		label="Compras no grabadas y/o sin derecho a crédito fiscal"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;466" />
+
+	<overse.section
+		id="b31"
+		title="Base imponible"
+		label="Importaciones gravadas por alícuota general"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;483" />
+
+	<overse.section
+		id="b32"
+		class="EvaluatedSection" 
+		expression="{b31} * {ali_general} / 100" 
+		eastGap="15"
+		point="700;483" />
+
+	<overse.section
+		id="b312"
+		title="Base imponible"
+		label="Importaciones gravadas por alícuota general + adicional"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;499" />
+
+	<overse.section
+		id="b322"
+		class="EvaluatedSection" 
+		expression="{b312} * {ali_gen_adi} / 100" 
+		eastGap="15"
+		point="700;499" />
+
+	<overse.section
+		id="b313"
+		title="Base imponible"
+		label="Importaciones gravadas por alícuota reducida"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;515" />
+
+	<overse.section
+		id="b323"
+		class="EvaluatedSection" 
+		expression="{b313} * {ali_reducida} / 100" 
+		eastGap="15"
+		point="700;515" />
+
+	<overse.section
+		id="b33"
+		title="Base imponible"
+		label="Compras internas grabadas solo por alícuota general"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		query="c*p"
+		eastGap="15"
+		point="505;532" />
+
+	<overse.section
+		id="b34"
+		class="EvaluatedSection" 
+		expression="{b33} * {ali_general} / 100" 
+		eastGap="15"
+		point="700;532" />
+
+	<overse.section
+		id="b332"
+		title="Base imponible"
+		label="Compras internas grabadas solo por alícuota general + adicional"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;548" />
+
+	<overse.section
+		id="b342"
+		class="EvaluatedSection" 
+		expression="{b332} * {ali_gen_adi} / 100" 
+		eastGap="15"
+		point="700;548" />
+
+	<overse.section
+		id="b333"
+		title="Base imponible"
+		label="Compras internas grabadas por alícuota reducida"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="505;564" />
+
+	<overse.section
+		id="b343"
+		class="EvaluatedSection" 
+		expression="{b333} * {ali_reducida} / 100" 
+		eastGap="15"
+		point="700;564" />
+
+	<overse.section
+		id="b35"
+		class="EvaluatedSection"
+		expression="{b30} + {b31} + {b312} + {b313} + {b33} + {b332} + {b333}"
+		eastGap="15"
+		point="505;581" />
+
+	<overse.section
+		id="b36"
+		class="EvaluatedSection"
+		expression="{b32} + {b322} + {b323} + {b34} + {b342} + {b343}"
+		eastGap="15"
+		point="700;581" />
+
+	<!-- C. Calculo del credito deducible -->
+	<!-- *************************************************************** -->
+
+	<overse.section
+		id="c70"
+		class="EvaluatedSection" 
+		expression="{b36}" 
+		outputIf="{a40} > 0"
+		eastGap="15"
+		point="700;624" />
+
+	<overse.section 
+		id="prorrata" 
+		class="EvaluatedSection" 
+		expression="({a41} + {a42} + {a442} + {a443}) / {a40}" />
+
+	<overse.section
+		id="c37"
+		class="EvaluatedSection"
+		expression="({b36} - {c70}) * {prorrata}"
+		outputIf="{a40} > 0"
+		eastGap="15"
+		point="700;639" />
+
+	<overse.section
+		id="c71"
+		class="EvaluatedSection"
+		expression="{c70} + {c37}"
+		outputIf="{a40} > 0"
+		eastGap="15"
+		point="700;656" />
+
+	<overse.section
+		id="c20"
+		title="Cálculo del credito deducible"
+		label="Excedentes créditos fiscales del mes anterior"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="700;673" />
+		<!--
+		class="EvaluatedSection" 
+		expression="fromSection({tpRif}, iva, d60, '', 0)"
+		-->
+
+	<overse.section
+		id="c21"
+		title="Cálculo del credito deducible"
+		label="Devolución solicitada (sólo exportaciones)"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="700;688" />
+
+	<overse.section
+		id="c38"
+		title="Cálculo del credito deducible"
+		label="Ajustes de los creditos fiscales de períodos anteriores"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="700;708" />
+
+	<overse.section id="v36o71" 
+		class="EvaluatedSection" 
+		expression="(({a40} == 0) * {b36}) + (({a40} >= 0) * {c71})" />
+	
+	<overse.section id="v_c39_pro" class="EvaluatedSection" expression="{c71} + {c20} - {c21} + {c38}" />
+
+	<overse.section id="v_c39" class="EvaluatedSection" expression="{b36} + {c20} - {c21} + {c38}" />
+
+	<overse.section
+		id="c39"
+		class="EvaluatedSection"
+		expression="{v36o71} + {c20} + {c38}"
+		eastGap="15"
+		point="700;738" />
+
+	<!-- D. Autoliquidacion -->
+	<!-- *************************************************************** -->
+
+	<overse.section id="v_a49_c39" 
+		class="EvaluatedSection" expression="{a49} - {c39}" />
+
+	<overse.section
+		id="d50"
+		class="EvaluatedSection"
+		expression="max({v_a49_c39}, 0)"
+		outputIf="{nroDecSus} > 0"
+		eastGap="15"
+		point="700;779" />
+
+	<overse.section
+		id="d22"
+		title="Autoliquidación"
+		label="Impuesto pagado en declaración(es) sustituida(as)"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{nroDecSus} > 0"
+		mouseEntered="{nroDecSus} > 0 ; xx ; msg35"
+		eastGap="15"
+		point="700;794" />
+		<!--
+		class="EvaluatedSection"
+		expression="fromSection({tpRif}, iva, d90, jurada_fecha, {fecDecSus})"
+		-->
+	<overse.section
+		id="d51"
+		title="Autoliquidación"
+		label="Retenciones descontadas en declaración(es) sustituida(as)"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{nroDecSus} > 0"
+		mouseEntered="{nroDecSus} > 0 ; xx ; msg35"
+		eastGap="15"
+		point="700;811" />
+<!--
+		class="EvaluatedSection"
+		expression="fromSection({tpRif}, iva, d55, jurada_fecha, {fecDecSus})"
+-->
+	<overse.section
+		id="d24"
+		title="Autoliquidación"
+		label="Percepciones descontadas en declaración(es) sustituida(as)"
+		class="SimpleInput"
+		sectionValue="Double"
+		inoutIf="{nroDecSus} > 0"
+		mouseEntered="{nroDecSus} > 0 ; xx ; msg35"
+		eastGap="15"
+		point="700;827" />
+<!--
+		class="EvaluatedSection"
+		expression="fromSection({tpRif}, iva, d58, jurada_fecha, {fecDecSus})"
+-->
+	<overse.section id="v_d52" 
+		class="EvaluatedSection" expression="{d50} - {d22} - {d51} - {d24}" />
+
+	<overse.section
+		id="d52"
+		class="EvaluatedSection"
+		expression="max({v_d52}, 0)"
+		outputIf="{nroDecSus} > 0"
+		eastGap="15"
+		point="700;848" />
+	
+	<!-- si es sustitutiva coloco 52 de lo contrario a49-c39 -->
+	<overse.section id="v52o49_39" class="EvaluatedSection" 
+		expression="({nroDecSus} != 0 * {d52}) + (({nroDecSus} == 0) * {v_a49_c39})"/>
+		
+	<overse.section id="d53" class="EvaluatedSection" 
+		expression="max({v52o49_39}, 0)" eastGap="15" point="700;880" />
+
+	<overse.section id="v_d60" class="EvaluatedSection" expression="{c39} - {a49}" />
+
+	<overse.section id="d60" class="EvaluatedSection" expression="max({v_d60}, 0)" eastGap="15" point="700;895" />
+
+	<overse.section
+		id="d54"
+		title="Autoliquidación"
+		label="Retenciones acumunadas por descontar"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="500;910" />
+
+	<overse.section
+		id="d66"
+		title="Autoliquidación"
+		label="Retenciones del periodo"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="500;925" />
+
+	<overse.section id="v_d55" class="EvaluatedSection" expression="{d54} + {d66}" />
+
+	<overse.section id="d55" class="EvaluatedSection" expression="min({v_d55}, {d53})" eastGap="15" point="700;942" />
+
+	<overse.section id="d67" class="EvaluatedSection" expression="{v_d55} - {d55}" eastGap="15" point="500;956" />
+
+	<overse.section id="d56" class="EvaluatedSection" expression="{d53} - {d55}" eastGap="15" point="700;975" />
+
+	<overse.section
+		id="d57"
+		title="Autoliquidación"
+		label="Percepciones acumuladas en importaciones por descontar"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="500;990" />
+
+	<overse.section
+		id="d68"
+		title="Autoliquidación"
+		label="Percepciones acumuladas en importaciones del período"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15"
+		point="500;1006" />
+
+	<overse.section id="v_d58" class="EvaluatedSection" expression="{d57} + {d68}" />
+
+	<overse.section id="d58" class="EvaluatedSection" expression="min({v_d58}, {d56})" eastGap="15" point="700;1024" />
+
+	<overse.section id="v_d69" class="EvaluatedSection" expression="{v_d58} - {d56}" />
+	<overse.section id="d69" class="EvaluatedSection" expression="max({v_d69}, 0)" eastGap="15" point="500;1040" />
+
+	<overse.section id="d61" class="EvaluatedSection" expression="{d56} - {d58}" eastGap="15" point="700;1056" />
+
+	<overse.section id="d62" 
+		title="Autoliquidación"
+		label="Impuesto pagado por cuenta de terceros. En caso de declaración sustitutiva, solo indicar el monto no pagado en la declaración sustituida."
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15" point="700;1075" />
+
+	<overse.section id="d65" 
+		title="Autoliquidación"
+		label="Impuesto percibidos en ventas realizadas. En caso de declaración sustitutiva, solo indicar el monto no pagado en la declaración sustituida."
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		eastGap="15" point="700;1095" />
+
+	<overse.section id="d90" class="EvaluatedSection" 
+		expression="{d61} + {d62} + {d65}" eastGap="15" point="700;1105" />
+
+	<!-- *************************************************************** -->
+	<!-- declaracion jurada -->
+	<!-- *************************************************************** -->
+
+	<overse.section id="jurada_lugar" class="AddressOutput" variable="tpDirecc" addrField="adCiudad" point="85;1140" />
+
+	<overse.section
+		id="jurada_fecha"
+		class="DateOutput"
+		variable="*today"
+		chrSep="/"
+		point="85;1155"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section id="dj_repRif" class="SimpleOutput" variable="tpRifRep" mask="#-########-#" point="180;1165" />
+
+	<!-- declaracion del contador -->
+	<overse.section id="contador_nombre" class="SimpleOutput" variable="tpNomCon" point="540;1125" />
+
+	<overse.section id="contador_ci" class="SimpleOutput" variable="tpCedCon" point="540;1135" />
+
+	<overse.section
+		id="contador_lugar"
+		class="AddressOutput"
+		variable="tpDirecc"
+		outputIf="&apos;{contador_nombre}&apos; != &apos;&apos;"
+		addrField="adCiudad"
+		point="440;1163" />
+
+	<overse.section
+		id="contador_fecha"
+		class="SimpleOutput"
+		outputIf="&apos;{contador_nombre}&apos; != &apos;&apos;"
+		variable="*date"
+		point="510;1163" />
+
+	<overse.section
+		id="contador_mes"
+		class="SimpleOutput"
+		variable="*month"
+		outputIf="&apos;{contador_nombre}&apos; != &apos;&apos;"
+		point="630;1162" />
+
+	<overse.section
+		id="contador_ano"
+		class="SimpleOutput"
+		variable="*year"
+		outputIf="&apos;{contador_nombre}&apos; != &apos;&apos;"
+		point="700;1162" />
+
+	<!--*************************************************************** -->
+	<!-- planilla de pago												-->
+	<!--*************************************************************** -->
+
+	<overse.section id="pagRif" class="SpacedOutput" variable="tpRif" 
+		mask="#-########-#" 
+		xPos="579" yPos="1269" width="216" height="17" westGap="0" eastGap="0" />
+
+	<!-- fechas -->
+		<overse.section id="pagMes" class="EvaluatedSection" expression="{mesImp}" point="650;1315" />
+		<overse.section id="pagAno" class="EvaluatedSection" expression="{anoImp}" point="720;1315" />
+
+	<!-- nombre -->
+	<overse.section id="pagNombre" class="SimpleOutput" variable="tpNombre" point="300;1310" />
+
+	<!-- monto a pagar -->
+	<overse.section id="pag91" class="EvaluatedSection" expression="{d90}" point="675;1355" />
+
+	<!-- pago en efectivo -->
+	<overse.section
+		id="pagEfe"
+		title="Forma de pago"
+		label="Efectivo"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inputIf="1.0"
+		ifBlank="----- O -----"
+		point="105;1401"
+		westGap="20" />
+
+	<!-- cheque de gerencia -->
+	<overse.section
+		id="pagChe"
+		title="Forma de pago"
+		label="Cheque de gerencia"
+		ifBlank="----- O -----"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inputIf="1.0"
+		point="205;1401"
+		westGap="20" />
+
+	<!-- Bonos -->
+	<overse.section
+		id="pagBon"
+		title="Forma de pago"
+		label="Bonos"
+		ifBlank="----- O -----"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inputIf="1.0"
+		point="405;1401"
+		westGap="20" />
+
+	<!-- Certificados -->
+	<overse.section
+		id="pagCer"
+		title="Forma de pago"
+		label="Certificados de reintegro"
+		ifBlank="----- O -----"
+		class="SimpleInput"
+		query="*no"
+		sectionValue="Double"
+		inputIf="1.0"
+		point="705;1401"
+		westGap="20" />
+
+	<!-- ciudad -->
+	<overse.section id="pagCda" class="AddressOutput" variable="tpDirecc" addrField="adCiudad" point="200;1435" />
+
+</form>

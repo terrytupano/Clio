@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+<root>
+
+<!-- Cultivos en general, cultivo de productos de mercado, horticultura. -->
+	<item code="0111 " text="Cultivo de maíz." />
+	<item code="0112 " text="Cultivo de sorgo." />
+	<item code="0113 " text="Cultivo de arroz." />
+	<item code="0114 " text="Cultivo de palma aceitera." />
+	<item code="0119 " text="Cultivo de otros cereales y oleaginosas" />
+	<item code="0121 " text="Cultivo de algodón." />
+	<item code="0122 " text="Cultivo de caña de azúcar." />
+	<item code="0123 " text="Cultivo de café." />
+	<item code="0124 " text="Cultivo de tabaco." />
+	<item code="0131 " text="Cultivo de papa, batata y yuca o mandioca." />
+	<item code="0132 " text="Cultivo de tomate." />
+	<item code="0134 " text="Cultivo de hortalizas y legumbres no clasificadas en otra parte." />
+	<item code="0135 " text="Cultivo de cítricos." />
+	<item code="0136 " text="Cultivo de cambur, banana y plátano." />
+	<item code="0137 " text="Cultivo de otros frutales." />
+	<item code="0139 " text="Cultivos no clasificados en otra parte." />
+
+<!-- Cría y explotación de animales domésticos. -->
+	<item code="0141 " text="Cría e invernada de ganado bovino." />
+	<item code="0142 " text="Cría de ganado equino. Haras." />
+	<item code="0143 " text="Cría de ganado ovino y su explotación lanera." />
+	<item code="0144 " text="Cría de ganado porcino." />
+	<item code="0150 " text="Cría de animales destinados a la producción de pieles." />
+	<item code="0161 " text="Cría de aves para producción de carnes." />
+	<item code="0162 " text="Cría y explotación de aves para producción de huevos." />
+	<item code="0163 " text="Producción de leche. Tambos." />
+	<item code="0164 " text="Cría y explotación de animales no clasificados en otra parte (incluye ganado caprino, otros animales de granja y su explotación, etc.)" />
+
+<!-- Cultivo de productos agrícolas en combinación con la cría de animales domésticos. -->
+	<item code="0170 " text="Cultivo de productos agrícolas en combinación con la cría de animales domésticos." />
+
+<!-- Servicios agropecuarios. -->
+	<item code="0181 " text="Fumigación, aspersión y pulverización de agentes perjudiciales para los cultivos." />
+	<item code="0182 " text="Roturación y siembra." />
+	<item code="0183 " text="Cosecha y recolección de cultivos." />
+	<item code="0184 " text="Alquiler de maquinaria agrícola con conductor." />
+	<item code="0185 " text="Servicios agropecuarios no clasificados en otra parte." />
+
+<!-- Caza ordinaria y mediante trampas y repoblación de animales. -->
+	<item code="0190 " text="Caza ordinaria y mediante trampas y repoblación de animales." />
+
+<!-- Silvicultura -->
+	<item code="0210 " text="Explotación de bosques excepto plantación, repoblación y conservación de bosques (incluye producción de carbón vegetal)." />
+	<item code="0220 " text="Forestación (plantación, repoblación, conservación de bosques y viveros forestales)." />
+
+<!-- Extracción de madera. -->
+	<item code="0240 " text="Extracción de madera. Corte, desbaste de tronco y madera en bruto y actividades conexas." />
+
+<!-- Pesca. -->
+	<item code="0510 " text="Pesca marítima (de altura y costera)." />
+	<item code="0520 " text="Pesca fluvial y lacustre (continental)." />
+	<item code="0530 " text="Explotación de criaderos o viveros de peces y otros frutos acuáticos." />
+
+<!-- Explotación de minas de carbón. -->
+	<item code="1010 " text="Explotación de minas de carbón." />
+
+<!-- Producción de petróleo crudo y gas natural. -->
+	<item code="1110 " text="Extracción de petróleo crudo y gas natural." />
+	<item code="1120 " text="Actividades de tipo servicio relacionadas con la extracción de petróleo y de gas, incluidas las perforaciones de prueba. No se incluyen las actividades de prospección." />
+
+<!-- Extracción de minerales metálicos. -->
+	<item code="1310 " text="Extracción de mineral de hierro." />
+	<item code="1321 " text="Extracción de bauxita." />
+	<item code="1322 " text="Extracción de oro." />
+	<item code="1329 " text="Extracción de otros minerales metálicos no ferrosos." />
+
+<!-- Extracción de minerales no metálicos. -->
+	<item code="1411 " text="Extracción de piedra para la construcción (mármoles, lajas, canto rodado, etc.) excepto piedra caliza." />
+	<item code="1412 " text="Extracción de arena." />
+	<item code="1413 " text="Extracción de piedra caliza." />
+	<item code="1421 " text="Extracción de minerales para la fabricación de abonos y productos químicos (incluye guano)." />
+	<item code="1422 " text="Explotación de minas de sal. Molienda y refinación en salinas." />
+	<item code="1429 " text="Explotación de otras minas y canteras." />
+
+<!-- Matanza de ganado, elaboración y conservación de carne, pescado, frutas, legumbres, hortalizas, aceites y grasas. -->
+	<item code="1511 " text="Matanza de ganado. Elaboración y conservación de carne. Elaboración de productos cárnicos. Mataderos y frigoríficos." />
+	<item code="1512 " text="Elaboración y conservación de pescado y de productos de pescado." />
+	<item code="1513 " text="Elaboración de frutas, legumbres y hortalizas." />
+	<item code="1514 " text="Elaboración de aceites y grasas de origen vegetal o animal." />
+	<item code="1520 " text="Elaboración de productos lácteos." />
+
+<!-- Elaboración de productos de molinería, de almidones y productos derivados del almidón, y de alimentos preparados para animales. -->
+	<item code="1531 " text="Molienda de maíz. Elaboración de harina de maíz y otros productos de molinería derivados del maíz." />
+	<item code="1532 " text="Elaboración de almidones y de productos derivados del almidón." />
+	<item code="1533 " text="Elaboración de alimentos preparados para animales." />
+	<item code="1534 " text="Molienda de arroz (beneficio de arroz)." />
+	<item code="1535 " text="Molienda de trigo. Elaboración de harina de trigo y otros productos de molinería del trigo." />
+	<item code="1536 " text="Molienda de otros cereales." />
+
+<!-- Elaboración de otros productos alimenticios. -->
+	<item code="1541 " text="Elaboración de productos de panadería." />
+	<item code="1542 " text="Elaboración de azúcar." />
+	<item code="1543 " text="Elaboración de cacao, chocolate y de productos de confitería." />
+	<item code="1544 " text="Elaboración de macarrones, fideos y otros productos farináceos similares." />
+	<item code="1545 " text="Elaboración de café." />
+	<item code="1546 " text="Fabricación de hielo." />
+	<item code="1547 " text="Fabricación de concentrados de café y té." />
+	<item code="1549 " text="Elaboración de otros productos alimenticios." />
+
+<!-- Elaboración de bebidas. -->
+	<item code="1551 " text="Destilación, rectificación y mezcla de bebidas alcohólicas; producción de alcohol etílico a partir de sustancias fermentadas." />
+	<item code="1552 " text="Elaboración de vinos." />
+	<item code="1553 " text="Elaboración de bebidas malteadas y de malta." />
+	<item code="1554 " text="Elaboración de bebidas no alcohólicas. Embotellado de aguas minerales." />
+
+<!-- Elaboración de productos de tabaco. -->
+	<item code="1600 " text="Elaboración de productos de tabaco." />
+
+<!-- Fabricación de Productos Textiles. -->
+	<item code="1711 " text="Preparación e hilado de fibras textiles." />
+	<item code="1712 " text="Fabricación de tejidos, excepto tejidos de punto." />
+	<item code="1713 " text="Acabado de productos textiles." />
+	<item code="1721 " text="Fabricación de artículos confeccionados con materias. textiles, excepto prendas de vestir." />
+	<item code="1722 " text="Fabricación de tapices y alfombras." />
+	<item code="1723 " text="Fabricación de cuerdas, cordeles, bramantes y redes." />
+	<item code="1729 " text="Fabricación de otros productos textiles." />
+	<item code="1730 " text="Fabricación de tejidos y artículos de punto y ganchillo." />
+
+<!-- Fabricación de prendas de vestir, adobo y teñido de pieles. -->
+	<item code="1810 " text="Fabricación de prendas de vestir, excepto prendas de piel." />
+	<item code="1820 " text="Adobo y teñido de pieles; fabricación de artículos de piel." />
+
+<!-- Curtido y adobo de cueros; fabricación de maletas, bolsos de mano, artículos de talabartería y calzado. -->
+	<item code="1911 " text="Curtido y adobo de cueros" />
+	<item code="1912 " text="Fabricación de maletas, bolsos de mano y artículos similares y de artículos de talabartería y guarnicionería." />
+	<item code="1913 " text="Fabricación de prendas de vestir de cuero." />
+	<item code="1921 " text="Fabricación de calzado de cuero." />
+	<item code="1922 " text="Fabricación de calzado excepto cuero." />
+
+<!-- Producción de madera y fabricación de productos de madera y de corcho, excepto muebles; fabricación de artículos de paja y de materiales trenzables. -->
+	<item code="2010 " text="Aserrado y acepillado de madera." />
+	<item code="2021 " text="Fabricación de hojas de madera para enchapado, fabricación de madera terciada, tableros laminados, aglomerados y otros tableros y paneles." />
+	<item code="2022 " text="Fabricación de partes y piezas de carpintería para edificios y construcciones." />
+	<item code="2029 " text="Fabricación de otros productos de madera, fabricación de artículos de corcho, paja y materiales trenzables." />
+
+<!-- Fabricación de papel y productos de papel. -->
+	<item code="2101 " text="Fabricación de pasta de papel, papel y cartón." />
+	<item code="2102 " text="Fabricación de papel y cartón ondulado y de envases de papel y cartón." />
+	<item code="2109 " text="Fabricación de otros artículos de papel y cartón." />
+
+<!-- Actividades de edición e impresión y de reproducción de grabaciones. -->
+	<item code="2211 " text="Edición de libros, folletos, partituras y otras publicaciones." />
+	<item code="2212 " text="Edición de periódicos, revistas y otras publicaciones periódicas." />
+	<item code="2213 " text="Edición de materiales grabados." />
+	<item code="2219 " text="Otros trabajos de edición." />
+	<item code="2221 " text="Actividades de impresión." />
+	<item code="2222 " text="Actividades de tipo servicio relacionadas con las de impresión." />
+	<item code="2230 " text="Reproducción de materiales grabados." />
+
+<!-- Productos de la refinación del petróleo, fabricación de coque. -->
+	<item code="2310 " text="Fabricación de productos de hornos de coque." />
+	<item code="2320 " text="Fabricación de productos de la refinación del petróleo." />
+
+<!-- Fabricación de sustancias y productos químicos. -->
+	<item code="2411 " text="Fabricación de sustancias químicas básicas excepto abonos y compuestos del nitrógeno." />
+	<item code="2412 " text="Fabricación de abonos y compuestos del nitrógeno." />
+	<item code="2413 " text="Fabricación de plásticos en formas primarias y caucho sintético." />
+	<item code="2421 " text="Fabricación de plaguicidas y otros productos químicos de uso agropecuario." />
+	<item code="2422 " text="Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas." />
+	<item code="2423 " text="Fabricación de productos farmacéuticos, sustancias químicas medicinales y productos botánicos." />
+	<item code="2424 " text="Fabricación de jabones y detergentes, preparados para limpiar y pulir, perfumes y preparados de tocador." />
+	<item code="2425 " text="Fabricación de fósforos." />
+	<item code="2429 " text="Fabricación de otros productos químicos." />
+	<item code="2430 " text="Fabricación de fibras sintéticas o artificiales." />
+
+<!-- Fabricación de productos de caucho y de plástico. -->
+	<item code="2511 " text="Fabricación de cubiertas (llantas) y cámaras de caucho; recauchutado y renovación de cubiertas de caucho." />
+	<item code="2519 " text="Fabricación de otros productos de caucho." />
+	<item code="2520 " text="Fabricación de productos de plástico." />
+
+<!-- Fabricación de otros productos minerales no metálicos. -->
+	<item code="2610 " text="Fabricación de vidrio y de productos de vidrio." />
+	<item code="2691 " text="Fabricación de productos de cerámica." />
+	<item code="2694 " text="Fabricación de cemento, cal y yeso." />
+	<item code="2695 " text="Fabricación de artículos de hormigón, cemento y yeso." />
+	<item code="2696 " text="Corte, tallado y acabado de piedra." />
+	<item code="2699 " text="Fabricación de otros productos minerales no metálicos." />
+
+<!-- Fabricación de metales comunes. -->
+	<item code="2710 " text="Fabricación de productos primarios de hierro y acero." />
+	<item code="2721 " text="Fabricación de productos primarios de metales no ferrosos excepto de metales preciosos." />
+	<item code="2722 " text="Fabricación de productos primarios de metales preciosos" />
+	<item code="2731 " text="Fundición de hierro y de acero." />
+	<item code="2732 " text="Fundición de metales no ferrosos excepto metales preciosos." />
+	<item code="2733 " text="Fundición de metales preciosos." />
+
+<!-- Fabricación de productos elaborados de metal, excepto maquinaria y equipo. -->
+	<item code="2811 " text="Fabricación de productos metálicos para uso estructural." />
+	<item code="2812 " text="Fabricación de tanques, depósitos y otros recipientes de metal excepto envases para gas." />
+	<item code="2813 " text="Fabricación de tanques y envases para gas." />
+	<item code="2890 " text="Fabricación de otros productos elaborados de metal; actividades de tipo servicio prestadas a fabricantes de productos elaborados de metal." />
+
+<!-- Fabricación de maquinaria y equipo. -->
+	<item code="2912 " text="Fabricación de bombas, compresores, grifos y válvulas." />
+	<item code="2913 " text="Fabricación de cojinetes, engranajes, trenes de engranajes y piezas de transmisión." />
+	<item code="2919 " text="Fabricación de otros tipos de maquinaria y equipos de uso general." />
+
+<!-- Fabricación de maquinaria y equipo de uso especial. -->
+	<item code="2921 " text="Fabricación de maquinaria agropecuaria y forestal." />
+	<item code="2922 " text="Fabricación de máquinas herramienta." />
+	<item code="2925 " text="Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco." />
+	<item code="2929 " text="Fabricación de otros tipos de maquinaria de uso especial." />
+	<item code="2930 " text="Fabricación de aparatos de uso doméstico." />
+
+<!-- Fabricación de maquinaria de oficina, contabilidad e informática. -->
+	<item code="3000 " text="Fabricación de maquinaria de oficina, contabilidad e informática." />
+
+<!-- Fabricación de maquinaria y aparatos eléctricos. -->
+	<item code="3110 " text="Fabricación y reparación de motores, generadores y transformadores eléctricos." />
+	<item code="3120 " text="Fabricación de aparatos de distribución y control de la energía eléctrica." />
+	<item code="3130 " text="Fabricación de hilos y cables aislados." />
+	<item code="3140 " text="Fabricación de acumuladores, pilas y baterías primarias." />
+	<item code="3150 " text="Fabricación de lámparas eléctricas." />
+	<item code="3190 " text="Fabricación de otros tipos de equipo y suministros eléctricos." />
+
+<!-- Fabricación de equipo y aparatos de radio, televisión y comunicaciones. -->
+	<item code="3200 " text="Fabricación de equipo y aparatos de radio, televisión y comunicaciones." />
+
+<!-- Fabricación de instrumentos médicos, ópticos y de precisión y fabricación de relojes. -->
+	<item code="3300 " text="Fabricación de instrumentos médicos, ópticos y de precisión y fabricación de relojes." />
+
+<!-- Fabricación de vehículos automotores, remolques y semi-remolques. -->
+	<item code="3410 " text="Fabricación y ensamblado de vehículos automotores." />
+	<item code="3420 " text="Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semi-remolques." />
+	<item code="3430 " text="Fabricación de partes, piezas y accesorios para vehículos automotores y para sus motores." />
+
+<!-- Fabricación de otros tipo de equipo de transporte. -->
+	<item code="3511 " text="Construcción y reparación de buques." />
+	<item code="3512 " text="Construcción y reparación de embarcaciones de recreo y deporte." />
+	<item code="3591 " text="Fabricación de motocicletas." />
+	<item code="3592 " text="Fabricación de bicicletas y de sillones de ruedas para inválidos." />
+	<item code="3599 " text="Fabricación de otros tipos de equipo de transporte." />
+
+<!-- Fabricación de muebles y otras industrias manufactureras. -->
+	<item code="3610 " text="Fabricación de muebles." />
+	<item code="3691 " text="Fabricación de joyas y de artículos conexos." />
+	<item code="3692 " text="Fabricación de instrumentos musicales." />
+	<item code="3693 " text="Fabricación de artículos deportivos excepto indumentaria deportiva." />
+	<item code="3694 " text="Fabricación de juegos y juguetes." />
+	<item code="3695 " text="Fabricación de calzado excepto calzado de cuero." />
+	<item code="3696 " text="Fabricación y grabación de discos láser y cintas magnéticas." />
+	<item code="3699 " text="Otras industrias manufactureras no clasificadas en otra parte." />
+
+<!-- Reciclamiento. -->
+	<item code="3710 " text="Reciclamiento de desechos y desperdicios metálicos." />
+	<item code="3720 " text="Reciclamiento de desperdicios y desechos no metálicos." />
+
+<!-- Suministro de electricidad, gas y agua -->
+	<item code="4011 " text="Generación de energía eléctrica." />
+	<item code="4012 " text="Distribución de energía eléctrica." />
+	<item code="4021 " text="Producción de gas; distribución de combustibles gaseosos por tuberías." />
+	<item code="4022 " text="Envasado de gas y distribución de gas envasado." />
+	<item code="4100 " text="Captación, purificación y distribución de agua." />
+
+<!-- Construcción. -->
+	<item code="4510 " text="Preparación del terreno." />
+	<item code="4521 " text="Construcción y reforma de edificios completos o partes de edificios." />
+	<item code="4522 " text="Construcción de carreteras, diques, puentes y obras afines." />
+	<item code="4530 " text="Acondicionamiento de edificios (instalación de cañerías, sistemas de calefacción y aire acondicionado, antenas, sistemas de alarma, eléctricos, extinción de incendios, ascensores, aislamiento hídrico y térmico, etc.)" />
+	<item code="4540 " text="Terminación de edificios (incluye terminación y acabado de la obra, vidriería, pintura, revestimiento de pisos y paredes con baldosas y azulejos, pulimento, alfombrado, etc.)" />
+	<item code="4550 " text="Alquiler de equipo de construcción o demolición dotado de operarios." />
+
+<!-- Venta, mantenimiento y reparación de vehículos automotores, motocicletas; venta al por menor de combustible para automotores. -->
+	<item code="5010 " text="Venta de vehículos automotores" />
+	<item code="5020 " text="Mantenimiento y reparación de vehículos automotores." />
+	<item code="5030 " text="Venta de partes, piezas y accesorios de vehículos automotores." />
+	<item code="5041 " text="Venta de motocicletas." />
+	<item code="5042 " text="Mantenimiento y reparación de motocicletas." />
+	<item code="5050 " text="Venta al por menor de combustibles para automotores; servicios prestados en gasolineras." />
+
+<!-- Comercio al por mayor y en comisión, excepto el comercio de vehículos automotores y motocicletas. -->
+	<item code="5110 " text="Comisionistas, corredores y otros mayoristas que comercian en nombre de terceros." />
+	<item code="5120 " text="Venta al por mayor de granos, frutos oleaginosos, flores, plantas y tabaco en bruto." />
+	<item code="5121 " text="Venta al por mayor de ganado en pie (bovinos, ovinos, equinos, porcinos, etc.)" />
+	<item code="5122 " text="Venta al por mayor de pieles y de animales vivos destinados a la producción de pieles." />
+	<item code="5123 " text="Venta al por mayor de carne." />
+	<item code="5124 " text="Venta al por mayor de frutas, verduras y hortalizas frescas." />
+	<item code="5125 " text="Venta al por mayor de productos alimenticios elaborados." />
+	<item code="5126 " text="Venta al por mayor de bebidas alcohólicas." />
+	<item code="5127 " text="Venta al por mayor de bebidas no alcohólicas y aguas minerales." />
+	<item code="5128 " text="Venta al por mayor de productos de tabaco." />
+	<item code="5131 " text="Venta al por mayor de productos farmacéuticos y medicinales." />
+	<item code="5133 " text="Venta al por mayor de prendas de vestir, excepto calzado y prendas de vestir de cuero." />
+	<item code="5134 " text="Venta al por mayor de prendas de vestir de cuero." />
+	<item code="5135 " text="Venta al por mayor de calzado de cuero." />
+	<item code="5136 " text="Venta al por mayor de calzado excepto calzado de cuero." />
+	<item code="5138 " text="Venta al por mayor de enseres domésticos y artículos del hogar." />
+	<item code="5141 " text="Venta al por mayor de equipos de computación y productos afines." />
+	<item code="5142 " text="Venta al por mayor de gas y de productos derivados del petróleo." />
+	<item code="5143 " text="Venta al por mayor de combustibles no derivados del petróleo." />
+	<item code="5144 " text="Venta al por mayor de metales y de minerales metalíferos." />
+	<item code="5145 " text="Venta al por mayor de abonos, fertilizantes, plaguicidas, etc." />
+	<item code="5149 " text="Venta al por mayor de otros productos intermedios, desperdicios y desechos." />
+	<item code="5151 " text="Venta al por mayor de materiales de construcción, artículos de ferretería y materiales de fontanería y calefacción." />
+	<item code="5152 " text="Venta al por mayor de maquinaria, equipo y materiales, excepto equipos para restaurantes y hoteles." />
+	<item code="5153 " text="Venta al por mayor de equipo para restaurantes, hoteles, etc." />
+	<item code="5190 " text="Venta al por mayor de otros productos." />
+
+<!-- Comercio al por menor no especializado. -->
+	<item code="5211 " text="Venta al por menor en almacenes no especializados con surtido compuesto principalmente de alimentos, bebidas y tabaco. Auto mercados, abastos." />
+	<item code="5212 " text="Grandes tiendas y almacenes. Tiendas y almacenes minoristas por departamentos." />
+	<item code="5219 " text="Venta al por menor de otros productos en almacenes no especializados." />
+
+<!-- Comercio al por menor en almacenes especializados. -->
+	<item code="5221 " text="Venta al por menor de verduras y frutas. Verdulerías y fruterías." />
+	<item code="5222 " text="Venta al por menor de carne y productos elaborados a base de carne. Carnicerías." />
+	<item code="5223 " text="Venta al por menor de pescados y mariscos. Pescaderías." />
+	<item code="5224 " text="Venta al por menor de pan. Panaderías." />
+	<item code="5225 " text="Venta al por menor de confituras. Pastelerías, dulcerías." />
+	<item code="5226 " text="Venta al por menor de bebidas alcohólicas. Licorerías." />
+	<item code="5227 " text="Venta al por menor de productos farmacéuticos y medicinales. Farmacias, casas naturistas." />
+	<item code="5228 " text="Venta al por menor de cosméticos y artículos de tocador." />
+	<item code="5231 " text="Venta al por menor de productos textiles, excepto prendas de vestir." />
+	<item code="5232 " text="Venta al por menor de prendas de vestir excepto calzado y artículos de cuero." />
+	<item code="5233 " text="Venta al por menor de prendas de vestir de cuero y artículos de cuero, excepto calzado." />
+	<item code="5234 " text="Venta al por menor de calzado de cuero. Zapaterías." />
+	<item code="5235 " text="Venta al por menor de calzado excepto calzado de cuero. Zapatillerías." />
+	<item code="5236 " text="Venta al por menor de equipos, artículos e indumentaria deportivos." />
+	<item code="5237 " text="Venta al por menor de libros. Librerías." />
+	<item code="5238 " text="Venta al por menor de artículos de oficina." />
+	<item code="5241 " text="Venta al por menor de juegos y juguetes. Jugueterías." />
+	<item code="5242 " text="Venta al por menor de discos y casetes de audio. Disquerías." />
+	<item code="5243 " text="Venta al por menor de muebles y accesorios. Mueblerías." />
+	<item code="5244 " text="Venta al por menor de muebles metálicos y de materiales sintéticos." />
+	<item code="5245 " text="Venta al por menor de pinturas y artículos conexos." />
+	<item code="5246 " text="Venta al por menor de aparatos, artículos y equipo de uso doméstico." />
+	<item code="5247 " text="Venta al por menor de equipos de computación y máquinas de oficina." />
+	<item code="5248 " text="Ferreterías; venta al por menor de materiales de construcción y de pinturas." />
+	<item code="5251 " text="Venta al por menor de artículos de decoración." />
+	<item code="5252 " text="Venta al por menor de relojes, joyas y artículos conexos." />
+	<item code="5253 " text="Ópticas." />
+	<item code="5254 " text="Galerías de Arte; casas de antigüedades." />
+	<item code="5255 " text="Venta al por menor de plantas y flores. Florerías." />
+	<item code="5259 " text="Otros tipos de ventas al por menor en almacenes especializados." />
+	<item code="5260 " text="Venta al por menor en almacenes de artículos usados." />
+	<item code="5266 " text="Venta al por menor de aparatos y artefactos eléctricos o electrónicos." />
+
+<!-- Comercio al por menor no realizado en almacenes, reparación de enseres domésticos. -->
+	<item code="5271 " text="Venta al por menor realizada por casas de venta por correo." />
+	<item code="5272 " text="Venta al por menor en puestos de venta y en mercados." />
+	<item code="5278 " text="Agencias de lotería e hipódromos." />
+	<item code="5279 " text="Otros tipo de venta al por menor no realizado en almacenes." />
+	<item code="5280 " text="Reparación de efectos personales y enseres domésticos." />
+
+<!-- Servicios de alojamiento, comida y hospedaje prestados en hoteles, casas de huéspedes, campamentos y otros lugares de alojamiento. -->
+	<item code="5511 " text="Servicios de alojamiento, comida y hospedaje prestados en hoteles, residenciales, hosterías y pensiones excepto alojamiento por hora." />
+	<item code="5512 " text="Servicios de alojamiento por hora." />
+	<item code="5519 " text="Servicios prestados en campamentos y lugares de alojamiento no clasificados en otra parte." />
+
+<!-- Expendio de comidas y bebidas en restaurantes, cafés y otros establecimientos con servicio de mesa y/o en mostrador. -->
+	<item code="5521 " text="Expendio de comidas elaboradas (no incluye pizzas, empanadas, hamburguesas, parrilladas y afines) y bebidas con servicio mesa consumo inmediato en el lugar. Restaurantes, cantinas y bares (sin espectáculo)." />
+	<item code="5522 " text="Expendio de pizzas, empanadas, hamburguesas y afines. Areperas, Pizzerías, luncherías, comida rápida." />
+	<item code="5523 " text="Heladerías." />
+	<item code="5524 " text="Expendio de comidas y bebidas con servicio de mesa para consumo inmediato en el lugar, con espectáculo." />
+
+<!-- Transporte por vía terrestre, transporte por tuberías. -->
+	<item code="6010 " text="Transporte ferroviario de carga y pasajeros." />
+	<item code="6021 " text="Transporte regular de pasajeros urbano, suburbano e interurbano a corta distancia (excluye transporte a larga distancia, transporte ferroviario, subterráneos y taxímetros)." />
+	<item code="6022 " text="Transporte regular de pasajeros a larga distancia por carretera." />
+	<item code="6023 " text="Transporte de pasajeros no clasificado en otra parte (incluye ómnibus de turismo, escolar)." />
+	<item code="6024 " text="Transporte terrestre de carga a corta, mediana y larga distancia excepto servicios de mudanza y transporte de valores, documentación, encomiendas, mensajes y similares." />
+	<item code="6025 " text="Servicios de mudanza." />
+	<item code="6026 " text="Transporte de valores, documentación, encomienda y similares." />
+	<item code="6029 " text="Otros tipos de transporte regular de carga por vía terrestre." />
+	<item code="6030 " text="Transporte por tuberías. Oleoductos y gaseoductos." />
+
+<!-- Transporte por vía acuática. -->
+	<item code="6110 " text="Transporte marítimo y de cabotaje." />
+	<item code="6120 " text="Transporte por vías de navegación interiores." />
+
+<!-- Transporte por vía aérea. -->
+	<item code="6210 " text="Transporte regular por vía aérea." />
+	<item code="6220 " text="Transporte no regular por vía aérea." />
+
+<!-- Actividades de transporte complementarias y auxiliares. Actividades de agencias de viajes. -->
+	<item code="6301 " text="Manipulación de carga." />
+	<item code="6302 " text="Almacenamiento y depósito." />
+	<item code="6303 " text="Otras actividades de transporte complementarias." />
+	<item code="6304 " text="Agencias de transporte de carga marítimo y aéreo." />
+	<item code="6305 " text="Agencias de Viajes." />
+	<item code="6306 " text="Agentes aduanales." />
+	<item code="6307 " text="Estacionamientos; Garajes." />
+	<item code="6309 " text="Servicios relacionados con el transporte no clasificado en otra parte." />
+
+<!-- Correo y telecomunicaciones. -->
+	<item code="6411 " text="Servicios de correo prestados por particulares." />
+	<item code="6420 " text="Servicios de telefonía, excepto lo celular." />
+	<item code="6421 " text="Servicio de telefonía celular." />
+	<item code="6431 " text="Emisoras de radio." />
+	<item code="6432 " text="Emisoras y retransmisoras de televisión (no incluye televisión por cable)." />
+	<item code="6433 " text="Servicios de transmisión de televisión por cable." />
+	<item code="6439 " text="Servicios de telecomunicaciones no especificadas en otra parte." />
+
+<!-- Intermediación de recursos financieros. -->
+	<item code="6511 " text="Banco Central." />
+	<item code="6512 " text="Intermediación de recursos financieros realizada por bancos (excluye Banco Central)." />
+	<item code="6513 " text="Intermediación de recursos financieros realizada por compañías financieras." />
+	<item code="6514 " text="Intermediación de recursos financieros realizada por sociedades de ahorro y préstamo para la vivienda y otros inmuebles." />
+	<item code="6515 " text="Intermediación de recursos financieros realizada por bancos hipotecarios." />
+	<item code="6516 " text="Compañías prestadoras de servicios de tarjetas de crédito y similares." />
+	<item code="6519 " text="Intermediación habitual entre oferta y demanda de recursos financieros realizadas por entidades no clasificadas en otra parte (excluye casas de cambio y agentes de bolsa)." />
+	<item code="6521 " text="Compra venta de divisas (moneda extranjera) y otros servicios prestados por casas de cambio." />
+	<item code="6522 " text="Agentes de bolsa. Agentes bursátiles y extrabursátiles." />
+	<item code="6591 " text="Arrendamiento con opción a compra." />
+	<item code="6592 " text="Otros tipos de crédito." />
+	<item code="6599 " text="Otros tipos de intermediación financiera." />
+
+<!-- Seguros y Pensiones. -->
+	<item code="6601 " text="Servicios prestados por las compañías de seguros y reaseguros (excepto planes de seguridad social)." />
+	<item code="6602 " text="Planes de seguridad social (excepto los administrados por el Estado)." />
+
+<!-- Actividades auxiliares de la intermediación financiera y de Seguros. -->
+	<item code="6711 " text="Administración de mercados financieros." />
+	<item code="6719 " text="Actividades auxiliares de la intermediación financiera (excepto la financiación de seguros y pensiones)." />
+	<item code="6720 " text="Corredores y agentes de Seguros; otros servicios relacionados con seguros." />
+
+<!-- Actividades Inmobiliarias. -->
+	<item code="7010 " text="Alquiler y arrendamiento de inmuebles propios." />
+	<item code="7020 " text="Compra, venta, alquiler, valuación, administración de inmuebles de terceros." />
+	<item code="7029 " text="Otros establecimientos dedicados a los bienes inmuebles." />
+
+<!-- Alquiler de equipo de transporte. -->
+	<item code="7111 " text="Alquiler de equipo de transporte por vía terrestre." />
+	<item code="7112 " text="Alquiler de equipo por vía acuática." />
+	<item code="7113 " text="Alquiler de equipo de transporte por vía aérea." />
+
+<!-- Alquiler de otros tipos de maquinaria y equipo. -->
+	<item code="7121 " text="Alquiler de maquinaria y equipo agropecuario." />
+	<item code="7122 " text="Alquiler de maquinaria y equipo de construcción y de ingeniería civil." />
+	<item code="7123 " text="Alquiler de maquinaria y equipo de oficina (incluso computación)" />
+	<item code="7129 " text="Alquiler de otros tipos de maquinaria y equipo." />
+	<item code="7130 " text="Alquiler de efectos personales y enseres domésticos." />
+
+<!-- Informática y Actividades Conexas. -->
+	<item code="7210 " text="Consultores en equipo de informática." />
+	<item code="7220 " text="Consultores en sistemas y programas de informática y suministro de programas de informática." />
+	<item code="7230 " text="Procesamiento de Datos." />
+	<item code="7250 " text="Mantenimiento y reparación de maquinaria de oficina, contabilidad e informática." />
+	<item code="7290 " text="Otras actividades de informática." />
+
+<!-- Investigación y Desarrollo. -->
+	<item code="7310 " text="Investigación y Desarrollo de las ciencias naturales." />
+	<item code="7320 " text="Investigación y Desarrollo de las ciencias sociales y las humanas." />
+
+<!-- Otras actividades empresariales. -->
+	<item code="7411 " text="Actividades jurídicas." />
+	<item code="7412 " text="Actividades de contabilidad, teneduría de libros y auditoría; asesoramiento en materia de impuestos." />
+	<item code="7413 " text="Investigación de mercados, y realización de encuestas de opinión pública." />
+	<item code="7414 " text="Actividades de asesoramiento empresarial y en materia de gestión; servicios de consultoría económico-financiera." />
+	<item code="7421 " text="Actividades de arquitectura e ingeniería y actividades conexas de asesoramiento técnico y prospección geológica excepto las actividades de prospección relacionadas con la extracción de petróleo y de gas." />
+	<item code="7422 " text="Actividades de prospección relacionadas con la extracción de petróleo y de gas (excluye perforaciones de prueba)." />
+	<item code="7423 " text="Ensayos y análisis técnico." />
+	<item code="7430 " text="Publicidad." />
+	<item code="7491 " text="Actividades de búsqueda, selección y obtención de personal." />
+	<item code="7492 " text="Actividades de seguridad e investigación." />
+	<item code="7493 " text="Actividades de limpieza de edificios." />
+	<item code="7494 " text="Fotografía aérea, impresión heliográfica, fotocopias, servicios fotográficos prestados a empresas." />
+	<item code="7495 " text="Actividades de envase y empaque" />
+	<item code="7499 " text="Otras Actividades Empresariales." />
+
+<!-- Administración Pública y Defensa; Planes de Seguridad Social de Afiliación Obligatoria. -->
+	<item code="7500 " text="Administración Pública y Defensa; Planes de Seguridad Social de Afiliación Obligatoria." />
+
+<!-- Enseñanza -->
+	<item code="8010 " text="Enseñanza Primaria." />
+	<item code="8020 " text="Enseñanza Secundaria." />
+	<item code="8030 " text="Enseñanza Superior." />
+	<item code="8090 " text="Enseñanza técnica y otros tipos de enseñanza." />
+
+<!-- Actividades relacionadas con la salud humana. -->
+	<item code="8511 " text="Actividades de asistencia médica y odontológica realizadas por sanatorios, clínicas y otras instituciones similares." />
+	<item code="8512 " text="Actividades de asistencia médica realizadas por médicos, odontólogos y otras especialidades médicas." />
+	<item code="8513 " text="Laboratorios de análisis." />
+	<item code="8514 " text="Actividades de ambulancias especiales, ambulancias de terapia intensiva móvil y similares." />
+	<item code="8519 " text="Otras actividades relacionadas con la salud humana." />
+
+<!-- Actividades veterinarias. -->
+	<item code="8520 " text="Actividades veterinarias." />
+
+<!-- Actividades de servicios sociales. -->
+	<item code="8530 " text="Actividades de servicios sociales." />
+
+<!-- Actividades de saneamiento y similares. -->
+	<item code="9001 " text="Limpieza urbana y recolección de residuos." />
+	<item code="9002 " text="Eliminación de aguas residuales; mantenimiento de cloacas y alcantarillas." />
+	<item code="9003 " text="Fumigación, desinfección, exterminio de insectos y plagas." />
+	<item code="9004 " text="Desagote de pozos negros y cámaras sépticas." />
+	<item code="9009 " text="Otras actividades de saneamiento." />
+
+<!-- Actividades Culturales -->
+	<item code="9211 " text="Producción de películas cinematográficas y de televisión." />
+	<item code="9212 " text="Servicios de revelado y copia de películas cinematográficas. Laboratorios cinematográficos." />
+	<item code="9213 " text="Distribución y alquiler de películas cinematográficas y distribución de videocintas (excluye video clubes)" />
+	<item code="9214 " text="Alquiler de videocintas (video clubes)" />
+	<item code="9215 " text="Exhibición de películas cinematográficas y videocintas." />
+	<item code="9216 " text="Producción de espectáculos teatrales y musicales." />
+	<item code="9217 " text="Producción y servicios de grabaciones musicales. Servicios de producción musical." />
+	<item code="9218 " text="Servicios relacionados con espectáculos teatrales, musicales y deportivos (incluye agencias de contratación de actores, de cantantes, de deportistas, etc.)" />
+	<item code="9219 " text="Composición y representación de obras teatrales y canciones. Autores, compositores y artistas." />
+	<item code="9220 " text="Actividades de agencias de noticias." />
+
+<!-- Actividades deportivas y otras actividades de esparcimiento. -->
+	<item code="9241 " text="Servicios de diversión y esparcimiento prestados en salones de baile, discotecas y similares." />
+	<item code="9242 " text="Servicios de prácticas deportivas (incluye clubes, gimnasios, canchas de tenis, 'paddle', etc.)" />
+	<item code="9243 " text="Servicios de juegos de salón (incluye salones de billar, 'pool', 'bowling', juegos electrónicos, etc.)" />
+	<item code="9244 " text="Producción de espectáculos deportivos." />
+	<item code="9245 " text="Actividades deportivas profesionales. Deportistas." />
+	<item code="9246 " text="Servicios de diversión y esparcimiento (incluye servicios de alquiler de caballerizas y 'studs', alquiler de botes, explotación de piscinas, etc.)" />
+	<item code="9249 " text="Otras actividades de esparcimiento." />
+
+<!-- Actividades de servicios personales y de los hogares. -->
+	<item code="9301 " text="Lavado, limpieza y teñido de prendas de tela o de piel." />
+	<item code="9302 " text="Peluquería y otros tratamientos de belleza." />
+	<item code="9303 " text="Servicios funerarios, casas de sepelios y actividades conexas." />
+	<item code="9304 " text="Servicios de Fotografía. Estudios y laboratorios fotográficos. Revelado." />
+	<item code="9309 " text="Otras actividades de servicios personales y del hogar." />
+</root>

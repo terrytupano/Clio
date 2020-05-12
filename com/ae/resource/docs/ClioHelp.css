@@ -1,0 +1,36 @@
+body {
+	font-family:  Arial;
+	font-size: 12;
+}
+
+table {
+	font-family:  Arial;
+	font-size: 12;    
+}
+
+<!-- para anteriores a los de topicos -->
+h3 {
+	font-family: Book Antiqua;
+	font-size: 16;    
+	margin: 0px;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+
+<!-- para titulos de topicos -->
+h4 {
+	font-family: Book Antiqua;
+	font-size: 14;    
+	margin: 0px;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+<!-- derechos reservados -->
+h5 {
+	color: #646464; 
+	font-family:  Arial;
+	font-weight: bold;
+	font-size: 10;    
+	text-align: right;
+}

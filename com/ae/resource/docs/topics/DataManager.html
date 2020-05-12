@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK rel="stylesheet" href="../ClioHelp.css" type="text/css"></head></head>
+<body>
+
+<h4> <img src="../../icons/New16.gif" border="0" width="16" height="16" alt="" align="left">Nuevo registro</h4>
+Los diálogos de entrada que se presentan luego de presionar <b>Nuevo</b> permiten adicionar una nueva entrada a la lista de valores. Los campos cuyas etiquetas se encuentran en negrita son campos de entrada obligatoria; por lo tanto la aplicación espera que el usuario de valores a dichos campos para así poder habilitar el botón <b>Aceptar</b>. 
+
+<p></p>
+<h4> <img src="../../icons/Edit16.gif" border="0" width="16" height="16" alt="" align="left">Editar un registro</h4>
+<b>Editar</b> permite la edición de los valores de un registro previamente seleccionado haciendo clic en algún elemento de la lista. Para ello, presenta los datos en un dialogo de entrada igual al presentado por la acción <b>Nuevo</b> pero con los campos clave inhabilitados (campo que no puede ser modificado debido que es usado internamente por la aplicación para identificar de manera exclusiva este registro). Modifique los valores dentro de los componentes de entrada y presione <b>Aceptar</b> para actualizar los cambios. Presione <b>Cancelar</b> para finalizar sin actualizar ningún cambio. 
+
+<p>Presionando <b>Aceptar</b> la aplicación adiciona esta nueva entrada a la lista. Si presiona <b>Cancelar</b> no se añade el registro. </p>
+
+<p></p>
+<h4><img src="../../icons/Delete16.gif" border="0" width="16" height="16" alt="" align="left"> Supresión de registro</h4>
+La acción <b>Suprimir</b> Elimina el registro seleccionado de la lista. Debido a que esta es una operación destructiva, antes de la eliminación se presenta un mensaje solicitando la confirmación por parte del usuario para proseguir. Si el usuario indica <b>Si, suprimir</b>, la aplicación elimina este registro y sus registros relacionados. Por Ej.: si desea borrar una cuenta contable, al presionar si, la aplicación elimina dicha cuenta y las relaciones que se hayan establecido entre ella y las secciones dentro de una forma. Presionando <b>NO, CANCELAR</b>, no se suprime el registro. 
+
+<blockquote><hr size="1" noshade>
+<b>Nota</b>
+<br>En la lista donde se presentan las secciones, en la opción Contabilidad/Clio, solo se puede seleccionar un elemento (asociación) para suprimir. Si desea suprimir varias, debe hacerlo una por una.
+<hr size="1" noshade>
+</blockquote>
+
+<p></p>
+<h4><img src="../../icons/Import16.gif" border="0" width="16" height="16" alt="" align="left"> Importar</h4>
+Permite incorporar datos externos a la aplicación. Para que esto sea posible, generalmente estos presentan un asistente. Un asistente es un conjunto de ventana que son presentadas en secuencia y con instrucciones precisas que indican al usuario los pasos necesarios que permiten a la aplicación recopilar suficiente información para cumplir con éxito la operación. Importar básicamente es dar a la aplicación información para que esta pueda convertir datos al formato necesario para poder ser útil dentro de este programa. 
+
+<p></p>
+<h4><img src="../../icons/Address16.gif" border="0" width="16" height="16" alt="" align="left"> Editor de direcciones</h4> 
+El editor de direcciones es un dialogo de entrada que permite una entrada unificada para todos los datos relacionados con direcciones. Este se encuentra en la ventana que aparece al presionar <b>Nuevo</b> o <b>Edición</b> de contribuyente. Para invocarlo, presione el botón <img src="../../icons/Address16.gif" border="0" width="16" height="16" alt=""> y aparecerá
+
+<p><div align="center"><img src="AddressEditor.gif" border="0" width="414" height="317" alt=""></div></p>
+
+<p>Este dialogo de entrada desglosa los elementos que conforman una dirección y le permite introducirlos en forma separada. Note que algunos de ellos son de entrada obligatoria. Una vez aceptado los cambios, este devuelve el control a la ventana anterior donde se puede ver que aparece una dirección con un formato ya preestablecido.</p>
+</body>
+</html>

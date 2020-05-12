@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+
+<!-- solo codigos principales (ver ciiu completo en di.varios) -->
+<root>
+	<item code=" "  text="Actividades no bien especificadas " />
+	<item code="1" text="Agricultura, caza, selvicultura y pesca" />
+	<item code="2"  text="Explotación de minas y canteras " />
+	<item code="3"  text="Industrias manufactureras" />
+	<item code="311" text="Fabricación de productos alimentarios, bebidas, tabaco " />
+	<item code="3210"  text="Textiles, prendas de vestir. Industria del cuero " />
+	<item code="3311"  text="Industria y productos de la madera " />
+	<item code="3411"  text="Fabricación de papel. Editoriales e industrias conexas " />
+	<item code="3511"  text="Fabricación de sustancias químicas y derivados del petróleo " />
+	<item code="36"  text="Fabricación de productos minerales no metálicos " />
+	<item code="37"  text="Industria metalurgia básica " />
+	<item code="381"  text="Fabricación de productos metálicos maquinarias y equipos " />
+	<item code="39"  text="Fabricación de productos no clasificados " />
+	<item code="4" text="Electricidad, gas y vapor " />
+	<item code="5"  text="Construcción" />
+	<item code="61"  text="Comercios al mayor " />
+	<item code="62"  text="Comercios al por menor " />
+	<item code="631"  text="Restaurantes y hoteles " />
+	<item code="7"  text="Transporte, almacenamiento y comunicaciones " />
+	<item code="8"  text="Financieros, seguros, arrendamiento y servicios " />
+	<item code="9" text="Servicios comunales, sociales y personales " />
+</root>

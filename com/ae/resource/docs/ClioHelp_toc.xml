@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<toc version="1.0">
+
+	<tocitem target="home" text="Clio" image="openbook">
+		<tocitem target="topics.fea" text="Introducción y caracteristicas" image="topic" />
+		<tocitem target="topics.start" text="Comenzando" image="topic" />
+		<tocitem text="Tópicos de ayuda" image="chapter">
+			<tocitem text="Aspectos generales" image="chapter">
+				<tocitem target="topics.dc" text="Calendario de obligaciones" image="topic" />
+				<tocitem target="topics.pref" text="Preferencias" image="topic" />
+				<tocitem target="topics.stock" text="Inventario" image="topic" />
+				<tocitem target="topics.taxp" text="Contribuyente" image="topic" />
+				<tocitem target="topics.form" text="Forma" image="topic" />
+				<tocitem target="topics.af" text="Asignar forma/contribuyente" image="topic" /> 
+				<tocitem target="topics.fedit" text="Editor de formas" image="topic" />
+				<tocitem target="topics.fdm" text="Secciones y sus relaciones" image="topic" />
+				<tocitem target="topics.dm" text="Manejo de datos" image="topic" />
+			</tocitem>
+				
+			<tocitem text="Avanzado" image="chapter">
+				<tocitem target="topics.acc_c" text="Contabilidad/Clio" image="topic" />
+				<tocitem target="topics.vou" text="Transacciones" image="topic" />
+				<tocitem target="topics.imn" text="Diferencia entre crear e importar" image="topic" />
+				<tocitem target="topics.kim" text="Consideraciones" image="topic" />
+			</tocitem>
+		</tocitem>
+		
+		<tocitem  text="Tareas" image="chapter">
+			<tocitem target="task.ac" text="Asociación Entrada contable >> secciones" image="topic" />
+			<tocitem target="task.lf" text="Recepción de formas" image="topic" />
+			<tocitem target="task.ntp" text="Crear un contribuyente" image="topic" />
+			<tocitem target="task.pf" text="Impresión de formas" image="topic" />
+			<tocitem target="task.flu" text="Alineando la planilla" image="topic" />
+			<tocitem target="task.rf" text="Solicitud de nuevas formas" image="topic" />
+			<tocitem target="task.ima" text="Importar cuentas contables" image="topic" />
+		</tocitem>
+		
+		<tocitem  text="Preguntas frecuentes" image="chapter">
+			<tocitem target="faq.wdsr" text="¿Porque al comenzar la declaración, algunas formas comienzan por el lado de atrás?" image="topic" /> 
+			<tocitem target="faq.cpafap" text="¿Si después de imprimir una forma, y esta se daño o tiene algún error, puedo imprimirla de nuevo?" image="topic" /> 
+			<tocitem target="faq.wii" text="¿Qué es el estado inactivo?" image="topic" /> 
+			<tocitem target="faq.nafr" text="¿Me resulta muy incomodo solicitar la renovacion del inventario vía Internet. No se puede hacer de otra manera?" image="topic" /> 
+			<tocitem target="faq.aop" text="¿Los precios que aparecen en la ventana Ordenar, son los oficiales?" image="topic" /> 
+			<tocitem target="faq.crp" text="¿Cómo puedo establecer una relación mas cercana con mi proveedor?" image="topic" /> 
+		</tocitem>
+	</tocitem>
+
+</toc>

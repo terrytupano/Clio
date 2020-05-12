@@ -1,0 +1,71 @@
+infocont version 5.51 (dos)
+---------------------------------------------
+base de datos:			
+datos de empresa:		no importa
+catalogo de cuentas:		<codigo>/aa-aa/dictacon/Cuentaco.db (**)
+comprobantes contables:		<carpeta cia>/aa-aa/acientoc.db (*)
+codificacion: 			big endian
+
+(*) la carpeta aa-aa indica el año inicio fin de ejercicio al momento de crear la compañia
+(**) la mascara se define por niveles. El archivo <codigo>/dianocon/anocontab.db contiene la longitud de cada nivel. esta longitud se usara para contruir la mascara. a partir de la 
+posicion 4629, cada byte indica la longitud del nivel.
+
+
+Saint enterprice contabilidad
+---------------------------------------------
+base de datos:		mssql
+datos de empresa:	
+Cuentas contables:	
+Movimientos:		
+Formato de montos:	
+
+a2software
+---------------------------------------------
+base de datos:		DBISAM
+datos de empresa:	/DataSistema/a2CEmpresas.DAT
+Cuentas contables:	/<codigo empresa>/data/a2CCuentas.DAT
+Movimientos:		/<codigo empresa>/data/a2CCompDiarioMov.DAT
+Formato de montos:	double, big endian
+
+galac contabilidad 7.84
+---------------------------------------------
+base de datos:		Standard Jet DB
+datos de empresa:	
+Cuentas contables:	
+Movimientos:		
+
+Premium soft 5.0
+---------------------------------------------
+Base de datos:		dbx foxpro 
+datos de empresa:	/<codigo empresa>/empresa.dbf
+mascara de cuentas	/<codigo empresa>/ctacar.dbf
+Cuentas contables:	/<codigo empresa>/ctacont.dbf
+Movimientos:		/<codigo empresa>/compmov.dbf
+Formato de montos:	caracter
+
+Saint contabilidad 4.5
+---------------------------------------------
+Base de datos:		
+datos de empresa:	/<codigo empresa>/scconf.dta
+Cuentas contables:	/<codigo empresa>/sccta.dat
+Movimientos:		/<codigo empresa>/scmov.dat
+Formato de montos:	double, big endian
+
+scconf.dta - Archivo de datos de empresas
+
+  1 -  13 fecha
+ 15 -  22 fecha inicio de ejercicio
+ 24 -  31 fecha de cierre del ejercicio
+ 33 -  33 separador de formato de cuenta
+ 35 -  56 formato de cuenta
+
+el resto del primer registro son las cuentas descritas en campo "cuenta de ganancia o perdida" dentro de
+opcion configuracion de cuentas
+
+sccta.dat - Catalogo de cuentas
+
+   1 -   81 nombre cuenta contable
+  82 -   82 movimiento
+ 102 -  102 tipo de actividad
+ 927 -  934 fecha de ultima modificacion
+1085 - 1095 codigo cuenta

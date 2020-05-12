@@ -1,0 +1,200 @@
+agenda
+-------
+maikel avila; 04141255882; maikel_avila@msn.com; Trabaja en HP y tiene una empresa llamada tetracomunicaciones. Contacto para conseguir equipos o consumibles
+Julia pereira rivero; 0212-5760156; jotape@terra.com; abogado que me hizo las gestiones del registro de la aplicacion.
+
+proximas versiones
+---------------------
+   * Crear un DocumentListener para controlar la longitud de los campos de entrada. Adicionalmente, ver si se puede usar esta misma clase para seleccionar el texto dentro del campo cuando el componente reciva el foco.
+   * vistas. Es posible usar AbstractTableDataInput para que presente el contenido de la table que represente el contenido de la table que representa en distintas formas (similar al explorador de windows. 
+   * Actualmente, el inventario posee un registro por forma, con esto basta para que la aplicacion limpiel el amacen retirando las formas vencidas, estas se vencen con el año nuevo. Evaluar el hecho de que si cada compra es registrada como una entrada individual, el inventario retiraria solo las formas que alcanzan la fecha de vencimiento; es decir, estableciendo una fecha de 6 meses el inventario constantemente se estaria actualizando con el retiro de las formas vencidas (compradas con fecha anterior a los 6 meses).
+   * Mejorar la comunicacion entre el usuario y los probeedores adicionando editores para el envio y recepceion de notas, y el reporte automatico de errores desde la aplicacion.
+   * implementar una ayuda automatizada que traduce lo que dicen los elementos de una seccion y lo presenta en lenguaje natural. Ej si la seccion es condicionada por alguna otra decir "solo se permite entrada si la seccion tal contiene un valor distinto de 0". Tambien puede implementarse un tooltip con los atributos label y text o incluso un clic derecho para funciones adicionanes como help, ir a origen, etc
+
+
+http://www.declaratusimpuestos.com
+usuario: osofeo
+contraceña: 41ace46a
+no se que coño es esto. Parece un "portal" de noticias sin mayor tracendencia. Pense que era un sitio para declarar impuestos pero no, al menos no vi por donde es.
+
+http://www.misimpuestos.net
+usuario: osofeo
+contraceña: 
+esta mierda es una cagada. ar-i y dpn con algunos campitos guevones. pura paja
+
+
+****************************************************
+elementos y atributos de descriptores de planillas
+****************************************************
+<form	
+  contiene toda la informacion sobre la planilla
+    id		
+      identificador de la planilla. Este es el nombre con el que se conocera la planilla dentro de la   aplicacion. Debe ser unico.
+    name
+      texto descriptivo de la forma.
+<(overse/reverse).image 
+  identifica la imagen digitalizada de la forma o planilla fisica. cuando 
+  este elemento es "overse.image" Form calcula el tamaño de sus componentes internos segun el tamaño de esta image. "reverse.image" puede no estar presente (la planilla no se imprime por detras)
+    name <ctdata>
+      nombre del archivo que contiene la imegen de la planilla.
+  <(overse/reverse).title
+    color para la barra de titulo del dialogo de entrada
+      fore="int;int;int" frente
+      back="int;int;int" fondo
+      fontN	nombre del fuente que se usara para el titulo
+      fontF	tamaño
+      fontB	negrita
+  <(overse/reverse).panel
+    color de la seccion principal, donde se encuentran los componentes de entrada. Este elemento tambien es usado por Form para determinar el color del fondo de la planilla.
+      fore="int;int;int" frente
+      back="int;int;int" fondo
+      fontN	nombre del fuente usado por los componentes de entrada
+      fontF	tamaño
+      fontB	negrita
+  <(overse/reverse).selected
+    color usado para resaltar al usuario que el puntero del raton se encentra sobre una seccion de entrada.
+      back="int;int;int" fondo
+<(overse/reverse).background
+  identifica una imagen de fondo que se coloca entre el fondo y las secciones. puede no estar presente
+    name <ctdata>
+      nombre del archivo que contiene la imegen de la planilla.
+    xPos <int>
+      posicion en el eje de las axisas del la imagen de fondo
+    yPos <int>
+      posicion en el eje de las ordenadas del la imagen de fondo
+
+  <message
+    descripcion de mensajes usados dentro de esta forma. es considerado un valor 
+    global
+      id <ctdata>
+        identificador de mensaje
+      msgType "w,a,i,c"
+        tipo de exeption que sera presentada. cada letra indica la clase que sera instanciada durante la interpretacion de descriptor.xml
+      msgText <ctdata>
+        texto del mensaje
+  <gv.timeScope value=<int> />
+    valor global. Indica la frecuencia en dias que sera usada por el editor de
+    cantidades
+  <gv.firstFace value="overse" />
+    sus 2 valores "overse" o "reverse" determina por cual de estos lados de la hoja se comienza a llenar la planilla. Este valor puede afectar el calculo. Form utiliza este valor para determinar la secuencia correcta de recalculo. Esto es debido a que la planillas estan diceñadas de forma tal que una pagina (generalmente la posterior) contiene el detalle de los que en algunas secciones de la otra (anterior) resumen o sus valores son "traidos" de la parte posterior
+  <gv.taxPayerConditions value="1.0" />
+    indica las condiciones que debe cumplir el contribuyente para que se le pueda 
+    asignar esta planilla
+  <gv.pre-dive="top" />
+    indica donde se encuentra el pre-picado de la planilla. Esto indica a la aplicacion la direccion en que el usuario debe introducir la planilla dentro de la impresora. "top" y "bottom" son los unicos valores.
+   
+<(overse/reverse).section	
+  identifica una seccion dentro de la forma. las secciones "overse.section" deben esta siempre presentes.
+    id <nombre> obligatorio
+      identificador de la seccion. Este debe ser unico dentro del grupo de secciones. es usado por la aplicacion para dar valor a una variables en la evaluacion de expresiones.
+    title <ctdata> 
+      Titulo de la seccion. Se coloca como titulo en el dialogo de entrada de la seccion.
+    helpId <ctdata>
+      *****  
+    article <ctdata>
+      *****
+    class <nombre calificado de classe> obligatorio
+      nombre calificado de la clase encargada de realizar las operaciones dentro de la seccion
+    expression <expresion logica o matematica>
+      expresion usada por las clase para calcular el valor de esta seccion. Ej: 
+		"{a1} + {a2}" idica que el valor de esta seccion es la suma de las secciones a1 y a2
+    fields <nombre;nombre;...>
+      campos de base de datos que son requeridos dentro de esta seccion. Los campos son valorizados durante la inicializacion por lo tanto, pueden ser usados dentro de otros atributos para calculos o validaciones. Por Ej: La clase SimpleOutput usa este atributo como argumento para identificar el campo que debe presentar. Para esta clase, solo se debe espcificar un campo.
+    inputIf <expresion logica>
+      Atributo que contiene una expresion que es evaluada para controlar el metodo isAnInputSection(). Ej: si una seccion debe solicitar datos solo si otra continene algun valor. AbstractSection implementa la logica basica para este atributo. Si es atributo no esta presenta, retorna false
+    outputIf <expresion logica>
+      expresion logica que es evaluada para controlar el metodo getValue(). Si la evaluacion de la expresion resulta en false, getValue() retorna false, 0 o blanco de manera que en recalc() exprese la nueva situacion de la seccion y secciones relacionadas. El valor interno de la seccion no se altera.
+    group <nombre>
+      denota una seccion como integrante de un grupo. Usado por intancias de BooleanInput para que se
+      comporten igual que un conjunto de JRadioButton agrupados dentro de un ButtonGroup.
+    xPos <int> obligatorio
+      posicion absoluta en el eje x del componente de salida del renglon dentro de la forma
+    xPos <int> obligatorio
+      posicion absoluta en el eje y del componente de salida del renglon dentro de la forma
+    width <int> obligatorio
+      ancho 
+    width <int> obligatorio
+      alto
+    eastGap <int>	
+      espacio entre el borde este y el texto dentro de la seccion. Si no esta presente, se colocan 5 puntos de espacio.
+    westGap <int> 
+      espacio entre el borde oeste y el texto dentro de la seccion. Si no esta presente, se colocan 5 puntos de espacio.
+    sections <nombre;nombre;...>
+      Usado por clases que necesitan conocer el valor de otra seccion para calcular los suyos. Es reponsa
+      bilidad de cada seccion dar valor a las variables en el momento requerido.
+    sectionValue <nombre calificado de classe>
+      usado por SimpleInput para identificar la clase del objeto usado como valor. SimpleInput crea los 
+      componentes adecuados para la edicion del valor usando este atributo.
+    label <ctdata>
+      Etiqueta usada para acompañar al componente de entrada. Usar, por ejemplo, cuando las secciones tienen un concepto o etiqueta que es diferente al titulo del grupo que las contiene.
+    addrField
+      idica el campo dentro de addressRecord que esta seccion desea como salida. Si contiene *complete, AddressOutput da formato estandar a la direccion y esta es lo que se presenta como salida.
+    constantElement
+      usado por constantOutput para indicar cual elemento de la constante se presentara como salida. *key indica que el codigo y *value el valor o descripcion.
+    nationalityField 
+      usado por IdentificationCard para identificar la nacionalidad del propietario del documento de identidad (atributo fields) al cual esta seccion representa. 
+    
+Nota acerca de la version, release y modificacion
+-------------------------------------------------
+a partir de hoy viernes 25-06-04 se comienzan las anotaciones de cambios. Esto debido a que ya fue entregada la primera version alfa de la aplicacion. El sistema para determinar la version y modificacion es:
+
+- v.r.m donde v=version, r=id de lanzamiento y m=modificacion. Estos numero son incrementados de igual forma que un numero natural de 3 cifras. Cada modificacion incrementa en 1 la variable m.
+- cada version de evaluacion entreada a mdv sera nombrada como l.n donde l es la letra alfa, beta, chi, epsilon ... y n un numero de un dijito que expresa la modificacion.
+- los paquetes de servicio son incrementales. Se llama paquete de servicio a un conjunto de modificaciones que una vez instaladas, forman parte definitiva del sistema e incrementa su v.r.m.
+- de igual forma, la creacion de una nueva version se distancia de las anteriores debido a que se separa una copia de la aplicacion, se realizan las modificaiones. Estas incrementaran tanto el v.r.m que "separa" un nuevo lanzamiento de los anteriores incluyendo los paquetes de servicio.
+- los archivos donde se mencionan las versiones son contiene el comentario <!-- version -->. esto es
+para identificar donde debe modificarse a la hora del cambio.
+
+paquetes
+---------
+com.ae.core contiene las clases principales para el manejo de la aplicacion, Clases abstractas
+com.ae.actions todas las acciones disponibles para la interaccion con la aplicacion.
+com.ae.resources clases que permiten el acceso a los recursos alamcenados con la aplicacion.
+com.ae.form clases que gestionan la interaccion con una forma fiscal
+com.ae.evaluate evaluador de expresiones matematicas
+com.ae.input Clases encargadas de presentar y solicitar datos de entrada para la aplicacion. 
+com.ae.gui Componentes desarrollados para mejorar la interface aplicacion < > usuario
+
+pasos basicos
+----------------
+- verificar cambios en contenido de carpeta di.distribution.lib. si es asi, actualizar en wrapper y ofuscator
+- se eliminan las carpetas com, org y prevalenceBase del directorio destino
+- ofuscado: 
+	-se limpia la carpeta di.dist.pre
+	-se copian com y org desde di a el directorio di.dist.pre
+	-eliminar archivos .java. 
+	- para ptf: se eliminan todos los archivos no modificados despues de fecha de emision de cd
+	-se ejecuta el ofuscador. verificar el campo de entrada "apply mapping" en "ofuscation"
+	   - para cd de instalacion: debe contener el valor "D:\di.install\Original_obfuscate.map"
+	   - para ptf: colocar "D:\di.install\Clio v.r_aammdd.map"
+	   - ofuscar
+	-para cd de instalacion: redenominar el archivo de salida "D:\di.install\shirink.use" a "Clio v.r_aammdd.map"
+- se copian prevalenceBase al directorio destino
+- se suprimien sub-carpetas de prevalencebase
+- para cd de instalacion: se copia resumen de cambios a directorio raiz destino
+
+procedimiento para crear nuevo cd de aplicacion
+------------------------------------------------
+- se cambian los elementos que contienen los nombres de la aplicacion y la version. (buscar la palabra <!-- version -->)
+- modificar la version en archivos de licencia y de instalacion.
+- ejecutar pasos basicos. destino di.distribution
+- se ejecuta util para cifrar los archivos
+- se ejecuta inno setup
+Resultado: inno setup crea una carpeta output con un archivo ejecutable que instalara la aplicacion.
+
+procedimiento para crear .jar con arreglos temporales
+------------------------------------------------
+- determinar fecha de emision de cd de aplicacion. buscar archivo Clio v.r_aammdd.map en directorio de instalacion
+- se eliminan las carpetas com, org y prevalenceBase de di.distribution
+- ejecutar pasos basicos. destino di.distribution.path
+- copiar carpetas com y org desde di.distribution a di.distribution.path
+- se ejecuta util para crear .jar
+Resultado: se crea un archivo ptfaaaammdd.jar listo para llevar
+
+procedimiento para crear archivo con formas para cliente
+------------------------------------------------
+- ejecutar pasos basicos. destino di.distribution.path
+- se eliminan archivos con fecha de modificacion menor a fecha de creacion de cd.
+- ejecutar util para encriptar datos de entrada obtenidos del archivo consumer.jar
+Resultado: se crea archiv producer.jar con formas para el cliente solicitante y con 
+arregos temporales. el archivo es exclusivo para el cliente solicitante.

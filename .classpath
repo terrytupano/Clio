@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path=""/>
+    <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+    <classpathentry kind="lib" path="lib/jdom.jar" sourcepath="C:/JavaSoft/jdom-b9/src/java"/>
+    <classpathentry kind="lib" path="lib/jh.jar"/>
+    <classpathentry kind="lib" path="lib/kunststoff.jar"/>
+    <classpathentry kind="lib" path="lib/mail.jar"/>
+    <classpathentry kind="lib" path="lib/activation.jar"/>
+    <classpathentry kind="lib" path="lib/lucene-1.4-final.jar"/>
+    <classpathentry kind="output" path=""/>
+</classpath>

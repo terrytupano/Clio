@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+    <jar path="D:/di/clio.jar"/>
+    <options overwrite="false" compress="false" exportErrors="true"
+        exportWarnings="true" saveDescription="true"
+        descriptionLocation="/di/jarcfg.jardesc"
+        useSourceFolders="false" buildIfNeeded="true"/>
+    <manifest manifestVersion="1.0" usesManifest="true"
+        reuseManifest="false" saveManifest="false"
+        generateManifest="true" manifestLocation="" mainClassHandleIdentifier="=di/&lt;com.ae.core{DIMain.java[DIMain">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false">
+        <javaElement handleIdentifier="=di/&lt;org.jdom.transform"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.resource.docs"/>
+        <javaElement handleIdentifier="=di/&lt;org.jdom.input"/>
+        <javaElement handleIdentifier="=di/&lt;com.incors.plaf.kunststoff.icons"/>
+        <javaElement handleIdentifier="=di/&lt;com.incors.plaf"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.evaluate"/>
+        <javaElement handleIdentifier="=di/&lt;org.jdom.xpath"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.resource.icons"/>
+        <javaElement handleIdentifier="=di/&lt;org.jdom.filter"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.form.sections"/>
+        <javaElement handleIdentifier="=di/&lt;org.prevayler.test"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.core"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.form.view"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.datainput.address"/>
+        <javaElement handleIdentifier="=di/&lt;org.jdom"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.resource"/>
+        <javaElement handleIdentifier="=di/&lt;org.prevayler.implementation"/>
+        <javaElement handleIdentifier="=di/&lt;org.prevayler"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.datainput.tributaryunit"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.datainput"/>
+        <javaElement handleIdentifier="=di/&lt;org.jdom.adapters"/>
+        <javaElement handleIdentifier="=di/&lt;com.incors.plaf.kunststoff.themes"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.form"/>
+        <javaElement handleIdentifier="=di/&lt;org.jdom.output"/>
+        <javaElement handleIdentifier="=di/&lt;com.incors.plaf.kunststoff"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.evaluate.functions.string"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.gui"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.evaluate.functions.math"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.gui.calendar"/>
+        <javaElement handleIdentifier="=di/&lt;com.ae.datainput.taxpayer"/>
+    </selectedElements>
+</jardesc>

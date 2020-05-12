@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding='ISO-8859-1'?>
+
+<!-- forma -->
+<form id="ar-i" cryptoId="a" name="Determinacion del % de retencion" infoDoc="ar-i" price="0" declaration="">
+	<overse.image name="ar-i"/>
+	<overse.title fore="56;84;175" back="222;226;239" fontN="Arial" fontF="11" fontB="yes" />
+	<overse.panel fore="44;72;179" back="255;255;255" fontN="Arial" fontF="11" fontB="no" />
+	<overse.selected back="226;234;255" />
+	<overse.background name="" xPos="" yPos="" />
+
+	<!-- valore globales -->
+	<gv.timeScope value="360" />
+	<gv.firstFace value="overse" />
+	<gv.pre-dive value="top" />
+	<gv.taxPayerConditions value="'{tpTipPer}' == 'na'" />
+	<gv.debugg value="no" />
+	
+	<!-- escenarios -->
+	<stage face="overse" expression="'{anoGravable}' == ''" message="msg06" />
+
+	<!-- nombre -->
+	<overse.section
+		id="nombre"
+		class="SimpleOutput"
+		variable="tpNombre"
+		point="193;110" />
+
+	<!-- cedula -->
+
+	<overse.section
+		id="ci"
+		class="IdentificationCard"
+		variable="tpCedula"
+		nationalityField="tpNacion"
+		xPos="435"
+		yPos="102"
+		width="154"
+		height="29"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- rif -->
+	<overse.section
+		id="rif"
+		class="SpacedOutput"
+		variable="tpRif"
+		xPos="604"
+		yPos="101"
+		width="190"
+		height="27"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- empresas donde trabaja -->
+	<overse.section
+		id="empresaA"
+		title="Nombre de la empresa u organismo donde trabaja"
+		class="SimpleInput"
+		sectionValue="String"
+		inputIf="1.0"
+		point="79;173"
+		westGap="15" />
+
+	<overse.section
+		id="empresaB"
+		title="Nombre de la empresa u organismo donde trabaja"
+		class="SimpleInput"
+		sectionValue="String"
+		inoutIf="&apos;{empresaA}&apos; > &apos;&apos;"
+		point="79;180"
+		westGap="15" />
+
+	<overse.section
+		id="empresaC"
+		title="Nombre de la empresa u organismo donde trabaja"
+		class="SimpleInput"
+		sectionValue="String"
+		inoutIf="&apos;{empresaB}&apos; > &apos;&apos;"
+		point="300;173"
+		westGap="15" />
+
+	<overse.section
+		id="empresaD"
+		title="Nombre de la empresa u organismo donde trabaja"
+		class="SimpleInput"
+		sectionValue="String"
+		inoutIf="&apos;{empresaC}&apos; > &apos;&apos;"
+		point="300;180"
+		westGap="15" />
+
+	<!-- Variacion -->
+	<overse.section
+		id="v1"
+		class="BooleanInput"
+		group="g1"
+		inputIf="1.0"
+		mouseEntered="msg02"
+		point="555;180"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="v2"
+		class="BooleanInput"
+		group="g1"
+		inputIf="1.0"
+		mouseEntered="msg02"
+		point="600;180"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="v3"
+		class="BooleanInput"
+		group="g1"
+		inputIf="1.0"
+		mouseEntered="msg02"
+		point="655;180"
+		westGap="0"
+		eastGap="0" />
+
+	<overse.section
+		id="v4"
+		class="BooleanInput"
+		group="g1"
+		inputIf="1.0"
+		mouseEntered="msg02"
+		point="700;180"
+		westGap="0"
+		eastGap="0" />
+
+	<!-- si esta seccion es > 0 es una variacion -->
+	<overse.section 
+		id="variacion"
+		class="EvaluatedSection"
+		expression="('{v1}' == 'true') + ('{v2}' == 'true') + ('{v3}' == 'true') + ('{v4}' == 'true')" />
+
+
+	<!-- año gravable -->
+
+	<overse.section
+		id="anoGravable"
+		title="Año gravable"
+		class="SimpleList"
+		label="Selecciona el año grabable"
+		listType="*year"
+		inputIf="1.0"
+		xPos="729"
+		yPos="150"
+		width="68"
+		height="43"
+		westGap="33"
+		eastGap="0" />
+
+	<!-- Estimación de las remuneraciones por percibir en el año grabable -->
+	<overse.section
+		id="a1"
+		title="Cantidad por percibir de la empresa u organismo"
+		class="RemunerationAppraisal"
+		inoutIf="&apos;{empresaA}&apos; > &apos;&apos;"
+		point="200;244"
+		westGap="25" />
+
+	<overse.section
+		id="a2"
+		title="Cantidad por percibir de la empresa u organismo"
+		class="RemunerationAppraisal"
+		inoutIf="&apos;{empresaB}&apos; > &apos;&apos;"
+		point="200;275"
+		westGap="25" />
+
+	<overse.section
+		id="a3"
+		title="Cantidad por percibir de la empresa u organismo"
+		class="RemunerationAppraisal"
+		inoutIf="&apos;{empresaC}&apos; > &apos;&apos;"
+		point="500;244"
+		westGap="30" />
+
+	<overse.section
+		id="a4"
+		title="Cantidad por percibir de la empresa u organismo"
+		class="RemunerationAppraisal"
+		inoutIf="&apos;{empresaD}&apos; > &apos;&apos;"
+		point="500;275"
+		westGap="30" />
+
+	<overse.section
+		id="a6"
+		title="Total que se estima percibir"
+		class="EvaluatedSection"
+		expression="{a1} + {a2} + {a3} + {a4}"
+		point="720;293"
+		eastGap="10" />
+
+	<!-- B. conversion de remuneraciones en ut -->
+
+	<overse.section
+		id="b1"
+		class="EvaluatedSection"
+		expression="{a6}"
+		point="200;348"
+		westGap="25" />
+
+	<overse.section
+		id="b2"
+		class="EvaluatedSection"
+		expression="lastTributaryUnit({anoGravable}, 1)"
+		point="400;348"
+		height="16" />
+
+	<overse.section
+		id="totalB"
+		class="EvaluatedSection"
+		expression="{b1} / {b2}"
+		point="730;340"
+		eastGap="10" />
+
+	<!-- Desgrabamenes que se estiman pagar -->
+
+	<overse.section
+		id="c1"
+		title="Desgrabamenes que estima pagara en el año grabable"
+		class="SimpleInput"
+		sectionValue="Amount"
+		label="Gastos por educacion (contribuyento y desendientes no mayores de 25 años)"
+		inputIf="1.0"
+		mouseEntered="msg01"
+		point="730;390"
+		eastGap="10" />
+		
+
+	<overse.section
+		id="c2"
+		class="SimpleInput"
+		title="Desgrabamenes que estima pagará en el año grabable"
+		sectionValue="Amount"
+		label="Primas de seguro, hospitalizacion, cirugia y maternidad"
+		inputIf="1.0"
+		mouseEntered="msg01"
+		point="730;405"
+		eastGap="10" />
+		
+
+	<overse.section
+		id="c3"
+		class="SimpleInput"
+		title="Desgrabamenes que estima pagará en el año grabable"
+		sectionValue="Amount"
+		label="Servicios médicos odontológicos y de hospitalización"
+		mouseEntered="msg01"
+		inputIf="1.0"
+		point="730;425"
+		eastGap="10" />
+		
+
+	<overse.section
+		id="c4"
+		title="Intereses para la adquisicion de viviendas o pago de alquiler"
+		class="HomeRelatedDisencumbrance"
+		variable="b2"
+		inputIf="1.0"
+		mouseEntered="msg01"
+		point="730;450"
+		eastGap="10" />
+		
+
+	<overse.section
+		id="totalC"
+		class="EvaluatedSection"
+		expression="{c1} + {c2} + {c3} + {c4}"
+		point="730;467"
+		eastGap="10" />
+
+	<!-- conversion de los desgrabamenes estimados en c a u.t. -->
+
+	<overse.section
+		id="d1"
+		class="EvaluatedSection"
+		expression="{totalC}"
+		point="200;524"
+		westGap="25" />
+
+	<overse.section
+		id="d2"
+		class="EvaluatedSection"
+		expression="lastTributaryUnit({anoGravable}, 1)"
+		outputIf="{totalC} > 0"
+		point="400;524"
+		westGap="25" />
+
+	<overse.section
+		id="totalD"
+		class="EvaluatedSection"
+		expression="{d1} / {d2}"
+		point="730;515"
+		eastGap="10" />
+
+	<!-- desgravamen unico -->
+	<overse.section
+		id="totalE"
+		class="EvaluatedSection"
+		expression="774"
+		outputIf="{totalC} == 0"
+		article="61"
+		point="730;556"
+		eastGap="47" />
+
+	<!-- F. determinacion de la renta gravable -->
+	<overse.section
+		id="f1"
+		class="EvaluatedSection"
+		expression="{totalB}"
+		point="200;595"
+		eastGap="30" />
+
+	<overse.section
+		id="f2"
+		class="EvaluatedSection"
+		expression="max({totalD}, {totalE})"
+		point="400;595"
+		eastGap="30" />
+
+	<overse.section
+		id="totalF"
+		class="EvaluatedSection"
+		expression="{f1} - {f2}"
+		point="730;595"
+		eastGap="30" />
+
+	<!-- total inpuesto año gravable -->
+
+	<overse.section
+		id="totalIAG"
+		class="EvaluatedSection"
+		expression="totalTax({totalF}, 1, 1)"
+		point="730;683"
+		eastGap="30" />
+
+	<!-- H. rebajas al impuesto -->
+
+	<overse.section
+		id="h2"
+		title="Rebajas al impuesto"
+		label="Nro. de cargas familiares"
+		class="SimpleInput"
+		sectionValue="Integer"
+		inputIf="1.0"
+		point="300;745" />
+
+	<overse.section
+		id="th2"
+		class="EvaluatedSection"
+		expression="{h2} * 10"
+		point="620;748"
+		eastGap="30" />
+
+	<overse.section
+		id="h3"
+		title="Rebajas al impuesto"
+		label="Impuesto retenidos demás en años anteriores"
+		class="SimpleInput"
+		sectionValue="Double"
+		inputIf="1.0"
+		point="200;781"
+		westGap="24" />
+
+	<overse.section
+		id="h3a"
+		class="EvaluatedSection"
+		expression="{b2}"
+		outputIf="{h3} > 0"
+		point="400;781"
+		westGap="24" />
+
+	<overse.section
+		id="th3"
+		class="EvaluatedSection"
+		expression="{h3} / {h3a}"
+		point="600;781"
+		eastGap="30" />
+
+	<overse.section
+		id="toth"
+		class="EvaluatedSection"
+		expression="{th2} + {th3} + 10"
+		point="730;785"
+		eastGap="30" />
+
+	<!-- impuesto estimado -->
+	<overse.section
+		id="impuestoE"
+		class="EvaluatedSection"
+		expression="{totalIAG} - {toth}"
+		point="730;810"
+		eastGap="27" />
+
+	<!-- j. porcentaje de retencion inicial -->
+
+	<overse.section
+		id="j1"
+		class="EvaluatedSection"
+		expression="{impuestoE}"
+		outputIf="{variacion} == 0"
+		point="485;855" />
+
+	<overse.section
+		id="j2"
+		class="EvaluatedSection"
+		outputIf="{variacion} == 0"
+		expression="{totalB}"
+		point="485;870" />
+
+	<overse.section
+		id="totalJ"
+		class="EvaluatedSection"
+		outputIf="{variacion} == 0"
+		expression="({j1} / {j2}) * 100"
+		point="650;860" />
+	
+	<!-- K. porcentaje por variacion en los datos -->
+	
+	<overse.section
+		id="k1"
+		title="Porcentaje por variación en los datos"
+		label="Total del impuesto que se le ha retenido hasta la fecha"
+		class="SimpleInput"
+		sectionValue="Double"
+		mouseEntered="{variacion} > 0 ; xx ; msg28"
+		inoutIf="{variacion} > 0"
+		point="730;915" />
+
+	<overse.section
+		id="k2"
+		title="Porcentaje por variación en los datos"
+		label="Total remuneraciones percibidas hasta la fecha"
+		class="SimpleInput"
+		sectionValue="Double"
+		mouseEntered="{variacion} > 0 ; xx ; msg28"
+		inoutIf="{variacion} > 0"
+		point="730;930" />
+
+	<overse.section
+		id="kti"
+		class="EvaluatedSection"
+		outputIf="{variacion} > 0"
+		expression="{impuestoE}"
+		point="420;965" />
+
+	<overse.section
+		id="ktu"
+		class="EvaluatedSection"
+		outputIf="{variacion} > 0"
+		expression="{b2}"
+		point="530;965" />
+
+	<overse.section
+		id="kk1"
+		class="EvaluatedSection"
+		outputIf="{variacion} > 0"
+		expression="{k1}"
+		point="620;965" />
+
+	<overse.section
+		id="kta"
+		class="EvaluatedSection"
+		outputIf="{variacion} > 0"
+		expression="{a6}"
+		point="460;980" />
+
+	<overse.section
+		id="kk2"
+		class="EvaluatedSection"
+		outputIf="{variacion} > 0"
+		expression="{k2}"
+		point="590;980" />
+
+	<overse.section
+		id="totk"
+		class="EvaluatedSection"
+		outputIf="{variacion} > 0"
+		expression="({kti} * {ktu} - {kk1}) / ({kta} - {kk2}) * 100"
+		point="730;970" />
+	
+	<!-- constancia de entrega -->
+	<overse.section
+		id="e_lugar"
+		class="AddressOutput"
+		variable="tpDirecc"
+		addrField="adCiudad"
+		point="120;1055" />
+
+	<overse.section
+		id="e_fecha"
+		class="DateOutput"
+		variable="*today"
+		chrSep="/"
+		point="220;1055" westGap="0" eastGap="0" reSize="0.5"/>
+
+</form>
